@@ -1,0 +1,229 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary Colors */
+  --reaction: hsl(0, 100%, 67%);
+  --memory: hsl(39, 100%, 56%);
+  --verbal: hsl(166, 100%, 37%);
+  --visual: hsl(234, 85%, 45%);
+
+  /* Gradients for: */
+  /* -Backogrund */
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+  /* -Circle Element */
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* Other Colors */
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Hanken Grotesk", sans-serif;
+  color: var(--White);
+  background-color: var(--Pale-blue);
+}
+
+.component {
+  background-color: var(--White);
+}
+/* Result section */
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1.5em;
+  text-align: center;
+  background: linear-gradient(
+    0deg,
+    var(--Light-royal-blue) 0%,
+    var(--Light-slate-blue) 100%
+  );
+  border-radius: 0 0 25px 25px;
+}
+
+.result__header {
+  font-weight: 700;
+  color: var(--Light-lavender);
+}
+
+.result__score-circle {
+  position: relative;
+  margin: 1em 0;
+  /* width: 37vw; */
+  /* height: 37vw; */
+  height: clamp(120px, 37vw, 200px);
+  width: clamp(120px, 37vw, 200px);
+  border-radius: 50%;
+  background: linear-gradient(
+    0deg,
+    var(--Persian-blue) 0%,
+    var(--Violet-blue) 100%
+  );
+}
+
+.result__score {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.6rem;
+  color: var(--Light-lavender);
+}
+
+.result__score strong {
+  font-size: 6rem;
+  font-weight: 800;
+  color: var(--White);
+}
+
+.result__description-title {
+  font-size: 2.5rem;
+}
+
+.result__description {
+  margin-bottom: 1.5em;
+  max-width: 80%;
+  font-size: 1.6rem;
+  color: var(--Light-lavender);
+}
+
+/* Summary section */
+
+.summary {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.summary__header {
+  color: var(--Dark-gray-blue);
+  font-weight: 800;
+}
+
+.summary__categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* Category bar */
+.summary__category {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 15px;
+}
+
+.summary__category-name::before {
+  vertical-align: middle;
+  margin-right: 0.7em;
+}
+
+.summary__category-score {
+  color: var(--Light-lavender);
+}
+.summary__category-score strong {
+  margin-right: 0.2em;
+  color: var(--Dark-gray-blue);
+}
+
+.summary__btn {
+  padding: 1em;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--Pale-blue);
+  background: var(--Dark-gray-blue);
+  border: none;
+  border-radius: 45px;
+  transition: background 0.4s;
+}
+.summary__btn:hover {
+  cursor: pointer;
+  background: var(--Light-royal-blue);
+}
+/* ---------------------------------------------------- */
+/* Specified rules for each category */
+
+/* Reaction Category */
+.summary__category--reaction {
+  color: var(--reaction);
+  background-color: hsla(0, 100%, 37%, 0.05);
+}
+.summary__category--reaction .summary__category-name::before {
+  content: url(./img/icon-reaction.svg);
+}
+
+/*  Memory Category */
+.summary__category--memory {
+  color: var(--memory);
+  background-color: hsla(39, 100%, 56%, 0.05);
+}
+.summary__category--memory .summary__category-name::before {
+  content: url(./img/icon-memory.svg);
+}
+
+/*  Verbal Category */
+.summary__category--verbal {
+  color: var(--verbal);
+  background-color: hsla(166, 100%, 37%, 0.05);
+}
+.summary__category--verbal .summary__category-name::before {
+  content: url(./img/icon-verbal.svg);
+}
+
+/* Visual Category */
+.summary__category--visual {
+  color: var(--visual);
+  background-color: hsla(234, 85%, 45%, 0.05);
+}
+.summary__category--visual .summary__category-name::before {
+  content: url(./img/icon-visual.svg);
+}
+
+/* Styles for wider screens */
+
+@media (min-width: 992px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .component {
+    display: flex;
+    justify-content: center;
+    max-width: 60%;
+    border-radius: 25px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
+  }
+  .result {
+    width: 50%;
+    border-radius: 25px;
+  }
+  .summary {
+    width: 50%;
+  }
+}

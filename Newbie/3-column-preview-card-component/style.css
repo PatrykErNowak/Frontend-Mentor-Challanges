@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --paragraph: hsla(0, 0%, 100%, 0.75);
+  --background-headings-btn: hsl(0, 0%, 95%);
+
+  --sedans: hsl(31, 77%, 52%);
+  --suvs: hsl(184, 100%, 22%);
+  --luxury: hsl(179, 100%, 13%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--paragraph);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5em;
+  max-width: 1200px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5em;
+  padding: 3em;
+  flex: 1;
+}
+
+.card__icon {
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.card__title {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 3rem;
+  color: var(--background-headings-btn);
+  text-transform: uppercase;
+}
+
+.card__desc {
+  line-height: 150%;
+}
+
+.card__btn {
+  padding: 1em 2em;
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 25px;
+  background-color: var(--background-headings-btn);
+  transition: border 0.4s, background-color 0.4s, color 0.4s;
+}
+.card__btn:hover {
+  border: 2px solid var(--background-headings-btn);
+  cursor: pointer;
+}
+
+/* Specified styles for each card */
+.card--sedans {
+  background-color: var(--sedans);
+}
+.card--sedans .card__icon::before {
+  content: url(./img/icon-sedans.svg);
+}
+.card--sedans .card__btn {
+  color: var(--sedans);
+}
+.card--sedans .card__btn:hover {
+  color: var(--background-headings-btn);
+  background-color: var(--sedans);
+}
+
+.card--suvs {
+  background-color: var(--suvs);
+}
+.card--suvs .card__icon::before {
+  content: url(./img/icon-suvs.svg);
+}
+.card--suvs .card__btn {
+  color: var(--suvs);
+}
+.card--suvs .card__btn:hover {
+  color: var(--background-headings-btn);
+  background-color: var(--suvs);
+}
+
+.card--luxury {
+  background-color: var(--luxury);
+}
+.card--luxury .card__icon::before {
+  content: url(./img/icon-luxury.svg);
+}
+.card--luxury .card__btn {
+  color: var(--luxury);
+}
+.card--luxury .card__btn:hover {
+  color: var(--background-headings-btn);
+  background-color: var(--luxury);
+}
+
+@media (min-width: 992px) {
+  .cards {
+    flex-direction: row;
+  }
+  .card__btn {
+    margin-top: 3em;
+  }
+}
