@@ -1,0 +1,163 @@
+/* 
+## Colors
+
+### Primary
+
+- Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%)
+
+### Neutral
+
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --typography-color: hsl(243, 100%, 93%);
+  --grayish-bg: hsl(229, 7%, 55%);
+  --component-bg: hsl(228, 56%, 26%);
+  --component-bg-darker: rgb(12, 18, 44);
+  --component-bar-bg: rgba(12, 18, 44, 0.452);
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  min-height: 100vh;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  background-image: url(./img/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Centering component on screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container of component */
+.c-data {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  width: calc(100% - 3em);
+  color: var(--typography-color);
+}
+
+/* General styles for Interface & Overview section */
+
+.c-data__interface,
+.c-data__overview {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5em;
+  background-color: var(--component-bg);
+  border-radius: 10px;
+}
+
+.c-data__interface {
+  align-items: flex-start;
+  gap: 2em;
+  border-top-right-radius: 75px;
+}
+
+.c-data__overview {
+  position: relative;
+  padding-bottom: 4em;
+}
+
+/* Interface section elements */
+
+.c-data__btns {
+  display: flex;
+  gap: 1em;
+}
+
+.c-data__btn {
+  padding: 0.8em;
+  background-color: var(--component-bg-darker);
+  border: hidden;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* Overview section elements */
+
+.c-data__text {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.c-data__text span {
+  font-weight: 700;
+}
+
+.c-data__progress-bar {
+  position: relative;
+  margin-bottom: 0.5em;
+  height: 20px;
+  width: 100%;
+  background-color: var(--component-bar-bg);
+  border-radius: 50px;
+}
+
+.c-data__progress-bar .bar {
+  position: relative;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  height: 14px;
+  width: 81.5%;
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  border-radius: 50px;
+}
+
+.c-data__progress-bar .bar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  width: 11px;
+  height: 11px;
+  transform: translateY(-50%);
+  background-color: var(--typography-color);
+  border-radius: 50%;
+}
+
+.c-data__minmax-value {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.c-data__capacity-left {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding: 1em;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--grayish-bg);
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.c-data__capacity-left span {
+  margin-right: 0.2em;
+  color: var(--component-bg-darker);
+  font-size: 3.5rem;
+  vertical-align: -5px;
+}
