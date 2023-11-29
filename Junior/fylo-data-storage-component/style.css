@@ -34,6 +34,7 @@ body {
   background-image: url(./img/bg-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 
   /* Centering component on screen */
   display: flex;
@@ -62,7 +63,6 @@ body {
 }
 
 .c-data__interface {
-  align-items: flex-start;
   gap: 2em;
   border-top-right-radius: 75px;
 }
@@ -73,20 +73,39 @@ body {
 }
 
 /* Interface section elements */
+.c-data__logo {
+  max-width: 150px;
+}
 
 .c-data__btns {
   display: flex;
+  justify-content: flex-start;
   gap: 1em;
 }
 
 .c-data__btn {
+  flex: 0 1 50px;
   padding: 0.8em;
   background-color: var(--component-bg-darker);
   border: hidden;
   border-radius: 10px;
-  width: 50px;
-  height: 50px;
   cursor: pointer;
+  transition: transform 0.3s;
+  outline: transparent;
+}
+.c-data__btn svg path {
+  transition: fill 0.3s;
+}
+
+.c-data__btn:hover,
+.c-data__btn:active,
+.c-data__btn:focus {
+  transform: scale(1.1);
+}
+.c-data__btn:hover svg path,
+.c-data__btn:active svg path,
+.c-data__btn:focus svg path {
+  fill: #fff;
 }
 
 /* Overview section elements */
@@ -138,7 +157,7 @@ body {
 .c-data__minmax-value {
   display: flex;
   justify-content: space-between;
-  font-size: 0.9em;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 
@@ -147,10 +166,12 @@ body {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
-  padding: 1em;
-  font-size: 1.4rem;
-  font-weight: 700;
+  padding: 1.5em;
   color: var(--grayish-bg);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   background-color: #fff;
   border-radius: 10px;
 }
@@ -160,4 +181,58 @@ body {
   color: var(--component-bg-darker);
   font-size: 3.5rem;
   vertical-align: -5px;
+}
+
+@media (min-width: 920px) {
+  body {
+    background-image: url(./img/bg-desktop.png);
+  }
+
+  /* Main container */
+  .c-data {
+    flex-direction: row;
+    align-items: flex-end;
+    max-width: 1100px;
+  }
+
+  /* Sections of component */
+  .c-data__interface,
+  .c-data__overview {
+    padding: 3em;
+  }
+
+  .c-data__interface {
+    flex-grow: 1;
+    gap: 2.5em;
+  }
+  .c-data__overview {
+    flex-grow: 2;
+    max-height: 70%;
+  }
+
+  /* Overview section */
+  .c-data__text {
+    align-self: flex-start;
+    margin-bottom: 1.5em;
+  }
+
+  .c-data__capacity-left {
+    bottom: 110%;
+    left: unset;
+    right: 3em;
+    transform: translate(0, 50%);
+    width: max-content;
+    border-bottom-right-radius: 0;
+  }
+  .c-data__capacity-left::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(85%);
+    width: 25px;
+    height: 25px;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    background-color: #fff;
+  }
 }
