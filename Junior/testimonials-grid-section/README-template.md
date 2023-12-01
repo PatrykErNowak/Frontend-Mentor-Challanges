@@ -1,6 +1,6 @@
-# Frontend Mentor - Fylo data storage component solution
+# Frontend Mentor - Testimonials grid section solution
 
-This is a solution to the [Fylo data storage component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Testimonials grid section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -22,11 +22,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](../../Photos%20of%20Challenges/junior/fylo%20data%20storage%20component.jpg)
+![](../../Photos%20of%20Challenges/junior/testimonials%20grid%20section.jpg)
 
 ### Links
 
-- Live Site URL: [Fylo data storage component ](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Junior/fylo-data-storage-component/)
+- Live Site URL: [Testimonials grid section](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Junior/testimonials-grid-section/)
 
 ## My process
 
@@ -35,8 +35,8 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+- CSS Grid
 - Mobile-first workflow
-- A11Y
 
 ## Author
 
