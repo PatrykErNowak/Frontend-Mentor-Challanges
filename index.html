@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
-  <title>Frontend Mentor Challenges</title>
+  <title>Frontend Mentor Challenges | PENDEV</title>
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Heebo&display=swap"
+        rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
@@ -13,41 +21,288 @@
       padding: 0;
     }
 
+    html {
+      font-size: 62.5%;
+    }
+
     body {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 5em;
-      padding: 10vh;
+      padding: 1em 0;
+      font-size: 1.6rem;
+      font-family: 'Heebo', sans-serif;
       background-color: rgb(250, 250, 250);
       min-height: 100vh;
     }
 
-    ul {
+    .wrapper {
+      margin: 0 auto;
+      width: calc(100% - 1.5em);
+      max-width: 120rem;
+    }
+
+    /* Header section */
+    header {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 3em;
+    }
+
+    header h1 {
+      position: relative;
+      padding-bottom: 1.6rem;
+      font-family: 'Barlow', sans-serif;
+      font-size: clamp(3.2rem, 3.2rem + 2vw, 5rem);
+      color: rgb(62, 84, 163);
+      text-align: center;
+    }
+
+    header h1::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      height: 3px;
+      background-color: rgb(237, 44, 73);
+      border-radius: 50px;
+    }
+
+    .header-content {
       display: flex;
       flex-direction: column;
-      gap: 1em;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+    }
+
+    header p {
+      color: rgb(115, 115, 115);
+      font-size: clamp(1.4rem, 1.4rem + 0.3vw, 1.8rem);
+    }
+
+    header p::first-letter {
+      font-size: 2.5rem;
+    }
+
+    .btn-github {
+      padding: 1em 1.5em;
+      font-family: 'Barlow', sans-serif;
+      color: #fff;
+      font-style: italic;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: rgb(237, 44, 73);
+      border: transparent;
+      border-radius: 100px;
+      transition: box-shadow 0.3s;
+    }
+
+    .btn-github:hover,
+    .btn-github:focus {
+      box-shadow: 0 0 10px rgb(237, 44, 73);
+    }
+
+    .btn-github svg {
+      margin-left: 0.5em;
+      width: 20px;
+      vertical-align: -5px;
+    }
+
+    .btn-github svg path {
+      fill: #fff;
+    }
+
+    header img {
+      display: none;
+      max-height: 400px;
+      width: 100%;
+      object-position: center;
+      object-fit: cover;
+      border-radius: 100px 0 100px 0;
+    }
+
+    @media (min-width: 992px) {
+      header {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 4em;
+      }
+
+      header h1 {
+        grid-column: 1/-1;
+        padding-bottom: 3.2rem;
+      }
+
+      .header-content {
+        align-items: flex-start;
+        gap: 3em;
+      }
+
+      header img {
+        display: inline-block;
+      }
+
+    }
+
+    /* Main section */
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      margin-top: 4em;
+    }
+
+    main h2 {
+      margin-bottom: 0.5em;
+      font-size: clamp(2.4rem, 2.4rem + 0.5vw, 3.2rem);
+      color: rgb(62, 84, 163);
+      border-bottom: 2px solid rgba(62, 84, 163, 0.4);
+      font-family: 'Barlow', sans-serif;
+    }
+
+    main h3 {
+      color: rgb(62, 84, 163);
+      font-family: 'Barlow', sans-serif;
+    }
+
+    main h3 span {
+      opacity: 0.7;
+      margin-right: 0.5em;
+    }
+
+    .list-of-solutions {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-rows: 1fr;
+      gap: 2em;
+      padding: 1em;
       list-style: none;
+    }
+
+
+    .solution a {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      padding: 1em;
+      text-decoration: none;
+      color: rgb(62, 84, 163);
+      font-weight: 700;
+      font-size: 1.6rem;
+      border-radius: 20px;
+      transition: all 0.3s;
+    }
+
+    .solution img {
+      width: 50%;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .solution a:hover,
+    .solution a:focus {
+      background-color: rgba(62, 84, 163, 0.1);
+      transform: scale(1.1);
+    }
+
+
+
+    @media (min-width: 992px) {
+      .list-of-solutions {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* footer section */
+    footer {
+      margin-top: 3em;
+      font-size: 1.4rem;
+      text-align: center;
+      color: rgb(115, 115, 115);
+    }
+
+    footer a {
+      text-decoration: none;
+      font-weight: 700;
+      color: rgb(62, 84, 163);
+    }
+
+    footer a:hover,
+    footer a:focus {
+      color: rgb(237, 44, 73);
     }
   </style>
 </head>
 
 <body>
-  <h1>Frontend Mentor Challenges</h1>
-  <ul>
-    <li>Newbie
-      <ol>
-        <li><a href="./Newbie/3-column-preview-card-component/">3 column preview card component</a></li>
-        <li><a href="./Newbie/results-summary-component/">Results summary component</a></li>
-      </ol>
-    </li>
-    <li>Junior <ol>
-        <li><a href="./Junior/testimonials-grid-section/">Testimonials grid section</a></li>
-        <li><a href="./Junior/fylo-data-storage-component/">Fylo data storage component</a></li>
-      </ol>
-    </li>
-  </ul>
+  <div class="wrapper">
+    <header>
+      <h1>Frontend Mentor Solutions</h1>
+      <div class="header-content">
+        <p>Here you can find a showcase of my front-end skills. This collection features my solutions to various
+          Frontend
+          Mentor challenges, each providing a real-life workflow experience. From designs, assets, and style
+          requirements,
+          I have honed my skills in building responsive and visually appealing websites. Explore my solutions and see
+          the
+          live demos.</p>
+        <a class="btn-github"
+           href="https://github.com/PatrykErNowak/Frontend-Mentor-Challenges">Check out on my GITHUB <svg
+               xmlns="http://www.w3.org/2000/svg"
+               class="ionicon"
+               viewBox="0 0 512 512">
+            <path
+                  d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z" />
+          </svg></a>
+      </div>
+      <img src="./Photos of Challenges/main site/header-mobile.jpg"
+           alt="">
+    </header>
+
+    <main>
+      <h2>Completed challenges</h2>
+
+      <div class="level-section">
+        <h3><span>01</span>Newbie</h3>
+        <ul class="list-of-solutions">
+          <li class="solution"><a href="./Newbie/3-column-preview-card-component/"><img
+                   src="./Photos of Challenges/newbie/3 column card preview.jpg"
+                   alt="">
+              <p>3 column preview card component</p>
+            </a></li>
+          <li class="solution"><a href="./Newbie/results-summary-component/"><img
+                   src="./Photos of Challenges/newbie/results summary component.jpg"
+                   alt="">
+              <p>Results summary component</p>
+            </a></li>
+        </ul>
+      </div>
+
+      <div class="level-section">
+        <h3><span>02</span>Junior</h3>
+        <ul class="list-of-solutions">
+          <li class="solution"><a href="./Junior/testimonials-grid-section/"><img
+                   src="./Photos of Challenges/junior/testimonials grid section.jpg"
+                   alt="">
+              <p>Testimonials grid section</p>
+            </a></li>
+          <li class="solution"><a href="./Junior/fylo-data-storage-component/"><img
+                   src="./Photos of Challenges/junior/fylo data storage component.jpg"
+                   alt="">
+              <p>Fylo data storage component</p>
+            </a></li>
+        </ul>
+      </div>
+
+    </main>
+    <footer>
+      <p>Created and Designed by <a href="https://www.pendev.me">Patryk Nowak</a></p>
+    </footer>
+  </div>
+
 </body>
 
 </html>
