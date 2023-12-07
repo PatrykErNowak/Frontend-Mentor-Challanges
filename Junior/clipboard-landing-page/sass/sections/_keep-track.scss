@@ -1,0 +1,11 @@
+.s-keep {
+  &__hero-img {
+    margin: 6rem 0;
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+}

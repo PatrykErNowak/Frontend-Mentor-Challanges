@@ -1,0 +1,20 @@
+.container-m,
+.container-l {
+  margin: 0 auto;
+}
+.container-m {
+  max-width: 120rem;
+}
+.container-l {
+  max-width: 140rem;
+}
+
+.section {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 0.5em;
+  }
+}

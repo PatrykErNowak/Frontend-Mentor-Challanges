@@ -1,0 +1,9 @@
+.s-access {
+  &__img {
+    margin-top: 4em;
+    width: 110%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

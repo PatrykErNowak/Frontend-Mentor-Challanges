@@ -1,9 +1,35 @@
+.container-m,
+.container-l {
+  margin: 0 auto;
+}
+
+.container-m {
+  max-width: 120rem;
+}
+
+.container-l {
+  max-width: 140rem;
+}
+
+.section {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  text-align: center;
+}
+.section__title {
+  margin-bottom: 0.5em;
+}
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+img {
+  width: 100%;
 }
 
 html {
@@ -13,4 +39,118 @@ html {
 body {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+  color: #4c545d;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+h1 {
+  font-size: clamp(3.2rem, 2rem + 1vw, 5.2rem);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(3rem, 2rem + 1vw, 4.2rem);
+}
+
+h3 {
+  font-size: clamp(2.4rem, 2rem + 1vw, 3.6rem);
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #9fabb2;
+}
+
+body {
+  padding: 0 3rem;
+}
+
+.btns {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  width: 100%;
+}
+
+.btn {
+  padding: 1em 2em;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 -3px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  font-family: inherit;
+  display: inline-block;
+}
+.btn--primary {
+  background-color: #26baa4;
+}
+.btn--secondary {
+  background-color: #6173ff;
+}
+
+.feature__icon {
+  margin-bottom: 1.5em;
+}
+.feature__title {
+  margin-bottom: 0.5em;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.header__logo {
+  margin-bottom: 3em;
+  width: auto;
+}
+.header__title {
+  margin-bottom: 0.5em;
+}
+
+.s-keep__hero-img {
+  margin: 6rem 0;
+}
+.s-keep__features {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.s-access__img {
+  margin-top: 4em;
+  width: 110%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.s-supercharge__features {
+  padding: 5em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+.s-supercharge__featured-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+}
+.s-supercharge__featured-in img {
+  width: auto;
+  max-height: 50px;
+  max-width: 130px;
 }/*# sourceMappingURL=style.css.map */
