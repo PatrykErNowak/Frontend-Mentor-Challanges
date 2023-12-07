@@ -1,0 +1,14 @@
+@use "sass:map";
+$font-weights: (
+  "regular": 400,
+  "medium": 600,
+);
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1.8rem;
+}
