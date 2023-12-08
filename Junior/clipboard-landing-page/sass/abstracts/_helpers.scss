@@ -3,15 +3,14 @@
   margin: 0 auto;
 }
 .container-m {
-  max-width: 120rem;
+  max-width: 80rem;
 }
 .container-l {
-  max-width: 140rem;
+  max-width: 110rem;
 }
 
 .section {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding: 7rem 3rem;
   text-align: center;
 
   &__title {

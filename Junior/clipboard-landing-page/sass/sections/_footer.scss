@@ -1,0 +1,113 @@
+@use "../abstracts/colors" as c;
+@use "../base/typography" as t;
+@use "../abstracts/breakpoints" as b;
+
+.footer {
+  margin-top: 7rem;
+  padding: 5rem 3rem;
+  text-align: center;
+  background-color: rgba(c.$grey-light, $alpha: 0.3);
+
+  .container-l {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5em;
+  }
+
+  &__logo {
+    width: 5rem;
+  }
+
+  &__list,
+  &__socials-list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__list {
+    width: 100%;
+    gap: 0.5em;
+    flex-direction: column;
+  }
+  &__socials-list {
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
+
+  &__link,
+  &__social-link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.4s;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: c.$primary;
+      outline: transparent;
+      svg path {
+        fill: c.$primary;
+      }
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      padding: 0.5em;
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+  &__social-link {
+    &:link,
+    &:visited {
+      padding: 1em;
+      svg path {
+        transition: fill 0.4s;
+      }
+    }
+  }
+
+  @media (min-width: b.$medium) {
+    padding: 2rem;
+    text-align: start;
+
+    .container-l {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    &__list {
+      max-width: 60rem;
+      margin-left: 5rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr 1fr;
+      grid-auto-flow: column;
+    }
+    &__socials-list {
+      gap: 0.5em;
+      margin-left: auto;
+    }
+
+    &__link {
+      &:link,
+      &:visited {
+        width: auto;
+      }
+    }
+
+    &__social-link {
+      &:link,
+      &:visited {
+        padding: 0.5em;
+      }
+    }
+  }
+}

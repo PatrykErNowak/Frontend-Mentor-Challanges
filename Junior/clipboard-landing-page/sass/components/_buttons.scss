@@ -1,5 +1,6 @@
 @use "../abstracts/colors" as c;
 @use "../base/typography" as t;
+@use "../abstracts/breakpoints" as b;
 
 .btns {
   margin-top: 3em;
@@ -7,26 +8,48 @@
   flex-direction: column;
   gap: 1.2em;
   width: 100%;
+
+  @media (min-width: b.$small) {
+    justify-content: center;
+    flex-direction: row;
+  }
 }
 
 .btn {
-  padding: 1em 2em;
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: map-get(t.$font-weights, medium);
-  letter-spacing: 1px;
-  border-radius: 100px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 -3px rgba(0, 0, 0, 0.1);
+  &:link,
+  &:visited {
+    padding: 1em 2em;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: map-get(t.$font-weights, medium);
+    letter-spacing: 1px;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 -3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.4s;
 
-  //  Reset for links
-  text-decoration: none;
-  font-family: inherit;
-  display: inline-block;
+    //  Reset for links
+    text-decoration: none;
+    font-family: inherit;
+    display: inline-block;
+  }
+  &:focus {
+    outline: transparent;
+  }
 
   &--primary {
     background-color: c.$primary;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: rgba($color: c.$primary, $alpha: 0.8);
+    }
   }
   &--secondary {
     background-color: c.$secondary;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: rgba($color: c.$secondary, $alpha: 0.8);
+    }
   }
 }

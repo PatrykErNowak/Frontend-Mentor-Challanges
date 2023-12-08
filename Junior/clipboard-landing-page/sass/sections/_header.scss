@@ -1,3 +1,5 @@
+@use "../abstracts/breakpoints" as b;
+
 .header {
   display: flex;
   flex-direction: column;
@@ -11,5 +13,8 @@
 
   &__title {
     margin-bottom: 0.5em;
+  }
+  @media (min-width: b.$medium) {
+    padding-top: 15rem;
   }
 }
