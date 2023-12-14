@@ -1,0 +1,29 @@
+.btn-github {
+  padding: 1em 1.5em;
+  font-family: "Barlow", sans-serif;
+  color: #fff;
+  font-style: italic;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: rgb(237, 44, 73);
+  border: transparent;
+  border-radius: 100px;
+  transition: box-shadow 0.3s;
+}
+
+.btn-github:hover,
+.btn-github:focus {
+  box-shadow: 0 0 10px rgb(237, 44, 73);
+}
+
+.btn-github svg {
+  margin-left: 0.5em;
+  width: 20px;
+  vertical-align: -5px;
+}
+
+.btn-github svg path {
+  fill: #fff;
+}

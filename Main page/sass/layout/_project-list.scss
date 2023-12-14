@@ -1,0 +1,64 @@
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 4em;
+}
+
+main h2 {
+  margin-bottom: 0.5em;
+  font-size: clamp(2.4rem, 2.4rem + 0.5vw, 3.2rem);
+  color: rgb(62, 84, 163);
+  border-bottom: 2px solid rgba(62, 84, 163, 0.4);
+  font-family: "Barlow", sans-serif;
+}
+
+main h3 {
+  color: rgb(62, 84, 163);
+  font-family: "Barlow", sans-serif;
+}
+
+main h3 span {
+  opacity: 0.7;
+  margin-right: 0.5em;
+}
+
+.list-of-solutions {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 2em;
+  padding: 1em;
+  list-style: none;
+}
+
+.solution a {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  text-decoration: none;
+  color: rgb(62, 84, 163);
+  font-weight: 700;
+  font-size: 1.6rem;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.solution img {
+  width: 50%;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.solution a:hover,
+.solution a:focus {
+  background-color: rgba(62, 84, 163, 0.1);
+  transform: scale(1.1);
+}
+
+@media (min-width: 992px) {
+  .list-of-solutions {
+    grid-template-columns: 1fr 1fr;
+  }
+}
