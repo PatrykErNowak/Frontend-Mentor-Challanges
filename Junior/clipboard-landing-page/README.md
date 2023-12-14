@@ -38,6 +38,7 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- BEM methodology
 - [Sass](https://sass-lang.com)
 - [AOS](https://github.com/michalsnik/aos) - Animate library
 
