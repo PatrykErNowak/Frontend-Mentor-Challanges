@@ -1,4 +1,6 @@
-.btn-github {
+@use "../abstracts/colors" as c;
+
+.btn {
   padding: 1em 1.5em;
   font-family: "Barlow", sans-serif;
   color: #fff;
@@ -7,23 +9,35 @@
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: rgb(237, 44, 73);
   border: transparent;
   border-radius: 100px;
   transition: box-shadow 0.3s;
+
+  &--primary {
+    background-color: c.$primary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow: 0 0 10px c.$primary;
+    }
+  }
+
+  &--secondary {
+    background-color: c.$secondary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow: 0 0 10px c.$secondary;
+    }
+  }
 }
 
-.btn-github:hover,
-.btn-github:focus {
-  box-shadow: 0 0 10px rgb(237, 44, 73);
-}
-
-.btn-github svg {
+// Button Childrens
+.btn-icon {
+  font-size: 2rem;
   margin-left: 0.5em;
   width: 20px;
-  vertical-align: -5px;
-}
-
-.btn-github svg path {
-  fill: #fff;
+  vertical-align: -0.5rem;
 }

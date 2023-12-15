@@ -1,3 +1,5 @@
+@use "../abstracts/colors" as c;
+
 main {
   display: flex;
   flex-direction: column;
@@ -30,35 +32,84 @@ main h3 span {
   gap: 2em;
   padding: 1em;
   list-style: none;
+
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-.solution a {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  padding: 1em;
-  text-decoration: none;
-  color: rgb(62, 84, 163);
-  font-weight: 700;
-  font-size: 1.6rem;
-  border-radius: 20px;
-  transition: all 0.3s;
-}
-
-.solution img {
-  width: 50%;
+.solution {
+  position: relative;
+  text-align: center;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
+  background-color: rgba(240, 240, 240, 1);
+  overflow: hidden;
 
-.solution a:hover,
-.solution a:focus {
-  background-color: rgba(62, 84, 163, 0.1);
-  transform: scale(1.1);
-}
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
 
-@media (min-width: 992px) {
-  .list-of-solutions {
-    grid-template-columns: 1fr 1fr;
+  &__content {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    width: 100%;
+  }
+
+  // content childrens
+
+  &__title {
+    display: inline-block;
+    padding: 0 2em 0.2em;
+    font-family: "Barlow", sans-serif;
+    font-size: 2rem;
+    color: #3e54a3;
+    font-weight: 700;
+    text-shadow: 0 5px 2rem rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #ddd;
+  }
+  &__type {
+    font-size: 1.2rem;
+    color: #999;
+  }
+
+  &__tech-list {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    position: relative;
+    margin: 1em 0;
+    padding-top: 1.3em;
+    list-style: none;
+
+    &::before {
+      content: attr(aria-label);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.2rem;
+      color: #999;
+    }
+  }
+
+  // icon selector
+  &__tech-item svg {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5em;
+  }
+
+  &__btn {
+    padding: 0.5em 1em;
   }
 }
