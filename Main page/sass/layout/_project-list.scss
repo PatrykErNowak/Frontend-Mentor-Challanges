@@ -1,4 +1,13 @@
 @use "../abstracts/colors" as c;
+@use "../abstracts/breakpoints" as b;
+
+// Local Variables
+$card-animation-duration: 0.5s;
+$card-additional-text: c.$paragraph;
+
+// -------------------------------------------------
+// Styles for Animations are at the bottom
+// -------------------------------------------------
 
 main {
   display: flex;
@@ -7,24 +16,7 @@ main {
   margin-top: 4em;
 }
 
-main h2 {
-  margin-bottom: 0.5em;
-  font-size: clamp(2.4rem, 2.4rem + 0.5vw, 3.2rem);
-  color: rgb(62, 84, 163);
-  border-bottom: 2px solid rgba(62, 84, 163, 0.4);
-  font-family: "Barlow", sans-serif;
-}
-
-main h3 {
-  color: rgb(62, 84, 163);
-  font-family: "Barlow", sans-serif;
-}
-
-main h3 span {
-  opacity: 0.7;
-  margin-right: 0.5em;
-}
-
+// Parent for solutions
 .list-of-solutions {
   display: grid;
   grid-template-columns: 1fr;
@@ -33,8 +25,11 @@ main h3 span {
   padding: 1em;
   list-style: none;
 
-  @media (min-width: 992px) {
+  @media (min-width: b.$medium) {
     grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: b.$large) {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -43,8 +38,13 @@ main h3 span {
   text-align: center;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  background-color: rgba(240, 240, 240, 1);
+  background-color: c.$solution-bg;
   overflow: hidden;
+
+  @media (min-width: b.$large) {
+    text-align: start;
+    padding-bottom: 4em;
+  }
 
   &__img {
     width: 100%;
@@ -58,6 +58,15 @@ main h3 span {
     margin-bottom: 1.5em;
     padding: 1em;
     width: 100%;
+
+    @media (min-width: b.$large) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(68%);
+      margin-bottom: 0;
+      background-color: rgba(240, 240, 240, 1);
+    }
   }
 
   // content childrens
@@ -71,10 +80,19 @@ main h3 span {
     font-weight: 700;
     text-shadow: 0 5px 2rem rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid #ddd;
+
+    @media (min-width: b.$large) {
+      padding: 0;
+      border-bottom: none;
+    }
   }
+
   &__type {
-    font-size: 1.2rem;
-    color: #999;
+    font-size: 1.3rem;
+    color: $card-additional-text;
+    @media (min-width: b.$large) {
+      font-size: 1.4rem;
+    }
   }
 
   &__tech-list {
@@ -86,6 +104,10 @@ main h3 span {
     padding-top: 1.3em;
     list-style: none;
 
+    @media (min-width: b.$large) {
+      justify-content: flex-start;
+    }
+
     &::before {
       content: attr(aria-label);
       position: absolute;
@@ -93,14 +115,19 @@ main h3 span {
       left: 50%;
       transform: translateX(-50%);
       font-size: 1.2rem;
-      color: #999;
+      color: $card-additional-text;
+      @media (min-width: b.$large) {
+        left: 0;
+        transform: translateX(0);
+        font-size: 1.4rem;
+      }
     }
   }
 
   // icon selector
-  &__tech-item svg {
-    width: 4rem;
-    height: 4rem;
+  &__tech-item embed {
+    width: 4.5rem;
+    height: 4.5rem;
   }
 
   &__btns {
@@ -111,5 +138,48 @@ main h3 span {
 
   &__btn {
     padding: 0.5em 1em;
+  }
+}
+
+// --------------------------------------------------------------
+// Animations
+
+.solution {
+  @media (min-width: b.$large) {
+    &:hover &__content {
+      transform: translateY(0);
+      &::before {
+        transform: scaleX(1);
+        transform-origin: left;
+        transition: transform $card-animation-duration;
+      }
+    }
+
+    &:hover &__img {
+      transform: scale(1.2);
+    }
+  }
+
+  &__img {
+    transition: transform $card-animation-duration;
+  }
+  &__content {
+    transition: transform $card-animation-duration;
+
+    @media (min-width: b.$large) {
+      // Progress bar
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 5px;
+        width: 100%;
+        background-color: rgba(c.$primary, $alpha: 0.8);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform $card-animation-duration;
+      }
+    }
   }
 }

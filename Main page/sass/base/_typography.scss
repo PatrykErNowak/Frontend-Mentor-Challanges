@@ -1,7 +1,55 @@
+@use "../abstracts/colors" as c;
+
 html {
   font-size: 62.5%;
 }
 body {
   font-size: 1.6rem;
   font-family: "Heebo", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Barlow", sans-serif;
+  color: c.$secondary;
+}
+
+h1 {
+  position: relative;
+  padding-bottom: 1.6rem;
+  font-size: clamp(3.2rem, 3.2rem + 2vw, 5rem);
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background-color: c.$primary;
+    border-radius: 50px;
+  }
+}
+
+h2 {
+  margin-bottom: 0.5em;
+  font-size: clamp(2.4rem, 2.4rem + 0.5vw, 3.2rem);
+  border-bottom: 2px solid rgba(c.$secondary, 0.4);
+}
+
+h3 {
+  span {
+    opacity: 0.7;
+    margin-right: 0.5em;
+  }
+}
+
+p {
+  color: c.$paragraph;
+  font-size: clamp(1.4rem, 1.4rem + 0.3vw, 1.8rem);
+  line-height: 1.7;
 }
