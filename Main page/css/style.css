@@ -271,7 +271,7 @@ main {
     font-size: 1.4rem;
   }
 }
-.solution__tech-item embed {
+.solution__tech-item .icon {
   width: 4.5rem;
   height: 4.5rem;
 }
