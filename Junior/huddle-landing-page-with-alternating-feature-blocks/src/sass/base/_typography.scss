@@ -1,0 +1,25 @@
+//VARIABLES
+// Headings
+$heading-typo: "Poppins", sans-serif;
+
+$heading-weights: (
+  "bold": 600,
+);
+
+// Body, CTA
+$body-typo: "Open Sans", sans-serif;
+
+$body-weights: (
+  "regular": 400,
+  "bold": 700,
+);
+//-------------------------------------
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: $body-typo;
+}
