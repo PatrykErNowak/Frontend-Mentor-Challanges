@@ -1,0 +1,23 @@
+@use "../abstracts/colors" as c;
+@use "../base/typography" as t;
+
+.btn {
+  border-radius: 100px;
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: map-get($map: t.$body-weights, $key: bold);
+  cursor: pointer;
+
+  &--primary {
+    padding: 1em 4em;
+    background-color: c.$primary;
+    color: c.$light;
+    box-shadow: 0 5px 5px rgba(c.$primary, $alpha: 0.1);
+  }
+  &--secondary {
+    padding: 0.5em 2em;
+    background-color: c.$light;
+    color: c.$secondary-dark;
+    box-shadow: 0 5px 5px rgba(c.$secondary-dark, $alpha: 0.1);
+  }
+}

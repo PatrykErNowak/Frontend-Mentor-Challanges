@@ -1,0 +1,61 @@
+@use "../abstracts/colors" as c;
+@use "../abstracts/breakpoints" as b;
+
+.header {
+  background-image: url("../img/bg-hero-mobile.svg"),
+    linear-gradient(
+      to right,
+      rgba(c.$secondary-light, 1),
+      rgba(c.$secondary-light, 1)
+    );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: b.$large) {
+    background-image: url("../img/bg-hero-desktop.svg"),
+      linear-gradient(
+        to right,
+        rgba(c.$secondary-light, 1),
+        rgba(c.$secondary-light, 1)
+      );
+  }
+
+  &__grid {
+    display: grid;
+    gap: 5rem;
+    padding: 15rem 0 3rem;
+
+    @media screen and (min-width: b.$large) {
+      grid-template-columns: 45fr 55fr;
+    }
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    text-align: center;
+    @media screen and (min-width: b.$large) {
+      align-items: start;
+      text-align: start;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 3rem 0;
+
+  &__logo {
+    width: 12rem;
+  }
+}
