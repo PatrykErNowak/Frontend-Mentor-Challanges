@@ -1,105 +1,3 @@
-// const gulp = require("gulp");
-
-// // Styles
-// const sass = require("gulp-sass")(require("sass"));
-// const csso = require("gulp-csso");
-// const sourcemaps = require("gulp-sourcemaps");
-// const autoprefixer = require("gulp-autoprefixer");
-
-// // Utilities
-// const browserSync = require("browser-sync").create();
-// const rename = require("gulp-rename");
-// const clean = require("gulp-clean");
-// const imagemin = require("gulp-imagemin");
-
-// // ---------------------------------------------------------
-// // Variables
-// const paths = {
-//   sassSrc: "./src/sass/**/main.scss",
-//   cssDist: "./dist/css",
-//   HTMLsrc: "./src/**/*.html",
-//   HTMLdist: "./dist",
-//   imgSrc: "./src/img/*",
-//   imgDist: "./dist/img",
-//   clear: {
-//     css: "./dist/css/*.css",
-//     img: "./dist/img/*",
-//   },
-// };
-
-// const cssFileName = "style";
-
-// // ---------------------------------------------------------
-// // TASKS
-
-// function html() {
-//   return gulp.src(paths.HTMLsrc).pipe(gulp.dest(paths.HTMLdist));
-// }
-
-// function cssDev() {
-//   return gulp
-//     .src(paths.sassSrc)
-//     .pipe(sourcemaps.init())
-//     .pipe(sass().on("error", sass.logError))
-//     .pipe(autoprefixer())
-//     .pipe(sourcemaps.write())
-//     .pipe(rename(cssFileName + ".css"))
-//     .pipe(gulp.dest(paths.cssDist))
-//     .pipe(browserSync.stream());
-// }
-
-// function cssProd() {
-//   return gulp
-//     .src(paths.sassSrc)
-//     .pipe(sourcemaps.init())
-//     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-//     .pipe(autoprefixer())
-//     .pipe(csso())
-//     .pipe(sourcemaps.write())
-//     .pipe(rename(cssFileName + ".min.css"))
-//     .pipe(gulp.dest(paths.cssDist));
-// }
-
-// function watchForChanges(cb) {
-//   gulp.watch(paths.sassSrc, gulp.series(cssDev));
-//   gulp.watch(paths.HTMLsrc, gulp.series(html));
-//   gulp.watch(paths.imgSrc, gulp.series(imagemin));
-//   gulp.watch("dist/**/*.html").on("change", browserSync.reload);
-//   cb();
-// }
-
-// function clear(cb) {
-//   gulp.src(paths.clear.css).pipe(clean());
-//   gulp.src(paths.clear.img).pipe(clean());
-//   cb();
-// }
-
-// const server = function (cb) {
-//   browserSync.init({
-//     server: {
-//       baseDir: "./dist",
-//     },
-//     notify: false,
-//     //host: "192.168.0.24",
-//     //port: 3000,
-//     open: true,
-//     browser: "chrome",
-//   });
-
-//   cb();
-// };
-
-// function imageOpt() {
-//   return gulp.src(paths.imgSrc).pipe(imagemin()).pipe(gulp.dest(paths.imgDist));
-// }
-
-// // ------------------------------------------------------
-
-// exports.default = gulp.series(cssProd, imageOpt, html, server, watchForChanges);
-// exports.clear = clear;
-
-/////////////////////////////
-
 const gulp = require("gulp");
 
 // CSS
@@ -116,6 +14,7 @@ const imagemin = require("gulp-imagemin");
 const browserSync = require("browser-sync").create();
 const clean = require("gulp-clean");
 
+// Local Variables
 const paths = {
   sass: "./src/sass/**/*.scss",
   css: "./dist/css",
@@ -128,6 +27,9 @@ const paths = {
 };
 
 const cssFileName = "style";
+
+//----------------------------------
+// TASKS
 
 function html() {
   return gulp.src(paths.html[0]).pipe(gulp.dest(paths.dist));

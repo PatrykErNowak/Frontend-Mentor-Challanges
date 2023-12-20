@@ -1,0 +1,65 @@
+@use "../abstracts/colors" as c;
+@use "../abstracts/breakpoints" as b;
+
+// LOCAL VARIABLES
+$box-shadow-color: rgba(0, 0, 0, 0.1);
+
+// Container styles
+.advantages {
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: 4rem;
+  padding: 8rem 0;
+}
+
+//---------------------------------
+// Component styles
+
+.advantage {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding: 8rem 4rem 4rem;
+  text-align: center;
+  border-radius: 2rem;
+  box-shadow: 0 0 20px $box-shadow-color;
+
+  @media screen and (min-width: b.$large) {
+    flex-direction: row;
+    gap: 14rem;
+    padding: 4rem 4rem 4rem 12rem;
+    text-align: start;
+
+    &:nth-child(odd) &__img-box {
+      order: 1;
+    }
+
+    &__img-box {
+      width: 40%;
+    }
+  }
+  &__img-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    display: block;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    gap: 2rem;
+  }
+
+  &__desc {
+    color: c.$grey;
+    font-size: 1.6rem;
+    line-height: 1.65;
+  }
+}
