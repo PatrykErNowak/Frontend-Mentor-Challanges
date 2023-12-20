@@ -29,4 +29,21 @@
       font-size: 1.8rem;
     }
   }
+
+  // ----------------------------------------------
+  // Fix bug from AOS library
+
+  &[data-aos^="zoom"][data-aos^="zoom"] {
+    opacity: 0;
+    transition-property: opacity, transform;
+
+    &.aos-animate {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1) translateY(40%);
+    }
+  }
+
+  &[data-aos="zoom-in"] {
+    transform: translateY(40%) scale(0.6);
+  }
 }

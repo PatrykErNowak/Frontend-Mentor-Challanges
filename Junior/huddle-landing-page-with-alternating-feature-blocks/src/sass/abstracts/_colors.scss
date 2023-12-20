@@ -1,10 +1,12 @@
+// MAIN COLORS
 $primary: hsl(322, 100%, 66%);
 
 $secondary-light: hsl(193, 100%, 96%);
 $secondary-dark: hsl(192, 100%, 9%);
 
+// ------------------------------------------
+// SECONDARY COLORS
 $grey: hsl(208, 11%, 55%);
-
-$background: #fff;
-
 $light: #fff;
+
+$background: $light;

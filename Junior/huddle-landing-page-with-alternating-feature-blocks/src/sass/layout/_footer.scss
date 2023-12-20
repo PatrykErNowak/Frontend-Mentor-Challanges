@@ -16,6 +16,7 @@ $typo-color: #fff; // color for all typography objects
     filter: grayscale(100) brightness(100);
   }
 
+  // Container with address/contact informations
   &__contact-box {
     display: flex;
     flex-direction: column;
@@ -94,14 +95,17 @@ $typo-color: #fff; // color for all typography objects
     }
   }
 
+  // ------------------------------------------
+  // Copyright text
   &__copyright {
     text-align: center;
     font-size: $copy-fz;
   }
 }
 
-//---------------------------------------
-// GRiD
+//-------------------------------------------------------------------------------------
+// GRiD / layout
+
 .footer {
   // GRID footer
   &__grid {

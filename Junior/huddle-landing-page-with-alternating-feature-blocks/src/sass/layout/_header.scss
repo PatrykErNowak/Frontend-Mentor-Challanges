@@ -50,10 +50,28 @@
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   padding: 3rem 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 200vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateX(-30%);
+    background-image: linear-gradient(
+      to bottom,
+      rgba(c.$secondary-light, 1) 0%,
+      rgba(c.$secondary-light, 0.8) 60%,
+      rgba(c.$secondary-light, 0) 100%
+    );
+  }
 
   &__logo {
     width: 12rem;
