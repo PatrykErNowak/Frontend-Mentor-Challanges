@@ -2,13 +2,13 @@
 @use "../abstracts/breakpoints" as b;
 
 .header {
+  color: c.$secondary-dark;
   background-image: url("../img/bg-hero-mobile.svg"),
     linear-gradient(
       to right,
       rgba(c.$secondary-light, 1),
       rgba(c.$secondary-light, 1)
     );
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 

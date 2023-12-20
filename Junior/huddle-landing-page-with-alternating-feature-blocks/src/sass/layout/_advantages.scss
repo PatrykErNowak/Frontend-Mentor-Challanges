@@ -1,15 +1,15 @@
 @use "../abstracts/colors" as c;
 @use "../abstracts/breakpoints" as b;
+@use "../abstracts/variables" as v;
 
 // LOCAL VARIABLES
-$box-shadow-color: rgba(0, 0, 0, 0.1);
 
 // Container styles
 .advantages {
   display: grid;
   grid-auto-rows: 1fr;
   gap: 4rem;
-  padding: 8rem 0;
+  padding: 8rem 0 0;
 }
 
 //---------------------------------
@@ -21,8 +21,8 @@ $box-shadow-color: rgba(0, 0, 0, 0.1);
   gap: 6rem;
   padding: 8rem 4rem 4rem;
   text-align: center;
-  border-radius: 2rem;
-  box-shadow: 0 0 20px $box-shadow-color;
+  border-radius: v.$borer-radius;
+  box-shadow: v.$box-shadow;
 
   @media screen and (min-width: b.$large) {
     flex-direction: row;

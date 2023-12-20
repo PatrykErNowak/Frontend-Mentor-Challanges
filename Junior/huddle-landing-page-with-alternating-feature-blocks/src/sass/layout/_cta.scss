@@ -1,0 +1,32 @@
+@use "../abstracts/colors" as c;
+@use "../abstracts/variables" as v;
+@use "../abstracts/breakpoints" as b;
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  max-width: max-content;
+  padding: 2em 6vw;
+  text-align: center;
+  transform: translateY(40%);
+  background-color: c.$background;
+  box-shadow: v.$box-shadow;
+  border-radius: v.$borer-radius;
+
+  @media screen and (min-width: b.$medium) {
+    padding: 3em 6em;
+  }
+
+  &__btn {
+    font-size: 1.6rem;
+    padding: 1em 2em;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    @media screen and (min-width: b.$medium) {
+      font-size: 1.8rem;
+    }
+  }
+}
