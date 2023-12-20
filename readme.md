@@ -16,3 +16,4 @@ Here you can find a showcase of my front-end skills. This collection features my
 - Testimonials grid section - [Repository](./Junior/testimonials-grid-section/) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Junior/testimonials-grid-section/)
 - Fylo data storage component - [Repository](./Junior/fylo-data-storage-component/) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Junior/fylo-data-storage-component/)
 - Clipboard landing page - [Repository](./Junior/clipboard-landing-page/) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Junior/clipboard-landing-page/)
+- Huddle landing page - [Repository](./Junior/huddle-landing-page-with-alternating-feature-blocks) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Junior/huddle-landing-page-with-alternating-feature-blocks/dist/)
