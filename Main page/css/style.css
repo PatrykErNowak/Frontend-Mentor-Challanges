@@ -274,6 +274,10 @@ main {
 .solution__tech-item .icon {
   width: 4.5rem;
   height: 4.5rem;
+  transition: transform 0.4s ease-in-out;
+}
+.solution__tech-item .icon:hover {
+  transform: scale(1.2);
 }
 .solution__btns {
   display: flex;
