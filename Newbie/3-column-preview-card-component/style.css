@@ -28,6 +28,10 @@ body {
   color: var(--paragraph);
 }
 
+a {
+  text-decoration: none;
+}
+
 .cards {
   display: flex;
   flex-direction: column;
