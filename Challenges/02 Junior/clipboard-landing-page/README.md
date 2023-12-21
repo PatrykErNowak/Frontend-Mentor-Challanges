@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](../../Photos%20of%20Challenges/junior/clipboard%20landing%20page.jpg)
+![](../../../Main%20page/img/Photos%20of%20Challenges/02%20junior/clipboard%20landing%20page.jpg)
 
 ### Links
 

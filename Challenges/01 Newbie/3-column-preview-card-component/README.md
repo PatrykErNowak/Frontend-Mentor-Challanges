@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](../../Photos%20of%20Challenges/newbie/3%20column%20card%20preview.jpg)
+![](../../../Main%20page/img/Photos%20of%20Challenges/01%20newbie/3%20column%20card%20preview.jpg)
 
 ### Links
 

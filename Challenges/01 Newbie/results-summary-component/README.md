@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](../../Photos%20of%20Challenges/newbie/results%20summary%20component.jpg)
+![](../../../Main%20page/img/Photos%20of%20Challenges/01%20newbie/results%20summary%20component.jpg)
 
 ### Links
 
