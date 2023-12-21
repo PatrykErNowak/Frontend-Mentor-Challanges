@@ -1,0 +1,25 @@
+@use "../abstracts/colors" as c;
+
+$font-family: "Rubik", sans-serif;
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $font-family;
+}
+
+h1 {
+  color: c.$main-heading;
+}
+
+p {
+  color: c.$paragraph;
+}

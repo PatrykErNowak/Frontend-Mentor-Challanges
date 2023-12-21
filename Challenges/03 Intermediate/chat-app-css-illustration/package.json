@@ -1,0 +1,32 @@
+{
+  "name": "chat-app-illustration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "makeFiles": "mkdir src dist && mkdir src\\js src\\sass src\\img src\\html && npx touch src\\index.html src\\scss\\main.scss src\\js\\main.js",
+    "mkSass": "mkdir  src\\sass && mkdir src\\sass\\abstracts src\\sass\\base src\\sass\\layout src\\sass\\components && npx touch src\\sass\\main.scss src\\sass\\abstracts\\_index.scss src\\sass\\base\\_index.scss src\\sass\\layout\\_index.scss src\\sass\\components\\_index.scss"
+  },
+  "keywords": [],
+  "author": "pendev",
+  "license": "ISC",
+  "browserslist": [
+    "defaults and fully supports es6-module",
+    "maintained node versions"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.69.5"
+  }
+}

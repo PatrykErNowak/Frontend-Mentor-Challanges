@@ -1,0 +1,9 @@
+@use "../abstracts/colors" as c;
+
+.app {
+  margin: 0 auto;
+  padding: 1em;
+  width: calc(100% - 10rem);
+  border-radius: 40px; // TODO set variabale
+  background-color: c.$white;
+}
