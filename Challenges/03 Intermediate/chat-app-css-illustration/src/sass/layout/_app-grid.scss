@@ -1,9 +1,16 @@
 @use "../abstracts/colors" as c;
+@use "../abstracts/variables" as v;
 
 .app {
   margin: 0 auto;
-  padding: 1em;
-  width: calc(100% - 10rem);
-  border-radius: 40px; // TODO set variabale
+  padding: 1.2rem;
+  max-width: 38rem;
+  border-radius: v.$border-radius;
   background-color: c.$white;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+
+  &__app-window {
+    background-color: c.$app-background;
+    border-radius: calc(v.$border-radius - 0.5rem);
+  }
 }

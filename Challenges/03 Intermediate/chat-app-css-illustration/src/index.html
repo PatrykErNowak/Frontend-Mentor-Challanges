@@ -20,49 +20,68 @@
 
 <body>
 
-  <header class="header">
-    <h1>Simple booking</h1>
-    <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to
-      discuss arrangements and make bookings. Once the walk has been completed you can rate
-      your walker and book again all through the chat.</p>
-  </header>
+  <div class="container">
 
-  <div class="app">
-
-    <header class="app__user-interface">
-      <a class="app__go-back-btn">
-        <svg class="icon">
-          <use xlink:href="./img/icons/sprite.svg#arrow-left"></use>
-        </svg></a>
-      <img src="./img/avatar.jpg" alt="" class="app__user-avatar">
-      <p class="app__username">Samuel Green</p>
-      <p class="app__user-status">Available to Walk</p>
-      <button class="app__settings-btn">
-        <svg class="icon">
-          <use xlink:href="./img/icons/sprite.svg#settings"></use>
-        </svg></button>
+    <header class="header">
+      <h1>Simple booking</h1>
+      <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to
+        discuss arrangements and make bookings. Once the walk has been completed you can rate
+        your walker and book again all through the chat.</p>
     </header>
 
-    <div class="app__chat-window">
-      <p class="app__msg app__msg--user">That sounds great. I’d be happy with that.</p>
-      <p class="app__msg app__msg--user">Could you send over some pictures of your dog, please?</p>
-      <div class="app__msg-imgs app__msg-imgs--client">
-        <img src="./img/dog-image-1.jpg" alt="">
-        <img src="./img/dog-image-2.jpg" alt="">
-        <img src="./img/dog-image-3.jpg" alt="">
+    <div class="app">
+      <div class="app__app-window">
+        <header class="app__user-interface">
+          <a class="app__go-back-btn">
+            <svg class="icon">
+              <use xlink:href="./img/icons/sprite.svg#arrow-left"></use>
+            </svg></a>
+          <img src="./img/avatar.jpg" alt="" class="app__user-avatar">
+          <p class="app__username">Samuel Green</p>
+          <p class="app__user-status">Available to Walk</p>
+          <button class="app__settings-btn">
+            <svg class="icon">
+              <use xlink:href="./img/icons/sprite.svg#settings"></use>
+            </svg></button>
+        </header>
+
+        <div class="app__chat-window">
+          <p class="app__msg app__msg--user">That sounds great. I’d be happy with that.</p>
+          <p class="app__msg app__msg--user">Could you send over some pictures of your dog, please?</p>
+          <div class="app__msg-imgs app__msg-imgs--client">
+            <img src="./img/dog-image-1.jpg" alt="">
+            <img src="./img/dog-image-2.jpg" alt="">
+            <img src="./img/dog-image-3.jpg" alt="">
+          </div>
+          <p class="app__msg app__msg--client">Here are a few pictures. She’s a happy girl!</p>
+          <p class="app__msg app__msg--client">Can you make it?</p>
+          <p class="app__msg app__msg--user">She looks so happy! The time we discussed works. How long shall I take her
+            out
+            for?</p>
+
+          <form action="">
+            <fieldset class="app__offer-box" aria-label="Choose the length of the walk">
+              <label class="app__offer"><input class="app__offer-input" type="radio" name="walk" id="" value="30">30
+                minute
+                walk
+                <span>$29</span></label>
+              <label class="app__offer"><input class="app__offer-input" type="radio" name="walk" id="" value="60">1 hour
+                walk
+                <span>$49</span></label>
+            </fieldset>
+
+            <div class="app__send-msg-box">
+              <input class="app__send-msg" type="text" placeholder="Type a message…">
+              <button class="app__send-msg-btn" aria-label="Send message">
+                <svg aria-hidden="true">
+                  <use xlink:href="./img/icons/sprite.svg#arrow-right"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+
+        </div>
       </div>
-      <p class="app__msg app__msg--client">Here are a few pictures. She’s a happy girl!</p>
-      <p class="app__msg app__msg--client">Can you make it?</p>
-      <p class="app__msg app__msg--user">She looks so happy! The time we discussed works. How long shall I take her out
-        for?</p>
-
-      <fieldset class="app__offers-box" aria-label="Choose the length of the walk">
-        <label class="app__offer"><input type="radio" name="offer" id="" value="29">30 minute walk
-          <span>$29</span></label>
-        <label class="app__offer"><input type="radio" name="offer" id="" value="49">1 hour walk <span>$49</span></label>
-      </fieldset>
-
-      <input class="app__send-msg" type="text" placeholder="Type a message…">
 
     </div>
   </div>

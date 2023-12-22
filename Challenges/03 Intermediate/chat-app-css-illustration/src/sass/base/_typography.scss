@@ -18,8 +18,11 @@ body {
 
 h1 {
   color: c.$main-heading;
+  font-size: clamp(3.2rem, 2rem + 2vw, 4.5rem);
 }
 
-p {
+p:not(.app p) {
   color: c.$paragraph;
+  line-height: 1.7;
+  font-size: clamp(1.6rem, 1rem + 2vw, 1.8rem);
 }
