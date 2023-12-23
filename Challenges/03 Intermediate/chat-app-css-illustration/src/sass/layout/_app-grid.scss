@@ -1,5 +1,6 @@
 @use "../abstracts/colors" as c;
 @use "../abstracts/variables" as v;
+@use "../abstracts/animations" as *;
 
 .app {
   margin: 0 auto;
