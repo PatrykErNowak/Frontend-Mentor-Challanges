@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Junior/huddle-landing-page-with-alternating-feature-blocks/dist)
+- Live Site URL: [LIVE](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Junior/huddle-landing-page-with-alternating-feature-blocks/dist)
 
 ## My process
 

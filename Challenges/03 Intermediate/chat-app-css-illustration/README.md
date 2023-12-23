@@ -1,0 +1,48 @@
+# Frontend Mentor - Chat app CSS illustration solution
+
+This is a solution to the [Chat app CSS illustration challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/chat-app-css-illustration-O5auMkFqY). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the component depending on their device's screen size
+- **Bonus**: See the chat interface animate on the initial load
+
+### Screenshot
+
+![](../../../Main%20page/img/Photos%20of%20Challenges/03%20Intermediate/chat-app.jpg)
+
+### Links
+
+- Live Site URL: [LIVE](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/03%20Intermediate/chat-app-css-illustration/dist/)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- BEM methodology
+- [Sass](https://sass-lang.com)
+- [Gulp](https://gulpjs.com)
+
+## Author
+
+- Website - [www.pendev.me](https://www.pendev.me)
+- Frontend Mentor - [@PatrykErNowak](https://https://www.frontendmentor.io/profile/PatrykErNowak)
