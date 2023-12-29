@@ -10,6 +10,7 @@ Here you can find a showcase of my front-end skills. This collection features my
 
 - 3 column preview card component - [Repository](./Challenges/01%20Newbie/3-column-preview-card-component/) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/01%20Newbie/3-column-preview-card-component/)
 - Results summary component - [Repository](./Challenges/01%20Newbie/results-summary-component/) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/01%20Newbie/results-summary-component/)
+- FAQ Accordion component - [Repository](./Challenges/01%20Newbie/faq-accordion) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/01%20Newbie/faq-accordion/dist/)
 
 ### Junior:
 
