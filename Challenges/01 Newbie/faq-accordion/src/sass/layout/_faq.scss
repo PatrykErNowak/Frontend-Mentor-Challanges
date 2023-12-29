@@ -1,0 +1,113 @@
+@use "../abstracts/colors" as c;
+@use "../base/typography" as t;
+@use "../abstracts/breakpoints" as b;
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  width: calc(100% - 4rem);
+  max-width: 80rem;
+  background-color: c.$White;
+  border-radius: 1rem;
+
+  @media screen and (min-width: b.$medium) {
+    padding: 4rem 3rem;
+  }
+  @media screen and (min-width: b.$large) {
+    padding: 5rem 4rem;
+  }
+
+  // Component Header
+  &__title {
+    display: flex;
+    align-items: center;
+    .icon-star {
+      display: flex;
+      align-items: center;
+      margin-right: 1.5rem;
+      height: 0.8em;
+      width: 0.8em;
+    }
+  }
+  // Container of elements: QUESTON ; ANSWER
+  &__row {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid c.$secondary-light;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+    width: 100%;
+    text-align: start;
+    color: c.$primary-dark;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: map-get($map: t.$f-weight, $key: bold);
+    line-height: 1.3;
+    transition: color 0.3s;
+
+    &:hover,
+    &:focus {
+      color: c.$secondary-dark;
+    }
+
+    .icon {
+      flex-shrink: 0;
+      width: 3.5rem;
+      height: 3.5rem;
+      pointer-events: none;
+      transition: opacity 0.4s ease-in-out;
+      &--plus {
+        opacity: 1;
+      }
+      &--minus {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        opacity: 0;
+      }
+    }
+  }
+
+  &__answer {
+    color: c.$primary-tiny;
+    overflow: clip;
+    p {
+      padding: 1em 0;
+    }
+  }
+}
+// ------------------------------------------------
+// Styles for active state
+
+.faq__row .faq__answer {
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.faq__row--active {
+  .faq__question .icon {
+    &--plus {
+      opacity: 0;
+    }
+    &--minus {
+      opacity: 1;
+    }
+  }
+}

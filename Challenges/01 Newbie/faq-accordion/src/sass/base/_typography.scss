@@ -1,0 +1,33 @@
+@use "../abstracts/breakpoints" as b;
+
+$f-weight: (
+  "normal": 400,
+  "bold": 600,
+  "x-bold": 700,
+);
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Work Sans", sans-serif;
+}
+
+h2 {
+  font-size: clamp(3rem, 2rem + 2vw, 5rem);
+  font-weight: map-get($map: $f-weight, $key: x-bold);
+}
+
+h3 {
+  font-size: clamp(1.6rem, 1rem + 1vw, 2rem);
+}
+
+p {
+  font-size: clamp(1.4rem, 1rem + 1vw, 1.6rem);
+  line-height: 1.4;
+  @media screen and (min-width: b.$medium) {
+    line-height: 1.6;
+  }
+}
