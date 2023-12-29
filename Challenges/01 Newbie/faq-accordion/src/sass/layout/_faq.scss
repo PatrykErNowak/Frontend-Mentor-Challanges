@@ -12,6 +12,7 @@
   max-width: 80rem;
   background-color: c.$White;
   border-radius: 1rem;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
 
   @media screen and (min-width: b.$medium) {
     padding: 4rem 3rem;
