@@ -17,16 +17,28 @@ const plugins = Object.keys(allPlugins)
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{html,js,php}'],
-  darkMode: 'class',
+  // darkMode: 'class',
   theme: {
-    extend: {},
-    colors: {
-      primary: 'hsl(25, 97%, 53%)',
-      secondaryLight: 'hsl(213, 19%, 18%)',
-      secondaryDark: 'hsl(216, 12%, 8%)',
-      lightGray: 'hsl(217, 12%, 63%)',
-      mediumGray: 'hsl(216, 12%, 54%)',
+    extend: {
+      colors: {
+        primary: 'hsl(25, 97%, 53%)',
+        secondary: {
+          light: 'hsl(213, 19%, 18%)',
+          dark: 'hsl(216, 12%, 8%)',
+          darkGradient: '#171e28',
+          lightGradient: '#242a34',
+        },
+        tertiary: {
+          light: 'hsl(217, 12%, 63%)',
+          medium: 'hsl(216, 12%, 54%)',
+        },
+      },
+      backgroundImage: {
+        'gradient-radial':
+          'radial-gradient(ellipse at top, var(--tw-gradient-stops))',
+      },
     },
+
     fontFamily: {
       sans: ['Overpass', 'sans-serif'],
     },

@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .rating-circle {
+    @apply bg-secondary-light text-tertiary-medium flex size-11 items-center justify-center overflow-hidden rounded-full md:size-12;
+  }
+  .rating-radio {
+    @apply absolute bottom-0 left-0 right-0 top-0 h-full w-full cursor-pointer opacity-0;
+  }
+  .rating-radio-anime {
+    @apply hover:text-white  focus-within:text-white transition duration-300 focus-within:bg-primary hover:bg-primary;
+  }
+  .rating-label {
+    @apply flex size-full items-center justify-center;
+  }
+}
