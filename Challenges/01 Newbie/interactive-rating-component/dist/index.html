@@ -19,84 +19,125 @@
   <body
     class="bg-secondary-dark relative min-h-screen text-[0.9375rem] md:text-base"
   >
-    <form
-      action="#"
-      class="bg-gradient-radial from-secondary-lightGradient to-secondary-darkGradient absolute left-1/2 top-1/2 box-border flex w-[95%] max-w-[380px] -translate-x-1/2 -translate-y-1/2 flex-col items-start gap-3 rounded-2xl p-5 md:aspect-square md:gap-4 md:p-5"
+    <div
+      class="js--rate-us bg-gradient-radial from-secondary-lightGradient to-secondary-darkGradient absolute left-1/2 top-1/2 box-border aspect-square min-h-[22.5rem] w-[95%] max-w-[23.75rem] -translate-x-1/2 -translate-y-1/2 rounded-2xl p-5"
     >
-      <div class="rating-circle mb-4">
-        <img src="./img/icon-star.svg" alt="Gold Star" class="size-4" />
+      <!-- <form
+        action="#"
+        class="js--rating-form flex h-full flex-col items-start justify-center gap-3 md:gap-4"
+      >
+        <div class="rating-circle mb-4">
+          <img src="./img/icon-star.svg" alt="Gold Star" class="size-4" />
+        </div>
+        <h3 class="text-white text-[1.4rem] font-bold md:text-[1.6rem]">
+          How did we do?
+        </h3>
+        <p class="text-tertiary-medium text-[0.9em] md:text-[1em]">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+
+        <fieldset
+          aria-label="Rate us"
+          class="mb-4 mt-3 flex w-full justify-between"
+        >
+          <div class="rating-circle rating-radio-anime relative">
+            <input
+              type="radio"
+              name="rating"
+              id="s1"
+              class="rating-radio peer"
+            />
+            <label
+              for="s1"
+              class="rating-label peer-checked:bg-tertiary-medium peer-checked:text-white"
+              >1</label
+            >
+          </div>
+
+          <div class="rating-circle rating-radio-anime relative">
+            <input
+              type="radio"
+              name="rating"
+              id="s2"
+              class="rating-radio peer"
+            />
+            <label
+              for="s2"
+              class="rating-label peer-checked:bg-tertiary-medium peer-checked:text-white"
+              >2</label
+            >
+          </div>
+          <div class="rating-circle rating-radio-anime relative">
+            <input
+              type="radio"
+              name="rating"
+              id="s3"
+              class="rating-radio peer"
+            />
+            <label
+              for="s3"
+              class="rating-label peer-checked:bg-tertiary-medium peer-checked:text-white"
+              >3</label
+            >
+          </div>
+          <div class="rating-circle rating-radio-anime relative">
+            <input
+              type="radio"
+              name="rating"
+              id="s4"
+              class="rating-radio peer"
+            />
+            <label
+              for="s4"
+              class="rating-label peer-checked:bg-tertiary-medium peer-checked:text-white"
+              >4</label
+            >
+          </div>
+          <div class="rating-circle rating-radio-anime relative">
+            <input
+              type="radio"
+              name="rating"
+              id="s5"
+              class="rating-radio peer"
+            />
+            <label
+              for="s5"
+              class="rating-label peer-checked:bg-tertiary-medium peer-checked:text-white"
+              >5</label
+            >
+          </div>
+        </fieldset>
+
+        <button
+          class="text-white hover:bg-white focus:bg-white w-full rounded-full bg-primary py-3 uppercase tracking-widest outline-none transition duration-300 hover:text-primary focus:text-primary"
+        >
+          Submit
+        </button>
+      </form> -->
+
+      <div
+        class="js--rating-thankyou flex h-full flex-col items-center justify-center gap-5 text-center"
+      >
+        <div>
+          <img
+            src="./img/illustration-thank-you.svg"
+            alt="illustration thank you"
+          />
+        </div>
+        <div
+          class="bg-secondary-light rounded-full px-4 py-2 tracking-wider text-primary"
+        >
+          <p>
+            You selected <span class="js--rating-userrating">4</span> out of 5
+          </p>
+        </div>
+        <h3 class="text-white text-[1.4rem] md:text-[1.6rem]">Thank you!</h3>
+        <p class="text-tertiary-medium text-[0.9em] md:text-[1em]">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
       </div>
-      <h3 class="text-white text-[1.4rem] font-bold md:text-[1.6rem]">
-        How did we do?
-      </h3>
-      <p class="text-tertiary-medium text-[0.9em] md:text-[1em]">
-        Please let us know how we did with your support request. All feedback is
-        appreciated to help us improve our offering!
-      </p>
-
-      <fieldset
-        aria-label="Rate us"
-        class="mb-4 mt-3 flex w-full justify-between"
-      >
-        <div class="rating-circle rating-radio-anime relative">
-          <input type="radio" name="rating" id="s1" class="rating-radio peer" />
-          <label
-            for="s1"
-            class="rating-label peer-checked:bg-tertiary-medium peer-checked:text-white"
-            >1</label
-          >
-        </div>
-
-        <div class="rating-circle rating-radio-anime relative">
-          <input type="radio" name="rating" id="s2" class="rating-radio peer" />
-          <label
-            for="s2"
-            class="rating-label peer-checked:bg-tertiary-medium peer-checked:text-white"
-            >2</label
-          >
-        </div>
-        <div class="rating-circle rating-radio-anime relative">
-          <input type="radio" name="rating" id="s3" class="rating-radio peer" />
-          <label
-            for="s3"
-            class="rating-label peer-checked:bg-tertiary-medium peer-checked:text-white"
-            >3</label
-          >
-        </div>
-        <div class="rating-circle rating-radio-anime relative">
-          <input type="radio" name="rating" id="s4" class="rating-radio peer" />
-          <label
-            for="s4"
-            class="rating-label peer-checked:bg-tertiary-medium peer-checked:text-white"
-            >4</label
-          >
-        </div>
-        <div class="rating-circle rating-radio-anime relative">
-          <input type="radio" name="rating" id="s5" class="rating-radio peer" />
-          <label
-            for="s5"
-            class="rating-label peer-checked:bg-tertiary-medium peer-checked:text-white"
-            >5</label
-          >
-        </div>
-      </fieldset>
-
-      <button
-        class="text-white hover:bg-white focus:bg-white w-full rounded-full bg-primary py-3 uppercase tracking-widest outline-none transition duration-300 hover:text-primary focus:text-primary"
-      >
-        Submit
-      </button>
-    </form>
-
-    <template>
-      <!-- Thank you state start -->
-
-      You selected
-      <!-- Add rating here -->
-      out of 5 Thank you! We appreciate you taking the time to give a rating. If
-      you ever need more support, don’t hesitate to get in touch!
-
-      <!-- Thank you state end -->
-    </template>
+    </div>
   </body>
 </html>
