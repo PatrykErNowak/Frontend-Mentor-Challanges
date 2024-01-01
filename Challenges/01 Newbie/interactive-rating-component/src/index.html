@@ -15,6 +15,7 @@
     <title>Frontend Mentor | Interactive rating component</title>
 
     <link rel="stylesheet" href="./css/style.min.css" />
+    <script defer src="./js/script.min.js"></script>
   </head>
   <body
     class="bg-secondary-dark relative min-h-screen text-[0.9375rem] md:text-base"
@@ -22,7 +23,7 @@
     <div
       class="js--rate-us bg-gradient-radial from-secondary-lightGradient to-secondary-darkGradient absolute left-1/2 top-1/2 box-border aspect-square min-h-[22.5rem] w-[95%] max-w-[23.75rem] -translate-x-1/2 -translate-y-1/2 rounded-2xl p-5"
     >
-      <!-- <form
+      <form
         action="#"
         class="js--rating-form flex h-full flex-col items-start justify-center gap-3 md:gap-4"
       >
@@ -43,10 +44,11 @@
         >
           <div class="rating-circle rating-radio-anime relative">
             <input
+              value="1"
               type="radio"
               name="rating"
               id="s1"
-              class="rating-radio peer"
+              class="rating-radio js--rating-radio peer"
             />
             <label
               for="s1"
@@ -57,10 +59,11 @@
 
           <div class="rating-circle rating-radio-anime relative">
             <input
+              value="2"
               type="radio"
               name="rating"
               id="s2"
-              class="rating-radio peer"
+              class="rating-radio js--rating-radio peer"
             />
             <label
               for="s2"
@@ -70,10 +73,11 @@
           </div>
           <div class="rating-circle rating-radio-anime relative">
             <input
+              value="3"
               type="radio"
               name="rating"
               id="s3"
-              class="rating-radio peer"
+              class="rating-radio js--rating-radio peer"
             />
             <label
               for="s3"
@@ -83,10 +87,11 @@
           </div>
           <div class="rating-circle rating-radio-anime relative">
             <input
+              value="4"
               type="radio"
               name="rating"
               id="s4"
-              class="rating-radio peer"
+              class="rating-radio js--rating-radio peer"
             />
             <label
               for="s4"
@@ -96,10 +101,11 @@
           </div>
           <div class="rating-circle rating-radio-anime relative">
             <input
+              value="5"
               type="radio"
               name="rating"
               id="s5"
-              class="rating-radio peer"
+              class="rating-radio js--rating-radio peer"
             />
             <label
               for="s5"
@@ -110,14 +116,14 @@
         </fieldset>
 
         <button
-          class="text-white hover:bg-white focus:bg-white w-full rounded-full bg-primary py-3 uppercase tracking-widest outline-none transition duration-300 hover:text-primary focus:text-primary"
+          class="text-white hover:bg-white focus:bg-white js--rating-btn w-full rounded-full bg-primary py-3 uppercase tracking-widest outline-none transition duration-300 hover:text-primary focus:text-primary"
         >
           Submit
         </button>
-      </form> -->
+      </form>
 
       <div
-        class="js--rating-thankyou flex h-full flex-col items-center justify-center gap-5 text-center"
+        class="js--rating-thankyou hidden h-full flex-col items-center justify-center gap-5 text-center"
       >
         <div>
           <img
