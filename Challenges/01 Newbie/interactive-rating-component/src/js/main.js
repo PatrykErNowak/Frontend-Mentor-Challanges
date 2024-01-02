@@ -17,6 +17,7 @@ const state = {
 const loadingStateElement = `      
 <svg
 class="text-tertiary-medium h-11 w-11 animate-spin js--loading"
+aria-label="Loading data, please wait"
 xmlns="http://www.w3.org/2000/svg"
 fill="none"
 viewBox="0 0 24 24"
