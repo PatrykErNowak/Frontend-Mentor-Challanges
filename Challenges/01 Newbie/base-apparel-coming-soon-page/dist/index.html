@@ -30,29 +30,50 @@
     <main>
       <div class="landing">
         <div class="landing__logo-box">
-          <img src="./img/logo.svg" alt="Base Apparek Logo" />
+          <a href="#">
+            <img src="./img/logo.svg" alt="Base Apparel Logo" />
+          </a>
         </div>
         <div class="landing__hero-box">
-          <img
-            src="./img/hero-mobile.jpg"
-            alt="Young woman with orange shirt looking at you"
-          />
+          <picture>
+            <source media="(max-width: 768px)" srcset="./img/hero-mobile.jpg" />
+            <source
+              media="(min-width: 768px)"
+              srcset="./img/hero-desktop.jpg"
+            />
+            <img
+              src="./img/hero-mobile.jpg"
+              alt="Young woman with orange shirt looking at you"
+            />
+          </picture>
         </div>
-        <h1 class="landing__heading"><span>We're</span> coming soon</h1>
-        <p class="landing__desc">
-          Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our
-          launch deals.
-        </p>
-        <form action="#">
-          <input
-            class="landing__input-email"
-            type="email"
-            name="email"
-            placeholder="Email Address"
-          />
-          <button class="landing__btn-email">&rsaquo;</button>
-        </form>
+        <div class="landing__content-box">
+          <h1 class="landing__heading">
+            <span>We're</span><br />
+            coming <br />
+            soon
+          </h1>
+          <p class="landing__desc">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+          <form action="#" class="landing__form" aria-label="Provide email ">
+            <input
+              class="landing__input-email"
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+            <p class="landing__error-msg">Please provide a valid email</p>
+            <button class="landing__btn-email" aria-label="Submit">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </main>
   </body>

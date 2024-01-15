@@ -1,0 +1,151 @@
+@use '../abstracts/colors' as c;
+@use '../abstracts/breakpoints' as b;
+
+$error-color: #f44336;
+
+.landing {
+  &__logo-box {
+    padding: 3rem;
+    width: 16rem;
+  }
+
+  &__hero-box {
+    width: 100%;
+  }
+  &__content-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 6rem 2.2rem 8rem;
+    text-align: center;
+  }
+
+  &__form {
+    position: relative;
+    margin-top: 2rem;
+  }
+
+  &__input-email {
+    padding: 1.5rem 2rem;
+    width: 100%;
+    color: inherit;
+    border-radius: 100rem;
+    border: 1px solid c.$primary;
+
+    &::placeholder {
+      color: inherit;
+      opacity: 0.8;
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid c.$primary;
+      outline: none;
+    }
+  }
+  &__btn-email {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 2.5rem;
+    height: 100%;
+    font-size: 1rem;
+    // background: c.$bg-gradient-2;
+    background: linear-gradient(90deg, hsl(0, 80%, 86%), transparent)
+      hsl(0, 74%, 74%);
+    border-radius: 100rem;
+    border: 1px solid transparent;
+    box-shadow: 0 20px 20px rgba($color: c.$primary, $alpha: 0.4);
+    cursor: pointer;
+    transition: background 0.5s ease-in-out;
+
+    .icon {
+      width: 1.4rem;
+      height: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: hsl(0, 80%, 86%);
+    }
+  }
+
+  // All styles for large screen
+  @media screen and (min-width: b.$medium) {
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+
+    &__logo-box {
+      margin-left: 25%;
+      padding: 8% 0 0;
+    }
+
+    &__hero-box {
+      grid-column: 2/3;
+      grid-row: 1/-1;
+      img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &__content-box {
+      justify-content: center;
+      padding: 5% 25%;
+      text-align: start;
+      gap: 4%;
+      background-image: url('../../img/bg-pattern-desktop.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &__input-email {
+      padding: 1.8rem 2.5rem;
+    }
+
+    &__btn-email {
+      padding: 0 3.5rem;
+    }
+  }
+}
+
+// Form Error state
+
+.landing__error-msg {
+  display: none;
+}
+
+.landing__form.invalid {
+  &::before {
+    content: url(../../img/icon-error.svg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .landing__input-email {
+    border: 1px solid $error-color;
+  }
+
+  .landing__error-msg {
+    display: block;
+    position: absolute;
+    bottom: -3rem;
+    left: 0;
+    padding-left: 2rem;
+    font-size: 0.8em;
+    color: $error-color;
+  }
+  @media screen and (min-width: b.$medium) {
+    .landing__error-msg {
+      padding-left: 2.5rem;
+    }
+  }
+}

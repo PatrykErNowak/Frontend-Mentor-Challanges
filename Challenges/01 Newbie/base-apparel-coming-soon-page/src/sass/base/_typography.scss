@@ -1,3 +1,6 @@
+@use '../abstracts/colors' as c;
+@use '../abstracts/breakpoints' as b;
+
 $font-weight: (
   'light': 300,
   'regular': 400,
@@ -11,4 +14,29 @@ html {
 body {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.6rem;
+  color: c.$primary;
+}
+
+h1 {
+  font-size: clamp(4rem, 2rem + 2vw, 7rem);
+  color: c.$grey;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  line-height: 1.1;
+  span {
+    font-weight: map-get($map: $font-weight, $key: light);
+    color: c.$primary;
+  }
+
+  @media screen and (min-width: b.$medium) {
+    letter-spacing: 1.4rem;
+  }
+}
+
+p {
+  font-size: clamp(1.5rem, 1rem + 1vw, 1.6rem);
+  line-height: 1.4;
+  @media screen and (min-width: b.$medium) {
+    line-height: 1.8;
+  }
 }
