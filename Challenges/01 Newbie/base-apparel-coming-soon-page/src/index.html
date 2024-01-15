@@ -27,17 +27,33 @@
     <script defer src="./js/script.min.js"></script>
   </head>
   <body>
-    We're coming soon Hello fellow shoppers! We're currently building our new
-    fashion store. Add your email below to stay up-to-date with announcements
-    and our launch deals. Email Address
-
-    <footer>
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </p>
-    </footer>
+    <main>
+      <div class="landing">
+        <div class="landing__logo-box">
+          <img src="./img/logo.svg" alt="Base Apparek Logo" />
+        </div>
+        <div class="landing__hero-box">
+          <img
+            src="./img/hero-mobile.jpg"
+            alt="Young woman with orange shirt looking at you"
+          />
+        </div>
+        <h1 class="landing__heading"><span>We're</span> coming soon</h1>
+        <p class="landing__desc">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <form action="#">
+          <input
+            class="landing__input-email"
+            type="email"
+            name="email"
+            placeholder="Email Address"
+          />
+          <button class="landing__btn-email">&rsaquo;</button>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
