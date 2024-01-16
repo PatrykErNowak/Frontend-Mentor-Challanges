@@ -36,7 +36,7 @@
         </div>
         <div class="landing__hero-box">
           <picture>
-            <source media="(max-width: 768px)" srcset="./img/hero-mobile.jpg" />
+            <source media="(max-width: 767px)" srcset="./img/hero-mobile.jpg" />
             <source
               media="(min-width: 768px)"
               srcset="./img/hero-desktop.jpg"
@@ -58,7 +58,11 @@
             store. Add your email below to stay up-to-date with announcements
             and our launch deals.
           </p>
-          <form action="#" class="landing__form" aria-label="Provide email ">
+          <form
+            action="#"
+            class="landing__form js-landing__form"
+            aria-label="Provide email "
+          >
             <input
               class="landing__input-email"
               type="email"
@@ -66,7 +70,9 @@
               placeholder="Email Address"
               required
             />
-            <p class="landing__error-msg">Please provide a valid email</p>
+            <p id="error-msg" class="landing__error-msg">
+              Please provide a valid email
+            </p>
             <button class="landing__btn-email" aria-label="Submit">
               <svg class="icon" aria-hidden="true">
                 <use xlink:href="./img/sprite.svg#icon-arrow"></use>

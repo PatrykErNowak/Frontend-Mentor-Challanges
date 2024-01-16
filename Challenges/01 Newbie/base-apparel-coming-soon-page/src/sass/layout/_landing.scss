@@ -1,8 +1,6 @@
 @use '../abstracts/colors' as c;
 @use '../abstracts/breakpoints' as b;
 
-$error-color: #f44336;
-
 .landing {
   &__logo-box {
     padding: 3rem;
@@ -40,7 +38,7 @@ $error-color: #f44336;
     &:hover,
     &:focus {
       border: 1px solid c.$primary;
-      outline: none;
+      outline: 2px solid c.$primary;
     }
   }
   &__btn-email {
@@ -67,6 +65,7 @@ $error-color: #f44336;
     &:hover,
     &:focus {
       background-color: hsl(0, 80%, 86%);
+      outline: 2px solid c.$primary;
     }
   }
 
@@ -131,7 +130,7 @@ $error-color: #f44336;
   }
 
   .landing__input-email {
-    border: 1px solid $error-color;
+    border: 1px solid c.$error;
   }
 
   .landing__error-msg {
@@ -141,11 +140,70 @@ $error-color: #f44336;
     left: 0;
     padding-left: 2rem;
     font-size: 0.8em;
-    color: $error-color;
+    color: c.$error;
   }
   @media screen and (min-width: b.$medium) {
     .landing__error-msg {
       padding-left: 2.5rem;
     }
+  }
+}
+
+// Popup Succes
+.popup-succes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 4rem;
+  width: max-content;
+  background-color: rgba($color: #fff, $alpha: 0.98);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  animation-name: fade-in;
+  animation-duration: 500ms;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    color: c.$error;
+    font-size: 1.2rem;
+    border-color: transparent;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.5);
+      outline: none;
+    }
+  }
+
+  @media screen and (min-width: b.$medium) {
+    padding: 5rem;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

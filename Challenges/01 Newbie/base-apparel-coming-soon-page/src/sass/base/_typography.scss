@@ -23,6 +23,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 1rem;
   line-height: 1.1;
+
   span {
     font-weight: map-get($map: $font-weight, $key: light);
     color: c.$primary;
