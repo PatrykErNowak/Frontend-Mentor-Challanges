@@ -12,6 +12,7 @@ Here you can find a showcase of my front-end skills. This collection features my
 - Results summary component - [Repository](./Challenges/01%20Newbie/results-summary-component/) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/01%20Newbie/results-summary-component/)
 - FAQ Accordion component - [Repository](./Challenges/01%20Newbie/faq-accordion) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/01%20Newbie/faq-accordion/dist/)
 - Interactive rating component - [Repository](./Challenges/01%20Newbie/interactive-rating-component) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/01%20Newbie/interactive-rating-component/dist/)
+- Base Apparel - [Repository](./Challenges/01%20Newbie/base-apparel-coming-soon-page) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/01%20Newbie/base-apparel-coming-soon-page/dist/)
 
 ### Junior:
 
