@@ -72,16 +72,23 @@ $intermediate: rgb(241, 182, 4);
   }
 
   &__level {
-    position: absolute;
-    top: 0;
-    right: 0;
     display: flex;
     align-items: center;
-    margin: 1.5em;
-    font-size: 0.9em;
+    margin: 0.5em auto;
+    width: max-content;
+    font-size: 0.7em;
     font-weight: bold;
     border: 1px solid transparent;
     border-radius: 0.5rem;
+    @media (min-width: b.$large) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 2.4rem 1.6rem;
+    }
+    @media (min-width: b.$x-large) {
+      font-size: 0.9em;
+    }
 
     .numerical {
       display: flex;
