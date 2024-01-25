@@ -75,6 +75,8 @@ $intermediate: rgb(241, 182, 4);
     position: absolute;
     top: 0;
     right: 0;
+    display: flex;
+    align-items: center;
     margin: 1.5em;
     font-size: 0.9em;
     font-weight: bold;
@@ -82,14 +84,15 @@ $intermediate: rgb(241, 182, 4);
     border-radius: 0.5rem;
 
     .numerical {
-      display: inline-block;
-      text-align: center;
-      width: 1.5em;
-      height: 1.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.6em;
+      height: 1.6em;
       color: #fff;
     }
     .lexical {
-      padding: 0.2em 0.4em;
+      padding: 0 0.4em;
       text-transform: uppercase;
       text-align: center;
       background-color: transparent;
