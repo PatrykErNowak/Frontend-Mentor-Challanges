@@ -2,7 +2,12 @@
 const paths = {
   sass: './src/sass/**/*.scss',
   css: './dist/css',
-  js: ['./src/js/**/*.js', '!./src/js/modules/**/*.js'],
+  js: [
+    './src/js/data/*.js',
+    './src/js/components/*.js',
+    './src/js/*.js',
+    '!./src/js/modules/**/*.js',
+  ],
   jsDist: './dist/js',
   img: './src/img/**/*',
   imgDist: './dist/img',

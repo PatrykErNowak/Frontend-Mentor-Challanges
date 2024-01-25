@@ -1,8 +1,20 @@
+//array of levels
+const getNumericalLevel = function (level) {
+  const difficultyLevels = {
+    newbie: 1,
+    junior: 2,
+    intermediate: 3,
+    advanced: 4,
+  };
+
+  return difficultyLevels[level];
+};
+
 const createSolutionElement = function (solution) {
-  const { id, title, type, technologies, img, links } = solution;
+  const { id, title, type, level, technologies, img, links } = solution;
   const li = document.createElement('li');
 
-  const createTechItems = function (tech) {
+  const createTechIcons = function (tech) {
     const techItems = tech
       .map(
         (t) => `        
@@ -20,7 +32,7 @@ const createSolutionElement = function (solution) {
   };
 
   const html = `            
-  <article class="solution" data-id="${id}">
+  <div class="solution" data-id="${id}">
     <img
       src="${img.src}"
       alt="${img.alt}"
@@ -29,8 +41,13 @@ const createSolutionElement = function (solution) {
     <div class="solution__content">
       <h4 class="solution__title">${title}</h4>
       <p class="solution__type">${type}</p>
+        <div class="solution__level solution__level--${level}" aria-label="Difficulty level">
+          <span class="numerical">${getNumericalLevel(
+            level,
+          )}</span><span class="lexical">${level}</span>
+        </div>
       <ul class="solution__tech-list" aria-label="Technologies">
-          ${createTechItems(technologies)}
+          ${createTechIcons(technologies)}
       </ul>
       <div class="solution__btns">
         <a
@@ -47,7 +64,7 @@ const createSolutionElement = function (solution) {
         ></a>
       </div>
     </div>
-  </article>
+  </div>
 `;
 
   li.insertAdjacentHTML('afterbegin', html);

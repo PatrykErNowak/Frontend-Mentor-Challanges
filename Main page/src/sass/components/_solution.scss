@@ -1,0 +1,219 @@
+@use '../abstracts/colors' as c;
+@use '../abstracts/breakpoints' as b;
+
+// Local Variables
+$card-animation-duration: 0.5s;
+$card-additional-text: c.$paragraph;
+
+$newbie: rgb(106, 190, 205);
+$junior: rgb(170, 215, 66);
+$intermediate: rgb(241, 182, 4);
+
+.solution {
+  position: relative;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background-color: c.$solution-bg;
+  overflow: hidden;
+
+  @media (min-width: b.$large) {
+    text-align: start;
+    padding-bottom: 4em;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    width: 100%;
+
+    @media (min-width: b.$large) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(68%);
+      margin-bottom: 0;
+      background-color: rgba(240, 240, 240, 1);
+    }
+  }
+
+  // content childrens
+
+  &__title {
+    display: inline-block;
+    padding: 0 2em 0.2em;
+    font-family: 'Barlow', sans-serif;
+    font-size: 2rem;
+    color: #3e54a3;
+    font-weight: 700;
+    text-shadow: 0 5px 2rem rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #ddd;
+
+    @media (min-width: b.$large) {
+      padding: 0;
+      border-bottom: none;
+    }
+  }
+
+  &__type {
+    font-size: 1.3rem;
+    color: $card-additional-text;
+    @media (min-width: b.$large) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__level {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.5em;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+
+    .numerical {
+      display: inline-block;
+      text-align: center;
+      width: 1.5em;
+      height: 1.5em;
+      color: #fff;
+    }
+    .lexical {
+      padding: 0.2em 0.4em;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: transparent;
+    }
+
+    &--newbie {
+      border: 1px solid $newbie;
+      .numerical {
+        background-color: $newbie;
+      }
+      .lexical {
+        color: $newbie;
+      }
+    }
+    &--junior {
+      border: 1px solid $junior;
+      .numerical {
+        background-color: $junior;
+      }
+      .lexical {
+        color: $junior;
+      }
+    }
+    &--intermediate {
+      border: 1px solid $intermediate;
+      .numerical {
+        background-color: $intermediate;
+      }
+      .lexical {
+        color: $intermediate;
+      }
+    }
+  }
+
+  &__tech-list {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    position: relative;
+    margin: 1em 0;
+    padding-top: 1.3em;
+    list-style: none;
+
+    @media (min-width: b.$large) {
+      justify-content: flex-start;
+    }
+
+    &::before {
+      content: attr(aria-label);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.2rem;
+      color: $card-additional-text;
+      @media (min-width: b.$large) {
+        left: 0;
+        transform: translateX(0);
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  // icon selector
+  &__tech-item .icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    transition: transform 0.4s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5em;
+  }
+
+  &__btn {
+    padding: 0.5em 1em;
+  }
+}
+
+// --------------------------------------------------------------
+// Animations
+
+.solution {
+  @media (min-width: b.$large) {
+    &:hover &__content {
+      transform: translateY(0);
+      &::before {
+        transform: scaleX(1);
+        transform-origin: left;
+        transition: transform $card-animation-duration;
+      }
+    }
+
+    &:hover &__img {
+      transform: scale(1.2);
+    }
+  }
+
+  &__img {
+    transition: transform $card-animation-duration;
+  }
+  &__content {
+    transition: transform $card-animation-duration;
+
+    @media (min-width: b.$large) {
+      // Progress bar
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 5px;
+        width: 100%;
+        background-color: rgba(c.$primary, $alpha: 0.8);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform $card-animation-duration;
+      }
+    }
+  }
+}
