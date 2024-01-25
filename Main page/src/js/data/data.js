@@ -31,7 +31,7 @@ const solutions = [
       alt: 'Results summary component solution screenshot',
     },
     links: {
-      live: '../Challenges/01%20Newbie/results-summary-component/',
+      live: '../../Challenges/01%20Newbie/results-summary-component/',
       repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/01%20Newbie/results-summary-component',
     },
   },
@@ -49,7 +49,7 @@ const solutions = [
       alt: 'Testimonials grid section solution screenshot',
     },
     links: {
-      live: '../Challenges/02%20Junior/testimonials-grid-section/',
+      live: '../../Challenges/02%20Junior/testimonials-grid-section/',
       repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/02%20Junior/testimonials-grid-section',
     },
   },
@@ -67,7 +67,7 @@ const solutions = [
       alt: 'Fylo data storage component solution screenshot',
     },
     links: {
-      live: '../Challenges/02%20Junior/fylo-data-storage-component/',
+      live: '../../Challenges/02%20Junior/fylo-data-storage-component/',
       repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/02%20Junior/fylo-data-storage-component',
     },
   },
@@ -86,7 +86,7 @@ const solutions = [
       alt: 'Clipboard landing page solution screenshot',
     },
     links: {
-      live: '../Challenges/02%20Junior/clipboard-landing-page/',
+      live: '../../Challenges/02%20Junior/clipboard-landing-page/',
       repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/02%20Junior/clipboard-landing-page',
     },
   },
@@ -106,7 +106,7 @@ const solutions = [
       alt: 'Huddle landing page solution screenshot',
     },
     links: {
-      live: '../Challenges/02%20Junior/huddle-landing-page-with-alternating-feature-blocks/dist/',
+      live: '../../Challenges/02%20Junior/huddle-landing-page-with-alternating-feature-blocks/dist/',
       repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/02%20Junior/huddle-landing-page-with-alternating-feature-blocks/',
     },
   },
@@ -126,7 +126,7 @@ const solutions = [
       alt: 'Chat app illustration solution screenshot',
     },
     links: {
-      live: '../Challenges/03 Intermediate/chat-app-css-illustration/dist/',
+      live: '../../Challenges/03 Intermediate/chat-app-css-illustration/dist/',
       repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/03%20Intermediate/chat-app-css-illustration',
     },
   },
@@ -147,7 +147,7 @@ const solutions = [
       alt: 'FAQ accordion solution screenshot',
     },
     links: {
-      live: '../Challenges/01%20Newbie/faq-accordion/dist/',
+      live: '../../Challenges/01%20Newbie/faq-accordion/dist/',
       repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/01%20Newbie/faq-accordion',
     },
   },
@@ -168,7 +168,7 @@ const solutions = [
       alt: 'Interactive rating component solution screenshot',
     },
     links: {
-      live: '../Challenges/01%20Newbie/interactive-rating-component/dist/',
+      live: '../../Challenges/01%20Newbie/interactive-rating-component/dist/',
       repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/01%20Newbie/interactive-rating-component',
     },
   },
@@ -189,7 +189,7 @@ const solutions = [
       alt: 'Base apparel page solution screenshot',
     },
     links: {
-      live: '../Challenges/01%20Newbie/base-apparel-coming-soon-page/dist/',
+      live: '../../Challenges/01%20Newbie/base-apparel-coming-soon-page/dist/',
       repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/01%20Newbie/base-apparel-coming-soon-page',
     },
   },
