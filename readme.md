@@ -1,4 +1,4 @@
-Additionaly [**HERE**](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Main%20page) is a Web version of this _README_
+Additionaly [**HERE**](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Main%20page/dist) is a Web version of this _README_
 
 # Frontend Mentor Solutions
 
