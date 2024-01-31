@@ -5,7 +5,7 @@
 .age-calc {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 3.5rem;
   margin: 4rem 2rem;
   padding: 5rem 2rem;
   max-width: 80rem;
@@ -101,6 +101,32 @@
 
     .result {
       color: c.$primary;
+    }
+  }
+}
+
+// Error handling styles
+.age-calc {
+  &__inputs.invalid {
+    label {
+      color: c.$error;
+    }
+    input {
+      border-color: c.$error;
+    }
+  }
+
+  &__input-box {
+    position: relative;
+    .error-desc {
+      position: absolute;
+      top: 110%;
+      left: 0;
+      font-size: 1.1rem;
+      font-size: clamp(1.1rem, 0.6rem + 1vw, 1.3rem);
+      font-style: italic;
+      font-weight: map-get($map: t.$font-weights, $key: regular);
+      color: c.$error;
     }
   }
 }
