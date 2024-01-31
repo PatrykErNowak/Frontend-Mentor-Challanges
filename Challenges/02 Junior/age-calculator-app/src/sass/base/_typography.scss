@@ -1,0 +1,19 @@
+@use '../abstracts/colors' as c;
+
+$font-weights: (
+  regular: 400,
+  bold: 700,
+  x-bold: 800,
+);
+// + 400 & 800 italic
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+  color: c.$Off-black;
+  line-height: 1;
+}

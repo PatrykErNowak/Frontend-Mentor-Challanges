@@ -1,0 +1,91 @@
+@use '../abstracts/colors' as c;
+@use '../base/typography' as t;
+@use '../abstracts/breakpoints' as b;
+
+.age-calc {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 4rem 2rem;
+  padding: 5rem 2rem;
+  max-width: 80rem;
+  background: c.$White;
+  border-radius: 25px 25px 80px;
+  overflow: clip;
+  @media screen and (min-width: b.$medium) {
+    padding: 5rem 5rem;
+  }
+
+  &__inputs {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 55rem;
+  }
+
+  &__input-box {
+    label {
+      display: inline-block;
+      margin-bottom: 0.5em;
+      font-size: clamp(1.3rem, 1rem + 1vw, 1.5rem);
+      color: c.$Smokey-grey;
+      font-weight: map-get($map: t.$font-weights, $key: bold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    input {
+      padding: 0.5em 0.6em;
+      width: 100%;
+      font-size: 2.4rem;
+      font-size: clamp(1.8rem, 1.5rem + 1.2vw, 3.2rem);
+      font-weight: map-get($map: t.$font-weights, $key: bold);
+      border: 1px solid c.$Light-grey;
+      border-radius: 8px;
+    }
+  }
+  &__btn-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: b.$medium) {
+      justify-content: end;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: c.$Off-white;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: c.$primary;
+
+    svg {
+      width: 80%;
+    }
+  }
+
+  &__output {
+    display: block;
+    font-size: clamp(4rem, 3rem + 3vw, 6rem);
+    font-weight: map-get($map: t.$font-weights, $key: x-bold);
+    font-style: italic;
+    line-height: 1.2;
+
+    .result {
+      color: c.$primary;
+    }
+  }
+}
