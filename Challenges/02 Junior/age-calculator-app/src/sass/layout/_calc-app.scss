@@ -43,6 +43,15 @@
       font-weight: map-get($map: t.$font-weights, $key: bold);
       border: 1px solid c.$Light-grey;
       border-radius: 8px;
+      cursor: pointer;
+      outline: transparent;
+      transition: border-color 0.4s ease-in-out;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-color: c.$primary;
+      }
     }
   }
   &__btn-container {
@@ -71,6 +80,12 @@
     padding: 1rem;
     border-radius: 50%;
     background-color: c.$primary;
+    transition: background-color 0.4s ease-in-out;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: c.$Off-black;
+    }
 
     svg {
       width: 80%;
