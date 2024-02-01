@@ -193,4 +193,25 @@ const solutions = [
       repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/01%20Newbie/base-apparel-coming-soon-page',
     },
   },
+  {
+    id: 11,
+    title: 'Age Calculator',
+    type: 'App',
+    level: 'junior',
+    technologies: [
+      { name: 'html', icon: 'icon-html5' },
+      { name: 'css', icon: 'icon-css3' },
+      { name: 'javascript', icon: 'icon-js' },
+      { name: 'sass', icon: 'icon-sass' },
+      { name: 'gulp', icon: 'icon-gulp' },
+    ],
+    img: {
+      src: './img/Photos of Challenges/02 junior/age-calculator-app.jpg',
+      alt: 'Age calculator application solution screenshot',
+    },
+    links: {
+      live: '../../Challenges/02%20Junior/age-calculator-app/dist/',
+      repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/02%20Junior/age-calculator-app',
+    },
+  },
 ];
