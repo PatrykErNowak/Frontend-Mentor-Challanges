@@ -107,7 +107,8 @@
 
 // Error handling styles
 .age-calc {
-  &__inputs.invalid {
+  &.invalid,
+  &__input-box.invalid {
     label {
       color: c.$error;
     }
