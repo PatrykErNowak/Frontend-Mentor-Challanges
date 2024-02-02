@@ -23,8 +23,12 @@ const clearErrorMsgs = function () {
   const inputs = form.querySelectorAll('input');
 
   form.classList.remove('invalid');
+  form.removeAttribute('aria-invalid');
   inputs.forEach((el) => {
     const container = el.closest('.age-calc__input-box');
+
+    el.removeAttribute('aria-invalid');
+    el.removeAttribute('aria-describedby');
     container.classList.remove('invalid');
     container.querySelector('.error-desc')?.remove();
   });
@@ -36,6 +40,12 @@ const renderErrorMsg = function (element, msg, addInvalidClass = true) {
 
   p.classList.add('error-desc');
   p.textContent = msg;
+  p.setAttribute('id', `error-${element.getAttribute('id')}`);
+  element.setAttribute('aria-invalid', 'true');
+  element.setAttribute(
+    'aria-describedby',
+    `error-${element.getAttribute('id')}`,
+  );
   inputBox.append(p);
   if (addInvalidClass) inputBox.classList.add('invalid');
 };

@@ -40,7 +40,7 @@
   </head>
   <body>
     <form action="#" class="age-calc">
-      <div class="age-calc__inputs">
+      <fieldset class="age-calc__inputs" aria-label="Enter the date of birth">
         <div class="age-calc__input-box">
           <label for="form-day">Day</label>
           <input
@@ -68,9 +68,9 @@
             placeholder="YYYY"
           />
         </div>
-      </div>
+      </fieldset>
       <div class="age-calc__btn-container">
-        <button class="age-calc__btn">
+        <button class="age-calc__btn" aria-label="Press to calculate the age">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="46"
@@ -90,6 +90,7 @@
         class="age-calc__output"
         name="result"
         for="form-day form-month form-year"
+        aria-label="Calculated age"
       >
         <p><span class="result" id="output-years">--</span> years</p>
         <p><span class="result" id="output-months">--</span> months</p>
