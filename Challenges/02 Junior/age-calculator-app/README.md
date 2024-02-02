@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/02%20junior/age-calculator-app/dist)
+- Live Site URL: [LIVE](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/02%20Junior/age-calculator-app/dist/)
 
 ## My process
 
