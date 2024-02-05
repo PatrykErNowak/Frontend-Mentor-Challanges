@@ -5,8 +5,8 @@ const solutions = [
     type: 'Component',
     level: 'newbie',
     technologies: [
-      { name: 'html', icon: 'icon-html5' },
-      { name: 'css', icon: 'icon-css3' },
+      { type: 'svg', name: 'html', icon: 'icon-html5' },
+      { type: 'svg', name: 'css', icon: 'icon-css3' },
     ],
     img: {
       src: './img/Photos of Challenges/01 newbie/3 column card preview.jpg',
@@ -23,8 +23,8 @@ const solutions = [
     type: 'Component',
     level: 'newbie',
     technologies: [
-      { name: 'html', icon: 'icon-html5' },
-      { name: 'css', icon: 'icon-css3' },
+      { type: 'svg', name: 'html', icon: 'icon-html5' },
+      { type: 'svg', name: 'css', icon: 'icon-css3' },
     ],
     img: {
       src: './img/Photos of Challenges/01 newbie/results summary component.jpg',
@@ -41,8 +41,8 @@ const solutions = [
     type: 'Section',
     level: 'junior',
     technologies: [
-      { name: 'html', icon: 'icon-html5' },
-      { name: 'css', icon: 'icon-css3' },
+      { type: 'svg', name: 'html', icon: 'icon-html5' },
+      { type: 'svg', name: 'css', icon: 'icon-css3' },
     ],
     img: {
       src: './img/Photos of Challenges/02 junior/testimonials grid section.jpg',
@@ -59,8 +59,8 @@ const solutions = [
     type: 'Component',
     level: 'junior',
     technologies: [
-      { name: 'html', icon: 'icon-html5' },
-      { name: 'css', icon: 'icon-css3' },
+      { type: 'svg', name: 'html', icon: 'icon-html5' },
+      { type: 'svg', name: 'css', icon: 'icon-css3' },
     ],
     img: {
       src: './img/Photos of Challenges/02 junior/fylo data storage component.jpg',
@@ -77,9 +77,9 @@ const solutions = [
     type: 'Landing page',
     level: 'junior',
     technologies: [
-      { name: 'html', icon: 'icon-html5' },
-      { name: 'css', icon: 'icon-css3' },
-      { name: 'sass', icon: 'icon-sass' },
+      { type: 'svg', name: 'html', icon: 'icon-html5' },
+      { type: 'svg', name: 'css', icon: 'icon-css3' },
+      { type: 'svg', name: 'sass', icon: 'icon-sass' },
     ],
     img: {
       src: './img/Photos of Challenges/02 junior/clipboard landing page.jpg',
@@ -96,10 +96,10 @@ const solutions = [
     type: 'Landing page',
     level: 'junior',
     technologies: [
-      { name: 'html', icon: 'icon-html5' },
-      { name: 'css', icon: 'icon-css3' },
-      { name: 'sass', icon: 'icon-sass' },
-      { name: 'gulp', icon: 'icon-gulp' },
+      { type: 'svg', name: 'html', icon: 'icon-html5' },
+      { type: 'svg', name: 'css', icon: 'icon-css3' },
+      { type: 'svg', name: 'sass', icon: 'icon-sass' },
+      { type: 'svg', name: 'gulp', icon: 'icon-gulp' },
     ],
     img: {
       src: './img/Photos of Challenges/02 junior/huddle ladning page.jpg',
@@ -116,10 +116,10 @@ const solutions = [
     type: 'Illustration',
     level: 'intermediate',
     technologies: [
-      { name: 'html', icon: 'icon-html5' },
-      { name: 'css', icon: 'icon-css3' },
-      { name: 'sass', icon: 'icon-sass' },
-      { name: 'gulp', icon: 'icon-gulp' },
+      { type: 'svg', name: 'html', icon: 'icon-html5' },
+      { type: 'svg', name: 'css', icon: 'icon-css3' },
+      { type: 'svg', name: 'sass', icon: 'icon-sass' },
+      { type: 'svg', name: 'gulp', icon: 'icon-gulp' },
     ],
     img: {
       src: './img/Photos of Challenges/03 Intermediate/chat-app.jpg',
@@ -136,11 +136,11 @@ const solutions = [
     type: 'Component',
     level: 'newbie',
     technologies: [
-      { name: 'html', icon: 'icon-html5' },
-      { name: 'css', icon: 'icon-css3' },
-      { name: 'javascript', icon: 'icon-js' },
-      { name: 'sass', icon: 'icon-sass' },
-      { name: 'gulp', icon: 'icon-gulp' },
+      { type: 'svg', name: 'html', icon: 'icon-html5' },
+      { type: 'svg', name: 'css', icon: 'icon-css3' },
+      { type: 'svg', name: 'javascript', icon: 'icon-js' },
+      { type: 'svg', name: 'sass', icon: 'icon-sass' },
+      { type: 'svg', name: 'gulp', icon: 'icon-gulp' },
     ],
     img: {
       src: './img/Photos of Challenges/01 newbie/faq-accordion.jpg',
@@ -157,11 +157,11 @@ const solutions = [
     type: 'Component',
     level: 'newbie',
     technologies: [
-      { name: 'html', icon: 'icon-html5' },
-      { name: 'css', icon: 'icon-css3' },
-      { name: 'javascript', icon: 'icon-js' },
-      { name: 'tailwindcss', icon: 'icon-tailwindcss' },
-      { name: 'gulp', icon: 'icon-gulp' },
+      { type: 'svg', name: 'html', icon: 'icon-html5' },
+      { type: 'svg', name: 'css', icon: 'icon-css3' },
+      { type: 'svg', name: 'javascript', icon: 'icon-js' },
+      { type: 'svg', name: 'tailwindcss', icon: 'icon-tailwindcss' },
+      { type: 'svg', name: 'gulp', icon: 'icon-gulp' },
     ],
     img: {
       src: './img/Photos of Challenges/01 newbie/interactive-rating-component.jpg',
@@ -178,11 +178,11 @@ const solutions = [
     type: 'Landing page',
     level: 'newbie',
     technologies: [
-      { name: 'html', icon: 'icon-html5' },
-      { name: 'css', icon: 'icon-css3' },
-      { name: 'javascript', icon: 'icon-js' },
-      { name: 'sass', icon: 'icon-sass' },
-      { name: 'gulp', icon: 'icon-gulp' },
+      { type: 'svg', name: 'html', icon: 'icon-html5' },
+      { type: 'svg', name: 'css', icon: 'icon-css3' },
+      { type: 'svg', name: 'javascript', icon: 'icon-js' },
+      { type: 'svg', name: 'sass', icon: 'icon-sass' },
+      { type: 'svg', name: 'gulp', icon: 'icon-gulp' },
     ],
     img: {
       src: './img/Photos of Challenges/01 newbie/base-apparel-page.jpg',
@@ -199,11 +199,11 @@ const solutions = [
     type: 'App',
     level: 'junior',
     technologies: [
-      { name: 'html', icon: 'icon-html5' },
-      { name: 'css', icon: 'icon-css3' },
-      { name: 'javascript', icon: 'icon-js' },
-      { name: 'sass', icon: 'icon-sass' },
-      { name: 'gulp', icon: 'icon-gulp' },
+      { type: 'svg', name: 'html', icon: 'icon-html5' },
+      { type: 'svg', name: 'css', icon: 'icon-css3' },
+      { type: 'svg', name: 'javascript', icon: 'icon-js' },
+      { type: 'svg', name: 'sass', icon: 'icon-sass' },
+      { type: 'svg', name: 'gulp', icon: 'icon-gulp' },
     ],
     img: {
       src: './img/Photos of Challenges/02 junior/age-calculator-app.jpg',
@@ -214,4 +214,25 @@ const solutions = [
       repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/02%20Junior/age-calculator-app',
     },
   },
+  // {
+  //   id: 12,
+  //   title: 'TEST',
+  //   type: 'App',
+  //   level: 'junior',
+  //   technologies: [
+  //     { type: 'svg', name: 'html', icon: 'icon-html5' },
+  //     { type: 'svg', name: 'css', icon: 'icon-css3' },
+  //     { type: 'svg', name: 'javascript', icon: 'icon-js' },
+  //     { type: 'svg', name: 'sass', icon: 'icon-sass' },
+  //     { type: 'png', name: 'parcel', icon: 'icon-parcel' },
+  //   ],
+  //   img: {
+  //     src: './img/Photos of Challenges/02 junior/age-calculator-app.jpg',
+  //     alt: 'Age calculator application solution screenshot',
+  //   },
+  //   links: {
+  //     live: '../../Challenges/02%20Junior/age-calculator-app/dist/',
+  //     repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/02%20Junior/age-calculator-app',
+  //   },
+  // },
 ];

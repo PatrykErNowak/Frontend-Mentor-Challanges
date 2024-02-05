@@ -16,16 +16,22 @@ const createSolutionElement = function (solution) {
 
   const createTechIcons = function (tech) {
     const techItems = tech
-      .map(
-        (t) => `        
-    <li class="solution__tech-item">
-      <svg class="icon" aria-label="${t.name}" role="img">
-        <use
-          xlink:href="./img/tech-icons/sprite.svg#${t.icon}"
-        ></use>
-      </svg>
-    </li>`,
-      )
+      .map((t) => {
+        const other = `          
+          <li class="solution__tech-item">
+            <img class="icon" aria-label="${t.name}" src="./img/tech-icons/other/${t.icon}.${t.type}">
+          </li>`;
+        const svg = `        
+          <li class="solution__tech-item">
+            <svg class="icon" aria-label="${t.name}" role="img">
+            <use
+            xlink:href="./img/tech-icons/sprite.svg#${t.icon}"
+            ></use>
+            </svg>
+          </li>`;
+
+        return t.type === 'svg' ? svg : other;
+      })
       .join('\n');
 
     return techItems;
