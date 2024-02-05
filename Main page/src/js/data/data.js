@@ -214,25 +214,26 @@ const solutions = [
       repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/02%20Junior/age-calculator-app',
     },
   },
-  // {
-  //   id: 12,
-  //   title: 'TEST',
-  //   type: 'App',
-  //   level: 'junior',
-  //   technologies: [
-  //     { type: 'svg', name: 'html', icon: 'icon-html5' },
-  //     { type: 'svg', name: 'css', icon: 'icon-css3' },
-  //     { type: 'svg', name: 'javascript', icon: 'icon-js' },
-  //     { type: 'svg', name: 'sass', icon: 'icon-sass' },
-  //     { type: 'png', name: 'parcel', icon: 'icon-parcel' },
-  //   ],
-  //   img: {
-  //     src: './img/Photos of Challenges/02 junior/age-calculator-app.jpg',
-  //     alt: 'Age calculator application solution screenshot',
-  //   },
-  //   links: {
-  //     live: '../../Challenges/02%20Junior/age-calculator-app/dist/',
-  //     repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/02%20Junior/age-calculator-app',
-  //   },
-  // },
+  {
+    id: 12,
+    title: 'Advice Generator',
+    type: 'App',
+    level: 'junior',
+    technologies: [
+      { type: 'svg', name: 'html', icon: 'icon-html5' },
+      { type: 'svg', name: 'css', icon: 'icon-css3' },
+      { type: 'svg', name: 'javascript', icon: 'icon-js' },
+      { type: 'svg', name: 'sass', icon: 'icon-sass' },
+      { type: 'png', name: 'parcel', icon: 'icon-parcel' },
+      { type: 'png', name: 'API', icon: 'icon-api' },
+    ],
+    img: {
+      src: './img/Photos of Challenges/02 junior/advice-generator-app.jpg',
+      alt: 'Advice generator application solution screenshot',
+    },
+    links: {
+      live: '../../Challenges/02%20Junior/advice-generator-app/dist/',
+      repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/02%20Junior/advice-generator-app',
+    },
+  },
 ];

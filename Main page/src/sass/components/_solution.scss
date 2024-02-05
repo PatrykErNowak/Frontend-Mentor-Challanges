@@ -137,6 +137,7 @@ $intermediate: rgb(241, 182, 4);
   &__tech-list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 0.5em;
     position: relative;
     margin: 1em 0;
