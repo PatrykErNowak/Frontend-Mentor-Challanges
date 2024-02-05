@@ -1,0 +1,2 @@
+const t=document.querySelector('[data-js="adviceID"]'),e=document.querySelector('[data-js="adviceText"]'),a=document.querySelector('[data-js="adviceBtn"]'),c=async function(){try{let a=await fetch("https://api.adviceslip.com/advice"),{id:c,advice:n}=(await a.json()).slip;t.textContent=c,e.textContent=n}catch(a){t.textContent="---",e.textContent="Sorry, We can't display the advice. Please try later."}};c(),a.addEventListener("click",c);
+//# sourceMappingURL=main.min.146101b8.js.map
