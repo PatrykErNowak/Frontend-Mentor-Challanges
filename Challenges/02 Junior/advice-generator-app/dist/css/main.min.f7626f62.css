@@ -22,7 +22,6 @@ html {
 }
 
 body {
-  font-family: Manrope, sans-serif;
   font-size: 1.6rem;
 }
 
@@ -46,21 +45,26 @@ body {
 .advice__text {
   color: #cee3e9;
   padding: 1em 0;
+  font-family: serif;
   font-size: clamp(2.2rem, 1.5rem + 1vw, 2.8rem);
   line-height: 1.4;
 }
 
 .advice__text span {
+  font-family: Manrope, sans-serif;
   font-weight: 800;
 }
 
 .advice__btn {
+  cursor: pointer;
   background-color: #52ffa8;
   border-color: #0000;
   border-radius: 50%;
+  outline: #0000;
   place-items: center;
   width: 6rem;
   height: 6rem;
+  transition: box-shadow .3s ease-in-out, transform .2s;
   display: grid;
   position: absolute;
   bottom: 0;
@@ -70,6 +74,14 @@ body {
 
 .advice__btn img {
   width: 40%;
+}
+
+.advice__btn:hover, .advice__btn:focus {
+  box-shadow: 0 0 15px #52ffa8;
+}
+
+.advice__btn:active {
+  transform: translate(-50%, 50%)scale(.9);
 }
 
 /*# sourceMappingURL=main.min.f7626f62.css.map */

@@ -21,8 +21,10 @@
     color: c.$primary-light;
     font-size: clamp(2.2rem, 1.5rem + 1vw, 2.8rem);
     line-height: 1.4;
+    font-family: serif;
     span {
       font-weight: 800;
+      font-family: 'Manrope', sans-serif;
     }
   }
 
@@ -37,9 +39,24 @@
     background-color: c.$primary;
     border-radius: 50%;
     border-color: transparent;
+    outline: transparent;
     transform: translate(-50%, 50%);
+    transition:
+      box-shadow 0.3s ease-in-out,
+      transform 0.2s;
+    cursor: pointer;
+
     img {
       width: 40%;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 15px c.$primary;
+    }
+
+    &:active {
+      transform: translate(-50%, 50%) scale(0.9);
     }
   }
 }
