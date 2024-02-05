@@ -21,9 +21,9 @@
 
     <title>Frontend Mentor | Advice generator app</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="sass/main.scss" />
+    <link rel="stylesheet" href="./sass/main.scss" />
     <!-- JS -->
-    <script defer src="js/main.js"></script>
+    <script defer src="./js/main.js"></script>
   </head>
   <body>
     <div class="advice">
@@ -31,12 +31,12 @@
       <p class="advice__text">"<span data-js="adviceText"></span>"</p>
       <img
         srcset="
-          img/pattern-divider-mobile.svg  295w,
-          img/pattern-divider-desktop.svg 444w
+          ./img/pattern-divider-mobile.svg  295w,
+          ./img/pattern-divider-desktop.svg 444w
         "
         sizes="(max-width: 400px) 295px,
         444px"
-        src="img/pattern-divider-mobile.svg"
+        src="./img/pattern-divider-mobile.svg"
         alt=""
         class="advice__divider"
         aria-hidden="true"
@@ -46,7 +46,7 @@
         aria-label="Generate new advice"
         data-js="adviceBtn"
       >
-        <img src="img/icon-dice.svg" alt="Dice" />
+        <img src="./img/icon-dice.svg" alt="Dice" />
       </button>
     </div>
   </body>

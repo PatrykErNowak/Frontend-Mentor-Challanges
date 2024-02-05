@@ -10,7 +10,7 @@
   "scripts": {
     "clean:output": "rimraf dist",
     "start": "npm run clean:output && parcel  --open chrome",
-    "build": "npm run clean:output && parcel build "
+    "build": "npm run clean:output && parcel build --public-url ./"
   },
   "author": "pendev",
   "license": "ISC",
@@ -28,6 +28,18 @@
     ".png$|.jpg$|.svg$|.jpg2$|.gif$|.bmp$|.webm$": "[folder]/[name].[hash].[type]"
   },
   "htmlnano": {
-    "minifySvg": false
+    "collapseAttributeWhitespace": false,
+    "collapseBooleanAttributes": false,
+    "collapseWhitespace": false,
+    "custom": [],
+    "deduplicateAttributeValues": false,
+    "mergeScripts": false,
+    "mergeStyles": false,
+    "removeUnusedCss": false,
+    "minifyJson": false,
+    "minifySvg": false,
+    "removeEmptyAttributes": false,
+    "removeRedundantAttributes": false,
+    "removeComments": false
   }
 }
