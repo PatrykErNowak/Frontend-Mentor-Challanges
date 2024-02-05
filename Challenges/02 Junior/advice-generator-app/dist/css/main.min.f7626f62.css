@@ -6,7 +6,10 @@
 
 body {
   background-color: #1f2632;
+  place-items: center;
+  min-height: 100vh;
   line-height: 1;
+  display: grid;
 }
 
 img {
@@ -27,21 +30,24 @@ body {
   text-align: center;
   background-color: #323a49;
   border-radius: 10px;
+  max-width: 50rem;
   margin: 1.5rem;
-  padding: 3rem 2rem 6rem;
+  padding: 5rem 2rem 7rem;
   position: relative;
 }
 
 .advice__numb {
   color: #52ffa8;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
+  font-size: clamp(1.2rem, .8rem + 1vw, 1.4rem);
 }
 
 .advice__text {
   color: #cee3e9;
   padding: 1em 0;
-  font-size: 2.8rem;
+  font-size: clamp(2.2rem, 1.5rem + 1vw, 2.8rem);
+  line-height: 1.4;
 }
 
 .advice__text span {

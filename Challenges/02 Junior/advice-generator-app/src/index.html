@@ -23,19 +23,29 @@
     <!-- CSS -->
     <link rel="stylesheet" href="sass/main.scss" />
     <!-- JS -->
-    <script src="js/main.js"></script>
+    <script defer src="js/main.js"></script>
   </head>
   <body>
     <div class="advice">
-      <p class="advice__numb">Advice # <span data-js="adviceID"></span></p>
+      <p class="advice__numb">Advice #<span data-js="adviceID"></span></p>
       <p class="advice__text">"<span data-js="adviceText"></span>"</p>
       <img
+        srcset="
+          img/pattern-divider-mobile.svg  295w,
+          img/pattern-divider-desktop.svg 444w
+        "
+        sizes="(max-width: 400px) 295px,
+        444px"
         src="img/pattern-divider-mobile.svg"
         alt=""
         class="advice__divider"
         aria-hidden="true"
       />
-      <button class="advice__btn" aria-label="Generate new advice">
+      <button
+        class="advice__btn"
+        aria-label="Generate new advice"
+        data-js="adviceBtn"
+      >
         <img src="img/icon-dice.svg" alt="Dice" />
       </button>
     </div>
