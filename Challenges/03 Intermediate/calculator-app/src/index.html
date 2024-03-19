@@ -16,6 +16,51 @@
     <link rel="stylesheet" href="sass/main.scss" />
     <script type="module" src="ts/main.ts"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="calc">
+      <div class="calc__top-s">
+        <p class="calc__name">calc</p>
+        <div class="calc__theme-changer">
+          <label class="calc__theme-label" for="theme">theme</label>
+          <input
+            class="calc__theme-input"
+            type="range"
+            name="Theme"
+            id="theme"
+            min="1"
+            max="3"
+            step="1"
+          />
+        </div>
+      </div>
+      <div class="calc__display-s">
+        <p class="calc__output">399,981</p>
+      </div>
+      <div class="calc__btns-s">
+        <button class="btn btn--primary">7</button>
+        <button class="btn btn--primary">8</button>
+        <button class="btn btn--primary">9</button>
+        <button class="btn btn--secondary">del</button>
+
+        <button class="btn btn--primary">4</button>
+        <button class="btn btn--primary">5</button>
+        <button class="btn btn--primary">6</button>
+        <button class="btn btn--primary">+</button>
+
+        <button class="btn btn--primary">1</button>
+        <button class="btn btn--primary">2</button>
+        <button class="btn btn--primary">3</button>
+        <button class="btn btn--primary">-</button>
+
+        <button class="btn btn--primary">.</button>
+        <button class="btn btn--primary">0</button>
+        <button class="btn btn--primary">/</button>
+        <button class="btn btn--primary">x</button>
+
+        <button class="btn btn--secondary expand">reset</button>
+        <button class="btn btn--tertiary expand">=</button>
+      </div>
+    </div>
+  </body>
 </html>
 
