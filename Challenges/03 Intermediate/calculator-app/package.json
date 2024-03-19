@@ -1,0 +1,25 @@
+{
+  "name": "vite-typescript-starter",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "clean:dist": "npx rimraf dist",
+    "clean:report": "npx rimraf playwright-report"
+  },
+  "devDependencies": {
+    "@total-typescript/ts-reset": "^0.5.1",
+    "@vitejs/plugin-legacy": "^5.3.0",
+    "autoprefixer": "^10.4.17",
+    "cssnano": "^6.0.3",
+    "postcss": "^8.4.35",
+    "postcss-import": "^16.0.1",
+    "prettier": "^3.2.5",
+    "sass": "^1.72.0",
+    "terser": "^5.27.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.6"
+  }
+}
