@@ -11,54 +11,74 @@
       sizes="32x32"
       href="./img/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Frontend Mentor | Calculator app</title>
     <link rel="stylesheet" href="sass/main.scss" />
     <script type="module" src="ts/main.ts"></script>
   </head>
   <body>
-    <div class="calc">
-      <div class="calc__top-s">
-        <p class="calc__name">calc</p>
-        <div class="calc__theme-changer">
-          <label class="calc__theme-label" for="theme">theme</label>
-          <input
-            class="calc__theme-input"
-            type="range"
-            name="Theme"
-            id="theme"
-            min="1"
-            max="3"
-            step="1"
-          />
+    <div class="calc theme-one">
+      <div class="calc-wrapper">
+        <div class="calc__top-s">
+          <p class="calc__name">calc</p>
+          <div class="calc__theme-toggle-box">
+            <p class="name" aria-hidden="true">theme</p>
+            <fieldset class="inputs-box">
+              <legend>theme</legend>
+              <div class="input-wrapper">
+                <label for="th-one">1</label>
+                <input
+                  type="radio"
+                  name="theme"
+                  id="th-one"
+                  value="1"
+                  checked
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="th-two">2</label>
+                <input type="radio" name="theme" id="th-two" value="2" />
+              </div>
+              <div class="input-wrapper">
+                <label for="th-three">3</label>
+                <input type="radio" name="theme" id="th-three" value="3" />
+              </div>
+            </fieldset>
+          </div>
         </div>
-      </div>
-      <div class="calc__display-s">
-        <p class="calc__output">399,981</p>
-      </div>
-      <div class="calc__btns-s">
-        <button class="btn btn--primary">7</button>
-        <button class="btn btn--primary">8</button>
-        <button class="btn btn--primary">9</button>
-        <button class="btn btn--secondary">del</button>
+        <div class="calc__display-s">
+          <p class="calc__output">399,981</p>
+        </div>
+        <div class="calc__keypad-s">
+          <button class="calc__key--math">7</button>
+          <button class="calc__key--math">8</button>
+          <button class="calc__key--math">9</button>
+          <button class="calc__key--func">del</button>
 
-        <button class="btn btn--primary">4</button>
-        <button class="btn btn--primary">5</button>
-        <button class="btn btn--primary">6</button>
-        <button class="btn btn--primary">+</button>
+          <button class="calc__key--math">4</button>
+          <button class="calc__key--math">5</button>
+          <button class="calc__key--math">6</button>
+          <button class="calc__key--math">+</button>
 
-        <button class="btn btn--primary">1</button>
-        <button class="btn btn--primary">2</button>
-        <button class="btn btn--primary">3</button>
-        <button class="btn btn--primary">-</button>
+          <button class="calc__key--math">1</button>
+          <button class="calc__key--math">2</button>
+          <button class="calc__key--math">3</button>
+          <button class="calc__key--math">-</button>
 
-        <button class="btn btn--primary">.</button>
-        <button class="btn btn--primary">0</button>
-        <button class="btn btn--primary">/</button>
-        <button class="btn btn--primary">x</button>
+          <button class="calc__key--math">.</button>
+          <button class="calc__key--math">0</button>
+          <button class="calc__key--math">/</button>
+          <button class="calc__key--math">x</button>
 
-        <button class="btn btn--secondary expand">reset</button>
-        <button class="btn btn--tertiary expand">=</button>
+          <button class="calc__key--func reset">reset</button>
+          <button class="calc__key--sum sum">=</button>
+        </div>
       </div>
     </div>
   </body>

@@ -1,0 +1,239 @@
+@use '../abstracts/helpers' as *;
+
+// .calc.theme-one {
+.calc:has(#th-one:checked) {
+  // #### Backgrounds
+  $main-bg: hsl(222, 26%, 31%);
+  $toggle-bg-keypad-bg: hsl(223, 31%, 20%);
+  $screen-bg: hsl(224, 36%, 15%);
+
+  // #### Keys
+  $math-key-bg: hsl(30, 25%, 89%);
+  $math-key-shadow: hsl(28, 16%, 65%);
+
+  $second-key-bg: hsl(225, 21%, 49%);
+  $second-key-shadow: hsl(224, 28%, 35%);
+  $second-key-bg-hover: hsl(225, 41%, 69%);
+
+  $sum-key-bg--toggle-input: hsl(6, 63%, 50%);
+  $sum-key-shadow: hsl(6, 70%, 34%);
+  $sum-key-bg--toggle-input-hover: hsl(6, 63%, 60%);
+
+  // #### Text
+
+  $text-dark: hsl(221, 14%, 31%);
+  $text-white: hsl(0, 0%, 100%);
+
+  // -------------------
+  background-color: $main-bg;
+  color: $text-white;
+
+  .calc__display-s {
+    background-color: $screen-bg;
+  }
+
+  .calc__keypad-s {
+    background-color: $toggle-bg-keypad-bg;
+  }
+
+  .calc__theme-toggle-box {
+    .inputs-box {
+      background-color: $toggle-bg-keypad-bg;
+
+      input:checked {
+        background-color: $sum-key-bg--toggle-input;
+      }
+
+      input:hover {
+        background-color: $sum-key-bg--toggle-input-hover;
+      }
+    }
+  }
+
+  .calc__key {
+    &--math {
+      color: $text-dark;
+      background-color: $math-key-bg;
+      @include key-box-shadow($math-key-shadow);
+      &:hover {
+        @include key-bg-saturation(0.95, $math-key-bg);
+      }
+    }
+    &--func,
+    &--sum {
+      color: $text-white;
+    }
+    &--func {
+      background-color: $second-key-bg;
+      @include key-box-shadow($second-key-shadow);
+      &:hover {
+        background-color: $second-key-bg-hover;
+      }
+    }
+    &--sum {
+      background-color: $sum-key-bg--toggle-input;
+      @include key-box-shadow($sum-key-shadow);
+      &:hover {
+        background-color: $sum-key-bg--toggle-input-hover;
+      }
+    }
+  }
+}
+// -------------------------------
+// .calc.theme-two {
+.calc:has(#th-two:checked) {
+  // #### Backgrounds
+  $main-bg: hsl(0, 0%, 90%);
+  $toggle-bg-keypad-bg: hsl(0, 5%, 81%);
+  $screen-bg: hsl(0, 0%, 93%);
+
+  // #### Keys
+  $math-key-bg: hsl(45, 7%, 89%);
+  $math-key-shadow: hsl(35, 11%, 61%);
+
+  $second-key-bg: hsl(185, 42%, 37%);
+  $second-key-shadow: hsl(185, 58%, 25%);
+  $second-key-bg-hover: hsl(185, 42%, 47%);
+
+  $sum-key-bg--toggle-input: hsl(25, 98%, 40%);
+  $sum-key-shadow: hsl(25, 99%, 27%);
+  $sum-key-bg--toggle-input-hover: hsl(25, 98%, 50%);
+
+  // #### Text
+
+  $text-dark: hsl(60, 10%, 19%);
+  $text-white: hsl(0, 0%, 100%);
+
+  // -----------------
+  background-color: $main-bg;
+  color: $text-dark;
+
+  .calc__display-s {
+    background-color: $screen-bg;
+  }
+
+  .calc__keypad-s {
+    background-color: $toggle-bg-keypad-bg;
+  }
+
+  .calc__theme-toggle-box {
+    .inputs-box {
+      background-color: $toggle-bg-keypad-bg;
+
+      input:checked {
+        background-color: $sum-key-bg--toggle-input;
+      }
+      input:hover {
+        background-color: $sum-key-bg--toggle-input-hover;
+      }
+    }
+  }
+
+  .calc__key {
+    &--math {
+      color: $text-dark;
+      background-color: $math-key-bg;
+      @include key-box-shadow($math-key-shadow);
+      &:hover {
+        @include key-bg-saturation(0.95, $math-key-bg);
+      }
+    }
+    &--func,
+    &--sum {
+      color: $text-white;
+    }
+    &--func {
+      background-color: $second-key-bg;
+      @include key-box-shadow($second-key-shadow);
+      &:hover {
+        background-color: $second-key-bg-hover;
+      }
+    }
+    &--sum {
+      background-color: $sum-key-bg--toggle-input;
+      @include key-box-shadow($sum-key-shadow);
+      &:hover {
+        background-color: $sum-key-bg--toggle-input-hover;
+      }
+    }
+  }
+}
+// -------------------------------
+// .calc.theme-three {
+.calc:has(#th-three:checked) {
+  // #### Backgrounds
+  $main-bg: hsl(268, 75%, 9%);
+  $toggle-bg-keypad-bg: hsl(268, 71%, 12%);
+  $screen-bg: $toggle-bg-keypad-bg;
+
+  // #### Keys
+  $math-key-bg: hsl(268, 47%, 21%);
+  $math-key-shadow: hsl(290, 70%, 36%);
+  $math-key-bg-hover: hsl(268, 47%, 51%);
+
+  $second-key-bg: hsl(281, 89%, 26%);
+  $second-key-shadow: hsl(285, 91%, 52%);
+  $second-key-bg-hover: hsl(281, 89%, 46%);
+
+  $sum-key-bg--toggle-input: hsl(176, 100%, 44%);
+  $sum-key-shadow: hsl(177, 92%, 70%);
+  $sum-key-bg--toggle-input-hover: hsl(176, 100%, 54%);
+
+  // #### Text
+
+  $text-special: hsl(52, 100%, 62%);
+  $text-dark: hsl(198, 20%, 13%);
+  $text-white: hsl(0, 0%, 100%);
+
+  // ---------------
+  background-color: $main-bg;
+  color: $text-special;
+
+  .calc__display-s {
+    background-color: $screen-bg;
+  }
+
+  .calc__keypad-s {
+    background-color: $toggle-bg-keypad-bg;
+  }
+
+  .calc__theme-toggle-box {
+    .inputs-box {
+      background-color: $toggle-bg-keypad-bg;
+
+      input:checked {
+        background-color: $sum-key-bg--toggle-input;
+      }
+      input:hover {
+        background-color: $sum-key-bg--toggle-input-hover;
+      }
+    }
+  }
+
+  .calc__key {
+    &--math {
+      color: $text-special;
+      background-color: $math-key-bg;
+      @include key-box-shadow($math-key-shadow);
+      &:hover {
+        background-color: $math-key-bg-hover;
+      }
+    }
+    &--func {
+      color: $text-white;
+      background-color: $second-key-bg;
+      @include key-box-shadow($second-key-shadow);
+      &:hover {
+        background-color: $second-key-bg-hover;
+      }
+    }
+    &--sum {
+      color: $text-dark;
+      background-color: $sum-key-bg--toggle-input;
+      @include key-box-shadow($sum-key-shadow);
+      &:hover {
+        background-color: $sum-key-bg--toggle-input-hover;
+      }
+    }
+  }
+}
