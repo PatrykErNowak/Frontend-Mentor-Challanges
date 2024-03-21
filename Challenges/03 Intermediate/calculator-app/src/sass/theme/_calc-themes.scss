@@ -44,7 +44,8 @@
         background-color: $sum-key-bg--toggle-input;
       }
 
-      input:hover {
+      input:hover,
+      input:focus {
         background-color: $sum-key-bg--toggle-input-hover;
       }
     }
@@ -55,7 +56,8 @@
       color: $text-dark;
       background-color: $math-key-bg;
       @include key-box-shadow($math-key-shadow);
-      &:hover {
+      &:hover,
+      &:focus {
         @include key-bg-saturation(0.95, $math-key-bg);
       }
     }
@@ -66,14 +68,16 @@
     &--func {
       background-color: $second-key-bg;
       @include key-box-shadow($second-key-shadow);
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: $second-key-bg-hover;
       }
     }
     &--sum {
       background-color: $sum-key-bg--toggle-input;
       @include key-box-shadow($sum-key-shadow);
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: $sum-key-bg--toggle-input-hover;
       }
     }
@@ -123,7 +127,8 @@
       input:checked {
         background-color: $sum-key-bg--toggle-input;
       }
-      input:hover {
+      input:hover,
+      input:focus {
         background-color: $sum-key-bg--toggle-input-hover;
       }
     }
@@ -134,7 +139,8 @@
       color: $text-dark;
       background-color: $math-key-bg;
       @include key-box-shadow($math-key-shadow);
-      &:hover {
+      &:hover,
+      &:focus {
         @include key-bg-saturation(0.95, $math-key-bg);
       }
     }
@@ -145,14 +151,16 @@
     &--func {
       background-color: $second-key-bg;
       @include key-box-shadow($second-key-shadow);
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: $second-key-bg-hover;
       }
     }
     &--sum {
       background-color: $sum-key-bg--toggle-input;
       @include key-box-shadow($sum-key-shadow);
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: $sum-key-bg--toggle-input-hover;
       }
     }
@@ -204,7 +212,8 @@
       input:checked {
         background-color: $sum-key-bg--toggle-input;
       }
-      input:hover {
+      input:hover,
+      input:focus {
         background-color: $sum-key-bg--toggle-input-hover;
       }
     }
@@ -215,7 +224,8 @@
       color: $text-special;
       background-color: $math-key-bg;
       @include key-box-shadow($math-key-shadow);
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: $math-key-bg-hover;
       }
     }
@@ -223,7 +233,8 @@
       color: $text-white;
       background-color: $second-key-bg;
       @include key-box-shadow($second-key-shadow);
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: $second-key-bg-hover;
       }
     }
@@ -231,7 +242,8 @@
       color: $text-dark;
       background-color: $sum-key-bg--toggle-input;
       @include key-box-shadow($sum-key-shadow);
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: $sum-key-bg--toggle-input-hover;
       }
     }

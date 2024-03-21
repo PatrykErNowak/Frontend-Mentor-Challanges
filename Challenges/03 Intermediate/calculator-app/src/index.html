@@ -53,31 +53,33 @@
           </div>
         </div>
         <div class="calc__display-s">
-          <p class="calc__output">399,981</p>
+          <p class="calc__output" data-js="screen">399,981</p>
         </div>
-        <div class="calc__keypad-s">
-          <button class="calc__key--math">7</button>
-          <button class="calc__key--math">8</button>
-          <button class="calc__key--math">9</button>
-          <button class="calc__key--func">del</button>
+        <div class="calc__keypad-s" data-js="keypad">
+          <button class="calc__key--math" data-action="numb">7</button>
+          <button class="calc__key--math" data-action="numb">8</button>
+          <button class="calc__key--math" data-action="numb">9</button>
+          <button class="calc__key--func" data-action="delete">del</button>
 
-          <button class="calc__key--math">4</button>
-          <button class="calc__key--math">5</button>
-          <button class="calc__key--math">6</button>
-          <button class="calc__key--math">+</button>
+          <button class="calc__key--math" data-action="numb">4</button>
+          <button class="calc__key--math" data-action="numb">5</button>
+          <button class="calc__key--math" data-action="numb">6</button>
+          <button class="calc__key--math" data-action="add">+</button>
 
-          <button class="calc__key--math">1</button>
-          <button class="calc__key--math">2</button>
-          <button class="calc__key--math">3</button>
-          <button class="calc__key--math">-</button>
+          <button class="calc__key--math" data-action="numb">1</button>
+          <button class="calc__key--math" data-action="numb">2</button>
+          <button class="calc__key--math" data-action="numb">3</button>
+          <button class="calc__key--math" data-action="subtract">-</button>
 
-          <button class="calc__key--math">.</button>
-          <button class="calc__key--math">0</button>
-          <button class="calc__key--math">/</button>
-          <button class="calc__key--math">x</button>
+          <button class="calc__key--math" data-action="dot">.</button>
+          <button class="calc__key--math" data-action="numb">0</button>
+          <button class="calc__key--math" data-action="divide">/</button>
+          <button class="calc__key--math" data-action="multiply">x</button>
 
-          <button class="calc__key--func reset">reset</button>
-          <button class="calc__key--sum sum">=</button>
+          <button class="calc__key--func reset" data-action="reset">
+            reset
+          </button>
+          <button class="calc__key--sum sum" data-action="sum">=</button>
         </div>
       </div>
     </div>
