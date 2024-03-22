@@ -5,29 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/img/favicon-32x32-DQjEQYWa.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32-DQjEQYWa.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet" />
 
     <title>Frontend Mentor | Calculator app</title>
-    <script type="module" crossorigin src="/js/index-NKLJhGTq.js"></script>
-    <link rel="stylesheet" crossorigin href="/css/index-DdRtVepp.css">
+    <script type="module" crossorigin src="/js/index-6YbLjPcN.js"></script>
+    <link rel="stylesheet" crossorigin href="/css/index-DFVd2xAO.css">
     <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
     <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
   </head>
   <body>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+    <div class="calc theme-one">
+      <div class="calc-wrapper">
+        <div class="calc__top-s">
+          <p class="calc__name">calc</p>
+          <div class="calc__theme-toggle-box">
+            <p class="name" aria-hidden="true">theme</p>
+            <fieldset class="inputs-box">
+              <legend>theme</legend>
+              <div class="input-wrapper">
+                <label for="th-default">1</label>
+                <input type="radio" name="theme" id="th-default" value="1" />
+              </div>
+              <div class="input-wrapper">
+                <label for="th-light">2</label>
+                <input type="radio" name="theme" id="th-light" value="2" />
+              </div>
+              <div class="input-wrapper">
+                <label for="th-dark">3</label>
+                <input type="radio" name="theme" id="th-dark" value="3" />
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <div class="calc__display-s">
+          <p class="calc__output" data-js="screen">399,981</p>
+        </div>
+        <div class="calc__keypad-s" data-js="keypad">
+          <button class="calc__key--math" data-action="numb">7</button>
+          <button class="calc__key--math" data-action="numb">8</button>
+          <button class="calc__key--math" data-action="numb">9</button>
+          <button class="calc__key--func" data-action="delete">del</button>
+
+          <button class="calc__key--math" data-action="numb">4</button>
+          <button class="calc__key--math" data-action="numb">5</button>
+          <button class="calc__key--math" data-action="numb">6</button>
+          <button class="calc__key--math" data-action="add">+</button>
+
+          <button class="calc__key--math" data-action="numb">1</button>
+          <button class="calc__key--math" data-action="numb">2</button>
+          <button class="calc__key--math" data-action="numb">3</button>
+          <button class="calc__key--math" data-action="subtract">-</button>
+
+          <button class="calc__key--math" data-action="dot">.</button>
+          <button class="calc__key--math" data-action="numb">0</button>
+          <button class="calc__key--math" data-action="divide">/</button>
+          <button class="calc__key--math" data-action="multiply">x</button>
+
+          <button class="calc__key--func reset" data-action="reset">reset</button>
+          <button class="calc__key--sum sum" data-action="sum">=</button>
+        </div>
+      </div>
     </div>
     <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
-    <script nomodule crossorigin id="vite-legacy-polyfill" src="/js/polyfills-legacy-Bz7G_6Ym.js"></script>
-    <script nomodule crossorigin id="vite-legacy-entry" data-src="/js/index-legacy-BJY37hrn.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+    <script nomodule crossorigin id="vite-legacy-polyfill" src="/js/polyfills-legacy-DdKClcTB.js"></script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="/js/index-legacy-DzOY86wB.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
   </body>
 </html>
 

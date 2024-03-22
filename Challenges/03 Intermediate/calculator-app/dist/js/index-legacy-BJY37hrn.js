@@ -1,1 +1,0 @@
-System.register([],(function(e,t){"use strict";return{execute:function(){var e=document.createElement("style");e.textContent="body{background-color:#639}\n",document.head.appendChild(e),console.log("Hello")}}}));
