@@ -1,51 +1,51 @@
 enum Operation {
   noOparation = 0,
-  add = 'add',
-  subtract = 'subtract',
-  multiply = 'multiply',
-  divide = 'divide'
+  add,
+  subtract,
+  multiply,
+  divide
 }
 
 class Calc {
-  private score: number;
-  private currentNumber: number = 0;
+  private score: number | null | "You can't divide by zero";
+  private currentNumber: number | string = 0;
   private activeOperation: Operation = Operation.noOparation;
   private typedNumberKey = false;
   private screen = document.querySelector('[data-js="screen"]') as HTMLParagraphElement;
   private keypad = document.querySelector('[data-js="keypad"]') as HTMLDivElement;
 
   constructor() {
-    this.score = 0;
+    this.score = null;
     this.displayResult();
     this.keypadHandler();
   }
 
-  clearScreen() {
+  private clearScreen() {
     this.screen.textContent = '0';
   }
-  clearCurrentNumb() {
+  private clearCurrentNumb() {
     this.currentNumber = 0;
   }
-  clearScore() {
-    this.score = 0;
-  }
-  clearStuff() {
+
+  private clearStuff() {
     this.clearCurrentNumb();
-    this.clearScore();
+    this.score = null;
     this.activeOperation = Operation.noOparation;
   }
 
-  displayResult() {
-    this.screen.textContent = String(this.score);
+  private displayResult() {
+    this.screen.textContent = this.score !== null ? String(this.score) : '0';
   }
 
-  typeNumber(numb: string) {
-    this.currentNumber = +(String(this.currentNumber || 0) + numb);
+  private typeNumber(numb: string) {
+    if (numb === '.') this.currentNumber = '0';
+    if (this.currentNumber === 0 || this.currentNumber === '0') this.currentNumber = '';
+    this.currentNumber = String(this.currentNumber) + numb;
     this.screen.textContent = String(this.currentNumber);
     this.typedNumberKey = true;
   }
 
-  sumAction(clearOparation = false) {
+  private sumAction(clearOparation = false) {
     const operation = this.activeOperation;
 
     if (operation === Operation.add) this.addAction(false);
@@ -54,38 +54,13 @@ class Calc {
     if (operation === Operation.divide) this.divideAction(false);
 
     if (clearOparation) this.activeOperation = Operation.noOparation;
-    // if (clear) this.clearStuff();
   }
 
-  // mathAction(operation: Operation, fn: Function, addOperationType = true) {
-  //   if (!this.typedNumberKey && !addOperationType) return;
-
-  //   if (this.activeOperation === Operation.noOparation || this.activeOperation === operation) {
-  //     fn();
-
-  //     this.displayResult();
-  //     this.clearCurrentNumb();
-  //     this.typedNumberKey = false;
-  //   } else {
-  //     this.sumAction(false);
-  //   }
-
-  //   if (addOperationType) this.activeOperation = operation;
-  // }
-  // addAction(addOperationType = true) {
-  //   const add = () => {
-  //     this.score = this.score + this.currentNumber;
-  //   };
-
-  //   this.mathAction(Operation.add, add, addOperationType);
-  // }
-
-  addAction(addOperationType = true) {
+  private mathAction(operationType: Operation, fn: Function, addOperationType = true) {
     if (!this.typedNumberKey && !addOperationType) return;
 
-    if (this.activeOperation === Operation.noOparation || this.activeOperation === Operation.add) {
-      this.score = this.score + this.currentNumber;
-
+    if (this.activeOperation === Operation.noOparation || this.activeOperation === operationType) {
+      fn();
       this.displayResult();
       this.clearCurrentNumb();
       this.typedNumberKey = false;
@@ -93,67 +68,69 @@ class Calc {
       this.sumAction(false);
     }
 
-    if (addOperationType) this.activeOperation = Operation.add;
+    if (addOperationType) this.activeOperation = operationType;
+  }
+  private addAction(addOperationType = true) {
+    const mathAdding = () => {
+      this.currentNumber = +this.currentNumber;
+      if (typeof this.score === 'number') this.score = this.score + this.currentNumber;
+      if (this.score === null) this.score = this.currentNumber;
+    };
+
+    this.mathAction(Operation.add, mathAdding, addOperationType);
   }
 
-  subtractAction(addOperationType = true) {
-    if (!this.typedNumberKey && !addOperationType) return;
+  private subtractAction(addOperationType = true) {
+    const mathSubtract = () => {
+      this.currentNumber = +this.currentNumber;
+      if (typeof this.score === 'number') this.score = this.score - this.currentNumber;
+      if (this.score === null) this.score = this.currentNumber;
+    };
 
-    if (this.activeOperation === Operation.noOparation || this.activeOperation === Operation.subtract) {
-      this.score = this.score === 0 ? this.currentNumber : this.score - this.currentNumber;
-      this.displayResult();
-      this.clearCurrentNumb();
-      this.typedNumberKey = false;
-    } else {
-      this.sumAction(false);
-    }
-
-    if (addOperationType) this.activeOperation = Operation.subtract;
+    this.mathAction(Operation.subtract, mathSubtract, addOperationType);
   }
 
-  multiplytAction(addOperationType = true) {
-    if (!this.typedNumberKey && !addOperationType) return;
+  private multiplytAction(addOperationType = true) {
+    const mathMultiply = () => {
+      this.currentNumber = +this.currentNumber;
+      if (typeof this.score === 'number') this.score = this.score * this.currentNumber;
+      if (this.score === null) this.score = this.currentNumber;
+    };
 
-    if (this.activeOperation === Operation.noOparation || this.activeOperation === Operation.multiply) {
-      this.currentNumber = this.currentNumber === 0 ? 1 : this.currentNumber;
-      this.score = this.score === 0 ? this.currentNumber : this.score * this.currentNumber;
-      this.displayResult();
-      this.clearCurrentNumb();
-      this.typedNumberKey = false;
-    } else {
-      this.sumAction(false);
-    }
-
-    if (addOperationType) this.activeOperation = Operation.multiply;
+    this.mathAction(Operation.multiply, mathMultiply, addOperationType);
   }
 
-  divideAction(addOperationType = true) {
-    if (!this.typedNumberKey && !addOperationType) return;
-
-    if (this.activeOperation === Operation.noOparation || this.activeOperation === Operation.divide) {
-      this.currentNumber = this.currentNumber === 0 ? 1 : this.currentNumber;
-      this.score = this.score === 0 ? this.currentNumber : this.score / this.currentNumber;
-      this.displayResult();
-      this.clearCurrentNumb();
-      this.typedNumberKey = false;
-    } else {
-      this.sumAction(false);
-    }
-
-    if (addOperationType) this.activeOperation = Operation.divide;
+  private divideAction(addOperationType = true) {
+    const mathDivide = () => {
+      this.currentNumber = +this.currentNumber;
+      if (this.score !== 0 && this.score !== null && typeof this.score === 'number' && this.currentNumber !== 0) {
+        this.score = this.score / this.currentNumber;
+        return;
+      }
+      if (this.score !== 0 && this.score !== null && this.currentNumber === 0) {
+        this.score = "You can't divide by zero";
+        return;
+      }
+      if (this.score === 0 && this.currentNumber !== 0) {
+        this.score = 0;
+        return;
+      }
+      if (this.score === null) this.score = this.currentNumber;
+    };
+    this.mathAction(Operation.divide, mathDivide, addOperationType);
   }
 
-  deleteAction() {
+  private deleteAction() {
     this.clearScreen();
     this.clearCurrentNumb();
   }
 
-  resetAction() {
+  private resetAction() {
     this.clearStuff();
     this.clearScreen();
   }
 
-  keypadHandler() {
+  private keypadHandler() {
     const handleKeypadAction = function (this: Calc, e: MouseEvent) {
       const { target } = e;
 
@@ -163,14 +140,13 @@ class Calc {
         if (actionType === 'delete') this.deleteAction();
         if (actionType === 'reset') this.resetAction();
 
-        if (actionType === 'numb') this.typeNumber(target.textContent!);
+        if (actionType === 'numb' || actionType === 'dot') this.typeNumber(target.textContent!);
         if (actionType === 'add') this.addAction();
         if (actionType === 'subtract') this.subtractAction();
         if (actionType === 'multiply') this.multiplytAction();
         if (actionType === 'divide') this.divideAction();
 
         if (actionType === 'sum') this.sumAction(true);
-        console.log(this);
       }
     };
 
