@@ -236,4 +236,25 @@ const solutions = [
       repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/02%20Junior/advice-generator-app',
     },
   },
+  {
+    id: 13,
+    title: 'Calculator',
+    type: 'App',
+    level: 'intermediate',
+    technologies: [
+      { type: 'svg', name: 'html', icon: 'icon-html5' },
+      { type: 'svg', name: 'css', icon: 'icon-css3' },
+      { type: 'svg', name: 'typescript', icon: 'icon-typescript' },
+      { type: 'svg', name: 'sass', icon: 'icon-sass' },
+      { type: 'png', name: 'vite', icon: 'icon-vite' },
+    ],
+    img: {
+      src: './img/Photos of Challenges/03 Intermediate/calculator-app.jpg',
+      alt: 'Calculator application solution screenshot',
+    },
+    links: {
+      live: '../../Challenges/03 Intermediate/calculator-app/dist/',
+      repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/03%20Intermediate/calculator-app',
+    },
+  },
 ];

@@ -26,3 +26,4 @@ Here you can find a showcase of my front-end skills. This collection features my
 ### Intermediate:
 
 - Chat app illustration - [Repository](./Challenges/03%20Intermediate/chat-app-css-illustration/) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/03%20Intermediate/chat-app-css-illustration/dist/)
+- Calculator App - [Repository](./Challenges/03%20Intermediate/calculator-app/) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/03%20Intermediate/calculator-app/dist/)
