@@ -5,18 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./img/favicon-32x32.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet" />
 
     <title>Frontend Mentor | Calculator app</title>
     <link rel="stylesheet" href="sass/main.scss" />
@@ -32,22 +24,16 @@
             <fieldset class="inputs-box">
               <legend>theme</legend>
               <div class="input-wrapper">
-                <label for="th-one">1</label>
-                <input
-                  type="radio"
-                  name="theme"
-                  id="th-one"
-                  value="1"
-                  checked
-                />
+                <label for="th-default">1</label>
+                <input type="radio" name="theme" id="th-default" value="1" />
               </div>
               <div class="input-wrapper">
-                <label for="th-two">2</label>
-                <input type="radio" name="theme" id="th-two" value="2" />
+                <label for="th-light">2</label>
+                <input type="radio" name="theme" id="th-light" value="2" />
               </div>
               <div class="input-wrapper">
-                <label for="th-three">3</label>
-                <input type="radio" name="theme" id="th-three" value="3" />
+                <label for="th-dark">3</label>
+                <input type="radio" name="theme" id="th-dark" value="3" />
               </div>
             </fieldset>
           </div>
@@ -76,9 +62,7 @@
           <button class="calc__key--math" data-action="divide">/</button>
           <button class="calc__key--math" data-action="multiply">x</button>
 
-          <button class="calc__key--func reset" data-action="reset">
-            reset
-          </button>
+          <button class="calc__key--func reset" data-action="reset">reset</button>
           <button class="calc__key--sum sum" data-action="sum">=</button>
         </div>
       </div>

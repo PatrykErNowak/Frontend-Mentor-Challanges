@@ -1,7 +1,7 @@
 @use '../abstracts/helpers' as *;
 
-// .calc.theme-one {
-.calc:has(#th-one:checked) {
+// .calc.theme-default {
+.calc:has(#th-default:checked) {
   // #### Backgrounds
   $main-bg: hsl(222, 26%, 31%);
   $toggle-bg-keypad-bg: hsl(223, 31%, 20%);
@@ -84,8 +84,8 @@
   }
 }
 // -------------------------------
-// .calc.theme-two {
-.calc:has(#th-two:checked) {
+// .calc.theme-light {
+.calc:has(#th-light:checked) {
   // #### Backgrounds
   $main-bg: hsl(0, 0%, 90%);
   $toggle-bg-keypad-bg: hsl(0, 5%, 81%);
@@ -167,8 +167,8 @@
   }
 }
 // -------------------------------
-// .calc.theme-three {
-.calc:has(#th-three:checked) {
+// .calc.theme-dark {
+.calc:has(#th-dark:checked) {
   // #### Backgrounds
   $main-bg: hsl(268, 75%, 9%);
   $toggle-bg-keypad-bg: hsl(268, 71%, 12%);
