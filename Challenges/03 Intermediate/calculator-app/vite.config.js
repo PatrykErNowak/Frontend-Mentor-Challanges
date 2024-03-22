@@ -5,6 +5,7 @@ process.env.BROWSER = 'chrome';
 // vite.config.js
 export default defineConfig({
   // config options
+  base: './',
   server: {
     open: true,
     port: 3000,
