@@ -11,7 +11,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 // JS
 const babel = require('gulp-babel');
-const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 const concat = require('gulp-concat');
 // Others
 const sourcemaps = require('gulp-sourcemaps');
@@ -53,7 +53,12 @@ function javascript(done) {
         presets: ['@babel/env'],
       }),
     )
-    .pipe(uglify())
+    .pipe(
+      terser({
+        keep_fnames: true,
+        mangle: false,
+      }),
+    )
     .pipe(rename(options.config.jsFileName + '.min.js'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(options.paths.jsDist));
