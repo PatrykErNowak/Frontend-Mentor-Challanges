@@ -11,6 +11,7 @@ export class Calc {
   private currentNumber: number | string = 0;
   private activeOperation: Operation = Operation.noOparation;
   private typedNumberKey = false;
+  private typedNumberIsFloat = false;
   private screen = document.querySelector('[data-js="screen"]') as HTMLParagraphElement;
   private keypad = document.querySelector('[data-js="keypad"]') as HTMLDivElement;
 
@@ -31,6 +32,7 @@ export class Calc {
     this.clearCurrentNumb();
     this.score = null;
     this.activeOperation = Operation.noOparation;
+    this.typedNumberIsFloat = false;
   }
 
   private displayResult() {
@@ -38,9 +40,13 @@ export class Calc {
   }
 
   private typeNumber(numb: string) {
-    if (numb === '.') this.currentNumber = '0';
-    if (this.currentNumber === 0 || this.currentNumber === '0') this.currentNumber = '';
+    if (numb === '.') {
+      if (this.typedNumberIsFloat) return;
+      this.typedNumberIsFloat = true;
+    }
+
     this.currentNumber = String(this.currentNumber) + numb;
+    if (this.currentNumber === '00') this.currentNumber = '0';
     this.screen.textContent = String(this.currentNumber);
     this.typedNumberKey = true;
   }
