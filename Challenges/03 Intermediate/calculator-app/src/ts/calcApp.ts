@@ -44,9 +44,9 @@ export class Calc {
       if (this.typedNumberIsFloat) return;
       this.typedNumberIsFloat = true;
     }
+    if (numb !== '.' && (this.currentNumber === '0' || this.currentNumber === 0)) this.currentNumber = '';
 
     this.currentNumber = String(this.currentNumber) + numb;
-    if (this.currentNumber === '00') this.currentNumber = '0';
     this.screen.textContent = String(this.currentNumber);
     this.typedNumberKey = true;
   }
@@ -70,6 +70,7 @@ export class Calc {
       this.displayResult();
       this.clearCurrentNumb();
       this.typedNumberKey = false;
+      this.typedNumberIsFloat = false;
     } else {
       this.sumAction(false);
     }
