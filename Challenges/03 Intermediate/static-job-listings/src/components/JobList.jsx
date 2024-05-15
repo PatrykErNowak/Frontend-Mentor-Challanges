@@ -1,10 +1,10 @@
 import JobListItem from './JobListItem';
 
-export default function JobList({ jobsOffers }) {
+export default function JobList({ onAddFilter, jobsOffers }) {
   return (
     <ul className="flex flex-col gap-11">
       {jobsOffers.map((job) => (
-        <JobListItem jobOffer={job} key={job.id}></JobListItem>
+        <JobListItem onAddFilter={onAddFilter} jobOffer={job} key={job.id}></JobListItem>
       ))}
     </ul>
   );
