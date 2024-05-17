@@ -1,6 +1,6 @@
 export default function FilterBox({ onRemoveFilter, filters }) {
   return (
-    <div className="flex justify-between gap-2 -mt-20 mb-12 p-4 lg:p-6 bg-white rounded-md shadow-xl ">
+    <div className="flex justify-between gap-2 relative z-10 -mt-20 mb-12 p-4 lg:p-6 bg-white rounded-md shadow-xl ">
       <ul className="flex gap-4 flex-wrap">
         {filters.map((filter, i) => (
           <FilterItem onRemoveFilter={onRemoveFilter} key={i}>

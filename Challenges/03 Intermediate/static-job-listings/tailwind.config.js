@@ -10,10 +10,6 @@ export default {
         'main-light': 'hsl(180, 31%, 95%)',
         'main-bg': 'hsl(180, 52%, 96%)',
       },
-      backgroundImage: {
-        'hero-mobile': 'url(./images/bg-header-mobile.svg)',
-        'hero-desktop': 'url(./images/bg-header-desktop.svg)',
-      },
     },
   },
   plugins: [],

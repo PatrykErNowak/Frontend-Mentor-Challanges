@@ -16,16 +16,18 @@ function App() {
         setError(false);
         const response = await fetch('./data.json');
         const data = await response.json();
-        setJobsOffers(data);
+        setJobsOffers(() => data.filter((job) => filters.every((item) => [job.role, job.level, ...job.languages, ...job.tools].includes(item))));
       } catch (error) {
         setError(true);
       }
     }
     fetchJobsOffers();
-  }, []);
+  }, [filters]);
 
   function handleAddFilters(category) {
-    if (filters.some((filter) => filter.toLowerCase() === category.toLowerCase())) return;
+    const isTheSameFilter = filters.some((filter) => filter.toLowerCase() === category.toLowerCase());
+
+    if (isTheSameFilter) return;
     setFilters((filter) => [...filter, category]);
   }
   function handleRemoveFilters(category) {
@@ -38,11 +40,11 @@ function App() {
 
   return (
     <div className="bg-main-bg min-h-screen">
-      <HeroTop></HeroTop>
+      <HeroTop />
       <BoxContainer>
-        {filters.length > 0 && <FilterBox onRemoveFilter={handleRemoveFilters} filters={filters}></FilterBox>}
-        {error && <p>Sorry, there was a problem with fetching data.</p>}
+        {filters.length > 0 && <FilterBox onRemoveFilter={handleRemoveFilters} filters={filters} />}
         {jobsOffers.length > 0 ? <JobList onAddFilter={handleAddFilters} jobsOffers={jobsOffers}></JobList> : <p>Currently, there are no job offers</p>}
+        {error && <p>Sorry, there was a problem with fetching data.</p>}
       </BoxContainer>
     </div>
   );
