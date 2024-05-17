@@ -257,4 +257,26 @@ const solutions = [
       repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/03%20Intermediate/calculator-app',
     },
   },
+  {
+    id: 14,
+    title: 'Job Listings',
+    type: 'App',
+    level: 'intermediate',
+    technologies: [
+      { type: 'svg', name: 'html', icon: 'icon-html5' },
+      { type: 'svg', name: 'css', icon: 'icon-css3' },
+      { type: 'svg', name: 'javascript', icon: 'icon-js' },
+      { type: 'svg', name: 'react', icon: 'icon-react' },
+      { type: 'svg', name: 'tailwindcss', icon: 'icon-tailwindcss' },
+      { type: 'png', name: 'vite', icon: 'icon-vite' },
+    ],
+    img: {
+      src: './img/Photos of Challenges/03 Intermediate/job-listings.jpg',
+      alt: 'Job Listings application solution screenshot',
+    },
+    links: {
+      live: '../../Challenges/03 Intermediate/static-job-listings/dist/',
+      repo: 'https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/03%20Intermediate/static-job-listings',
+    },
+  },
 ];
