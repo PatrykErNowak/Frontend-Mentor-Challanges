@@ -1,8 +1,8 @@
-@use "../abstracts/colors" as c;
+@use '../abstracts/colors' as c;
 
 .btn {
   padding: 1em 1.5em;
-  font-family: "Barlow", sans-serif;
+  font-family: 'Barlow', sans-serif;
   color: #fff;
   font-style: italic;
   font-size: 1.4rem;
@@ -36,8 +36,9 @@
 
 // Button Childrens
 .btn-icon {
+  height: 100%;
+  width: 20px;
   font-size: 2rem;
   margin-left: 0.5em;
-  width: 20px;
   vertical-align: -0.5rem;
 }
