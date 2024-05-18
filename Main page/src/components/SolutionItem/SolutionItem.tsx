@@ -39,14 +39,14 @@ function TechTag({ technology }: { technology: Technology }) {
   if (technology.type !== 'svg')
     return (
       <li className="solution__tech-item">
-        <img className="icon" aria-label={name} src={`/tech-icons/other/${icon}.${type}`} />
+        <img className="icon" aria-label={name} src={`./tech-icons/other/${icon}.${type}`} />
       </li>
     );
 
   return (
     <li className="solution__tech-item">
       <svg className="icon" aria-label={name} role="img">
-        <use xlinkHref={`/tech-icons/sprite.svg#${icon}`}></use>
+        <use xlinkHref={`./tech-icons/sprite.svg#${icon}`}></use>
       </svg>
     </li>
   );

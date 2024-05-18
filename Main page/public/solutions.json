@@ -17,7 +17,7 @@
       }
     ],
     "img": {
-      "src": "/Photos of Challenges/01 newbie/3 column card preview.jpg",
+      "src": "./Photos of Challenges/01 newbie/3 column card preview.jpg",
       "alt": "3 column card preview solution screenshot"
     },
     "links": {
@@ -43,7 +43,7 @@
       }
     ],
     "img": {
-      "src": "/Photos of Challenges/01 newbie/results summary component.jpg",
+      "src": "./Photos of Challenges/01 newbie/results summary component.jpg",
       "alt": "Results summary component solution screenshot"
     },
     "links": {
@@ -69,7 +69,7 @@
       }
     ],
     "img": {
-      "src": "/Photos of Challenges/02 junior/testimonials grid section.jpg",
+      "src": "./Photos of Challenges/02 junior/testimonials grid section.jpg",
       "alt": "Testimonials grid section solution screenshot"
     },
     "links": {
@@ -95,7 +95,7 @@
       }
     ],
     "img": {
-      "src": "/Photos of Challenges/02 junior/fylo data storage component.jpg",
+      "src": "./Photos of Challenges/02 junior/fylo data storage component.jpg",
       "alt": "Fylo data storage component solution screenshot"
     },
     "links": {
@@ -126,7 +126,7 @@
       }
     ],
     "img": {
-      "src": "/Photos of Challenges/02 junior/clipboard landing page.jpg",
+      "src": "./Photos of Challenges/02 junior/clipboard landing page.jpg",
       "alt": "Clipboard landing page solution screenshot"
     },
     "links": {
@@ -162,7 +162,7 @@
       }
     ],
     "img": {
-      "src": "/Photos of Challenges/02 junior/huddle ladning page.jpg",
+      "src": "./Photos of Challenges/02 junior/huddle ladning page.jpg",
       "alt": "Huddle landing page solution screenshot"
     },
     "links": {
@@ -198,7 +198,7 @@
       }
     ],
     "img": {
-      "src": "/Photos of Challenges/03 Intermediate/chat-app.jpg",
+      "src": "./Photos of Challenges/03 Intermediate/chat-app.jpg",
       "alt": "Chat app illustration solution screenshot"
     },
     "links": {
@@ -239,7 +239,7 @@
       }
     ],
     "img": {
-      "src": "/Photos of Challenges/01 newbie/faq-accordion.jpg",
+      "src": "./Photos of Challenges/01 newbie/faq-accordion.jpg",
       "alt": "FAQ accordion solution screenshot"
     },
     "links": {
@@ -280,7 +280,7 @@
       }
     ],
     "img": {
-      "src": "/Photos of Challenges/01 newbie/interactive-rating-component.jpg",
+      "src": "./Photos of Challenges/01 newbie/interactive-rating-component.jpg",
       "alt": "Interactive rating component solution screenshot"
     },
     "links": {
@@ -321,7 +321,7 @@
       }
     ],
     "img": {
-      "src": "/Photos of Challenges/01 newbie/base-apparel-page.jpg",
+      "src": "./Photos of Challenges/01 newbie/base-apparel-page.jpg",
       "alt": "Base apparel page solution screenshot"
     },
     "links": {
@@ -362,7 +362,7 @@
       }
     ],
     "img": {
-      "src": "/Photos of Challenges/02 junior/age-calculator-app.jpg",
+      "src": "./Photos of Challenges/02 junior/age-calculator-app.jpg",
       "alt": "Age calculator application solution screenshot"
     },
     "links": {
@@ -408,7 +408,7 @@
       }
     ],
     "img": {
-      "src": "/Photos of Challenges/02 junior/advice-generator-app.jpg",
+      "src": "./Photos of Challenges/02 junior/advice-generator-app.jpg",
       "alt": "Advice generator application solution screenshot"
     },
     "links": {
@@ -449,7 +449,7 @@
       }
     ],
     "img": {
-      "src": "/Photos of Challenges/03 Intermediate/calculator-app.jpg",
+      "src": "./Photos of Challenges/03 Intermediate/calculator-app.jpg",
       "alt": "Calculator application solution screenshot"
     },
     "links": {
@@ -495,7 +495,7 @@
       }
     ],
     "img": {
-      "src": "/Photos of Challenges/03 Intermediate/job-listings.jpg",
+      "src": "./Photos of Challenges/03 Intermediate/job-listings.jpg",
       "alt": "Job Listings application solution screenshot"
     },
     "links": {

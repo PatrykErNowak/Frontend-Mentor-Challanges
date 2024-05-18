@@ -6,7 +6,7 @@ import WrapperContainer from './components/WrappperContainer';
 import SolutionsList from './components/SolutionsList';
 
 async function fetchSolutions(fn: CallableFunction) {
-  const response = await fetch('/solutions.json');
+  const response = await fetch('./solutions.json');
   const data = await response.json();
   fn(data);
 }
