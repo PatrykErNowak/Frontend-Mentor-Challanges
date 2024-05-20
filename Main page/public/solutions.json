@@ -475,8 +475,8 @@
       },
       {
         "type": "svg",
-        "name": "javascript",
-        "icon": "icon-js"
+        "name": "typescript",
+        "icon": "icon-typescript"
       },
       {
         "type": "svg",

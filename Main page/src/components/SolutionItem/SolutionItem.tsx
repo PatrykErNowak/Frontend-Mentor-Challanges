@@ -5,7 +5,7 @@ import { Solution, DifficultyLevel, Technology } from './types';
 export default function SolutionItem({ solution }: { solution: Solution }) {
   const { title, type, level, technologies, img, links } = solution;
   return (
-    <div className="solution">
+    <li className="solution">
       <img src={img.src} alt={img.alt} className="solution__img" />
       <div className="solution__content">
         <h4 className="solution__title">{title}</h4>
@@ -30,7 +30,7 @@ export default function SolutionItem({ solution }: { solution: Solution }) {
           </a>
         </div>
       </div>
-    </div>
+    </li>
   );
 }
 
