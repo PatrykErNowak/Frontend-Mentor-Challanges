@@ -1,4 +1,6 @@
-export default function FilterBox({ onRemoveFilter, filters }) {
+import { FilterBoxProps, FilterItemProps } from './types';
+
+export default function FilterBox({ onRemoveFilter, filters }: FilterBoxProps) {
   return (
     <div className="flex justify-between gap-2 relative z-10 -mt-20 mb-12 p-4 lg:p-6 bg-white rounded-md shadow-xl ">
       <ul className="flex gap-4 flex-wrap">
@@ -15,7 +17,7 @@ export default function FilterBox({ onRemoveFilter, filters }) {
   );
 }
 
-function FilterItem({ onRemoveFilter, children }) {
+function FilterItem({ onRemoveFilter, children }: FilterItemProps) {
   return (
     <li className="flex rounded-md overflow-hidden">
       <p className="relative p-1 px-2 font-bold text-main before:absolute before:size-full before:bg-main before:top-0 before:left-0 before:opacity-15">

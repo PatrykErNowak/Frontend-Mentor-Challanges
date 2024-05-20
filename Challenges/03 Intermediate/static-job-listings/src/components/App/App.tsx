@@ -1,21 +1,22 @@
-import HeroTop from './components/HeroTop';
-import BoxContainer from './components/BoxContainer';
-import JobList from './components/JobList';
+import HeroTop from '../HeroTop/HeroTop';
+import BoxContainer from '../BoxContainer/BoxContainer';
+import JobList from '../JobList/JobList';
+import FilterBox from '../FilterBox/FilterBox';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import FilterBox from './components/FilterBox';
+import { JobOffer } from './types';
 
 function App() {
-  const [jobsOffers, setJobsOffers] = useState([]);
+  const [jobsOffers, setJobsOffers] = useState<Array<JobOffer>>([]);
   const [error, setError] = useState(false);
-  const [filters, setFilters] = useState([]);
+  const [filters, setFilters] = useState<Array<string>>([]);
 
   useEffect(() => {
     async function fetchJobsOffers() {
       try {
         setError(false);
         const response = await fetch('./data.json');
-        const data = await response.json();
+        const data: Array<JobOffer> = await response.json();
         setJobsOffers(() => data.filter((job) => filters.every((item) => [job.role, job.level, ...job.languages, ...job.tools].includes(item))));
       } catch (error) {
         setError(true);
@@ -24,13 +25,13 @@ function App() {
     fetchJobsOffers();
   }, [filters]);
 
-  function handleAddFilters(category) {
+  function handleAddFilters(category: string) {
     const isTheSameFilter = filters.some((filter) => filter.toLowerCase() === category.toLowerCase());
 
     if (isTheSameFilter) return;
-    setFilters((filter) => [...filter, category]);
+    setFilters((filters) => [...filters, category]);
   }
-  function handleRemoveFilters(category) {
+  function handleRemoveFilters(category: string) {
     if (category === 'all') {
       setFilters([]);
       return;
