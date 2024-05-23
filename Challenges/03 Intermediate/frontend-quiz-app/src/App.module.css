@@ -1,0 +1,16 @@
+.app {
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  &.light {
+    background-color: var(--light-bgc);
+    background-image: url('./assets/images/pattern-background-mobile-light.svg');
+  }
+
+  &.dark {
+    background-color: var(--dark-bgc);
+    background-image: url('./assets/images/pattern-background-mobile-dark.svg');
+  }
+}
