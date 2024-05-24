@@ -1,6 +1,6 @@
 import { IconCategoryBGC } from '../../configs/config';
 import CategoryTitle from '../IconTitle/IconTitle';
-import styles from './CategoryListItem.module.css';
+import styles from './AnswerListItem.module.css';
 
 function CategoryListItem({ iconSrc, children }: { iconSrc: string; children: string }) {
   return (
