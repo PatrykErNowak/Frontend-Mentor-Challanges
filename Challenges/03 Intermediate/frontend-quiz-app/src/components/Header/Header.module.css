@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem 2.4rem;
+}
+
+.icon {
+  height: 1.6rem;
+}
+
+.themeSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 48em) {
+  .icon {
+    height: 2.4rem;
+  }
+  .themeSwitcher {
+    gap: 1.6rem;
+  }
+}

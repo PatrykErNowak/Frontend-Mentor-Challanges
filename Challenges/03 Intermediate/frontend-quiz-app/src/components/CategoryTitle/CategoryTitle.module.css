@@ -1,0 +1,36 @@
+.category {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 4rem;
+  aspect-ratio: 1/1;
+  border-radius: 4px;
+
+  img {
+    height: 65%;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .category {
+    gap: 2.4rem;
+  }
+  .title {
+    font-size: 2.8rem;
+  }
+  .iconBox {
+    height: 5.6rem;
+  }
+}

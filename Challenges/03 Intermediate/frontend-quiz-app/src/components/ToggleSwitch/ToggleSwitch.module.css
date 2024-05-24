@@ -1,0 +1,51 @@
+/* The switch - the box around the slider */
+.switch {
+  --transition-dur: 0.3s;
+  --border-radious: 1000px;
+
+  position: relative;
+  display: inline-block;
+  width: 3.2rem;
+  height: 2rem;
+}
+
+@media screen and (min-width: 48em) {
+  .switch {
+    width: 4.8rem;
+    height: 2.8rem;
+  }
+}
+/* Hide default HTML checkbox */
+
+.checkbox {
+  appearance: none;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radious);
+  transition: var(--transition-dur);
+}
+
+.slider:before {
+  content: '';
+  position: absolute;
+  height: calc(100% - 8px);
+  aspect-ratio: 1/1;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--white-color);
+  border-radius: var(--border-radious);
+  transition: transform var(--transition-dur);
+}
+
+.checkbox:checked + .slider:before {
+  transform: translateX(100%);
+}

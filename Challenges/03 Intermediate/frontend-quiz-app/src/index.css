@@ -21,6 +21,9 @@
 
   --dark-bgc: var(--second-color-extra-dark);
   --light-bgc: var(--second-color-extra-light);
+
+  --media-tablet: 48em;
+  --media-desktop-1440: 90em;
 }
 
 html {
