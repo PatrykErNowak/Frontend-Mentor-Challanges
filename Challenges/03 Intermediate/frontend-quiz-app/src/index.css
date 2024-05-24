@@ -23,6 +23,7 @@
   --light-bgc: var(--second-color-extra-light);
 
   --media-tablet: 48em;
+  --media-desktop-1280: 80em;
   --media-desktop-1440: 90em;
 }
 
@@ -43,4 +44,12 @@ h4,
 h5,
 h6 {
   line-height: 1;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
 }

@@ -1,0 +1,18 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 48em) {
+  .list {
+    gap: 2.4rem;
+  }
+}
+@media screen and (min-width: 80em) {
+  .list {
+    max-width: 50%;
+  }
+}

@@ -1,0 +1,11 @@
+.text {
+  color: var(--second-color-medium);
+  font-style: italic;
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 48em) {
+  .text {
+    font-size: 2rem;
+  }
+}

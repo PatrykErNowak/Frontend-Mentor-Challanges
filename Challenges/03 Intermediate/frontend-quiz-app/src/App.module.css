@@ -5,6 +5,7 @@
   background-position: left top;
 
   &.light {
+    color: var(--second-color-extra-dark);
     background-color: var(--light-bgc);
     background-image: url('./assets/images/pattern-background-mobile-light.svg');
   }
@@ -12,5 +13,28 @@
   &.dark {
     background-color: var(--dark-bgc);
     background-image: url('./assets/images/pattern-background-mobile-dark.svg');
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .app {
+    &.light {
+      background-image: url('./assets/images/pattern-background-tablet-light.svg');
+    }
+
+    &.dark {
+      background-image: url('./assets/images/pattern-background-tablet-dark.svg');
+    }
+  }
+}
+@media screen and (min-width: 80em) {
+  .app {
+    &.light {
+      background-image: url('./assets/images/pattern-background-desktop-light.svg');
+    }
+
+    &.dark {
+      background-image: url('./assets/images/pattern-background-desktop-dark.svg');
+    }
   }
 }

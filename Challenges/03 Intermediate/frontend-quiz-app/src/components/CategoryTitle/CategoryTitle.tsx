@@ -1,6 +1,6 @@
 import styles from './CategoryTitle.module.css';
 
-function CategoryTitle({ children, iconSrc, iconBgc }: { children: React.ReactNode; iconSrc: string; iconBgc: string }) {
+function CategoryTitle({ children, iconSrc, iconBgc = `#f4f6fa` }: { children: React.ReactNode; iconSrc: string; iconBgc: string }) {
   const styleSet = {
     backgroundColor: iconBgc,
   };
