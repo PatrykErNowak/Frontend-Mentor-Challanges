@@ -5,8 +5,22 @@
   margin-top: 1.2rem;
   height: 1.6rem;
   width: 100%;
-  background-color: var(--white-color);
   border-radius: 100px;
+}
+
+.progress.light {
+  background-color: var(--white-color);
+
+  ::-webkit-progress-bar {
+    background-color: var(--white-color);
+  }
+}
+.progress.dark {
+  background-color: var(--second-color-dark);
+
+  ::-webkit-progress-bar {
+    background-color: var(--second-color-dark);
+  }
 }
 
 progress {
@@ -16,8 +30,6 @@ progress {
 }
 
 ::-webkit-progress-bar {
-  background-color: var(--white-color);
-  /* background-color: var(--color-medium); */
   border-radius: 100px;
 }
 ::-webkit-progress-value {

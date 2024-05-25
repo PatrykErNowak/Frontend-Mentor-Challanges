@@ -12,6 +12,7 @@
   }
 
   &.dark {
+    color: var(--white-color);
     background-color: var(--dark-bgc);
     background-image: url('./assets/images/pattern-background-mobile-dark.svg');
   }

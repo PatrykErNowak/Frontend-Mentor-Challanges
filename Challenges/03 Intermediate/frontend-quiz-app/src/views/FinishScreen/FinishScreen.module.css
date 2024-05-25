@@ -4,8 +4,21 @@
   align-items: center;
   gap: 1.6rem;
   padding: 3.2rem;
-  background-color: var(--white-color);
   border-radius: 1.2rem;
+}
+
+.scoreContainer.light {
+  background-color: var(--white-color);
+
+  .extraInfo {
+    color: var(--second-color-medium);
+  }
+}
+.scoreContainer.dark {
+  background-color: var(--second-color-dark);
+  .extraInfo {
+    color: var(--second-color-light);
+  }
 }
 
 .score {

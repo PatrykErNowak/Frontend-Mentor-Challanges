@@ -4,9 +4,7 @@
   align-items: center;
   width: 100%;
   padding: 1.2rem;
-  background-color: var(--white-color);
   border-radius: 1.2rem;
-  box-shadow: 0 1.4rem 4rem rgba(143, 160, 193, 14%);
   border: 2px solid transparent;
 
   &.correct {
@@ -23,4 +21,13 @@
     border: 3px solid var(--primary-color);
     outline: none;
   }
+}
+
+.item.light {
+  background-color: var(--white-color);
+  box-shadow: 0 1.4rem 4rem rgba(143, 160, 193, 14%);
+}
+.item.dark {
+  background-color: var(--second-color-dark);
+  box-shadow: 0 1.4rem 4rem rgba(49, 62, 81, 14%);
 }

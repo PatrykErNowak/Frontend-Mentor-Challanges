@@ -1,7 +1,13 @@
 .text {
-  color: var(--second-color-medium);
   font-style: italic;
   font-size: 1.4rem;
+}
+
+.text.light {
+  color: var(--second-color-medium);
+}
+.text.dark {
+  color: var(--second-color-light);
 }
 
 @media screen and (min-width: 48em) {

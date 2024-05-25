@@ -4,11 +4,15 @@ import correctIcon from '../../assets/images/icon-correct.svg';
 import incorrectIcon from '../../assets/images/icon-incorrect.svg';
 import { CategoryListItemProps } from './types';
 import { State as IconTitleState } from '../IconTitle/types';
+import { useThemeContext } from '../../contexts/ThemeContext/ThemeContext';
 
 function CategoryListItem({ iconSrc, iconText, iconBgc, children, onAnswer, btnState = 'idle', disabled = false }: CategoryListItemProps) {
+  const { theme } = useThemeContext();
+
   function handleClick() {
     onAnswer(children);
   }
+
   let stateClass = undefined;
   let iconTitleState: IconTitleState = '';
   if (btnState === 'active') {
@@ -27,7 +31,7 @@ function CategoryListItem({ iconSrc, iconText, iconBgc, children, onAnswer, btnS
   return (
     <>
       <li>
-        <button className={`${styles.item} ${stateClass}`} onClick={handleClick} disabled={disabled}>
+        <button className={`${styles.item} ${stateClass} ${styles[theme]}`} onClick={handleClick} disabled={disabled}>
           <IconTitle state={iconTitleState} iconSrc={iconSrc} text={iconText} iconBgc={iconBgc}>
             {children}
           </IconTitle>

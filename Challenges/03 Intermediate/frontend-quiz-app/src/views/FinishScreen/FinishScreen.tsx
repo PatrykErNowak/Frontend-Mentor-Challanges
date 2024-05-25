@@ -4,9 +4,11 @@ import IconTitle from '../../components/IconTitle/IconTitle';
 import SectionContainer from '../../components/SectionContainer/SectionContainer';
 import { IconCategoryBGC } from '../../configs/config';
 import { useQuizContext } from '../../contexts/QuizContext/QuizContext';
+import { useThemeContext } from '../../contexts/ThemeContext/ThemeContext';
 import styles from './FinishScreen.module.css';
 
 function FinishScreen() {
+  const { theme } = useThemeContext();
   const { state, dispatch } = useQuizContext();
   const { category } = state;
 
@@ -22,7 +24,7 @@ function FinishScreen() {
         <HeadingH1 preChildren="Quiz completed">You scored...</HeadingH1>
       </header>
       <SectionContainer>
-        <div className={styles.scoreContainer}>
+        <div className={`${styles.scoreContainer} ${styles[theme]}`}>
           <IconTitle iconSrc={category?.icon} iconBgc={IconCategoryBGC[category?.title as keyof typeof IconCategoryBGC]}>
             {category?.title}
           </IconTitle>
