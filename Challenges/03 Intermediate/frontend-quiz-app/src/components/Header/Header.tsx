@@ -6,8 +6,6 @@ import IconTitle from '../IconTitle/IconTitle';
 import { IconCategoryBGC } from '../../configs/config';
 import { useQuizContext } from '../../contexts/QuizContext';
 
-const tempData = { categoryTitle: 'HTML', iconSrc: 'images/icon-html.svg' };
-
 function Header() {
   const { state } = useQuizContext();
   const { category } = state;
@@ -15,8 +13,8 @@ function Header() {
   return (
     <header className={styles.header}>
       {category && (
-        <IconTitle iconSrc={tempData.iconSrc} iconBgc={IconCategoryBGC[category.icon as keyof typeof IconCategoryBGC]}>
-          {tempData.categoryTitle}
+        <IconTitle iconSrc={category.icon} iconBgc={IconCategoryBGC[category.title as keyof typeof IconCategoryBGC]}>
+          {category.title}
         </IconTitle>
       )}
       <div className={styles.themeSwitcher}>

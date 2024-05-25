@@ -3,6 +3,7 @@
   width: 100%;
   background-repeat: no-repeat;
   background-position: left top;
+  background-size: cover;
 
   &.light {
     color: var(--second-color-extra-dark);

@@ -13,8 +13,9 @@
 @media screen and (min-width: 80em) {
   .container {
     margin-top: 3rem;
-    flex-direction: row;
-
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 45fr 55fr;
+    gap: 10rem;
+    justify-items: end;
   }
 }

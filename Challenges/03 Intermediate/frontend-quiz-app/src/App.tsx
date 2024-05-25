@@ -10,7 +10,7 @@ function App() {
       <div className={`${styles.app} ${styles.light}`}>
         <WrapperContainer>
           <Header />
-          <Main></Main>
+          <Main />
         </WrapperContainer>
       </div>
     </QuizProvider>

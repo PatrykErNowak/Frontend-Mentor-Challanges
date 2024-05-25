@@ -2,11 +2,45 @@
   display: flex;
   align-items: center;
   gap: 1.6rem;
+
+  &.success .iconBox {
+    background-color: var(--success-color);
+    span {
+      color: var(--white-color);
+    }
+  }
+  &.failure .iconBox {
+    background-color: var(--failure-color);
+    span {
+      color: var(--white-color);
+    }
+  }
+
+  &:hover {
+    .iconBox {
+      background-color: #f6e7ff;
+
+      span {
+        color: var(--primary-color);
+      }
+    }
+  }
+  &:active,
+  &.active {
+    .iconBox {
+      background-color: var(--primary-color);
+
+      span {
+        color: var(--white-color);
+      }
+    }
+  }
 }
 
 .title {
   font-size: 1.8rem;
   font-weight: 500;
+  text-align: start;
 }
 
 .iconBox {
@@ -17,9 +51,16 @@
   height: 4rem;
   aspect-ratio: 1/1;
   border-radius: 4px;
+  background-color: var(--second-color-extra-light);
 
   img {
     height: 65%;
+  }
+
+  span {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--second-color-medium);
   }
 }
 
@@ -32,5 +73,8 @@
   }
   .iconBox {
     height: 5.6rem;
+    span {
+      font-size: 2.8rem;
+    }
   }
 }

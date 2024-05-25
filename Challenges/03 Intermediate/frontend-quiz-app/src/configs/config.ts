@@ -5,4 +5,11 @@ enum IconCategoryBGC {
   Accessibility = '#F6E7FF',
 }
 
-export { IconCategoryBGC };
+const QuestionOptions = new Map([
+  [0, 'A'],
+  [1, 'B'],
+  [2, 'C'],
+  [3, 'D'],
+]);
+
+export { IconCategoryBGC, QuestionOptions };
