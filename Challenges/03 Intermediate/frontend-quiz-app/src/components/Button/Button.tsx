@@ -1,9 +1,5 @@
 import styles from './Button.module.css';
-
-type ButtonProps = {
-  children: string;
-  onClick: () => void;
-};
+import { ButtonProps } from './types';
 
 function Button({ children, onClick }: ButtonProps) {
   return (

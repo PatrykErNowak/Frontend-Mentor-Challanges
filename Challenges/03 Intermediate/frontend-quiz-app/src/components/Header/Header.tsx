@@ -4,7 +4,7 @@ import iconSunDark from '../../assets/images/icon-sun-dark.svg';
 import iconMoonDark from '../../assets/images/icon-moon-dark.svg';
 import IconTitle from '../IconTitle/IconTitle';
 import { IconCategoryBGC } from '../../configs/config';
-import { useQuizContext } from '../../contexts/QuizContext';
+import { useQuizContext } from '../../contexts/QuizContext/QuizContext';
 
 function Header() {
   const { state } = useQuizContext();

@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import styles from './ToggleSwitch.module.css';
+import { ToggleSwitchProps } from './types';
 
-function ToggleSwitch({ onSetToggle, ariaLabel }: { onSetToggle: (p: boolean) => void; ariaLabel: string }) {
+function ToggleSwitch({ onSetToggle, ariaLabel }: ToggleSwitchProps) {
   const [isToggle, setIsToggle] = useState(false);
 
   function handleToggleSwitch() {

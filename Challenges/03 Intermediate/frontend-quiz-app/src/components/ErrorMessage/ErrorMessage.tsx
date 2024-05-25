@@ -1,8 +1,6 @@
 import styles from './ErrorMessage.module.css';
 import errorIcon from '../../assets/images/icon-error.svg';
-type ErrorMessagerProps = {
-  children: React.ReactNode;
-};
+import { ErrorMessagerProps } from './types';
 
 function ErrorMessage({ children }: ErrorMessagerProps) {
   return (

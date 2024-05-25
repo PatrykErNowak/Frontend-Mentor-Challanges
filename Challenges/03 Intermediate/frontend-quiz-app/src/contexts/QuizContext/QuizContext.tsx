@@ -1,25 +1,6 @@
 /* eslint-disable no-case-declarations */
 import { createContext, useContext, useEffect, useReducer } from 'react';
-import { Quiz } from '../types/types';
-
-interface State {
-  quizzes: Quiz[];
-  category: Quiz | null;
-  status: 'loading' | 'ready' | 'active' | 'finished';
-  currentQuestion: number;
-  userAnswer: string | null;
-  correctAnswers: number;
-}
-
-type Action = {
-  type: string;
-  payload?: string | [] | object;
-};
-
-type QuizContext = {
-  state: State;
-  dispatch: React.Dispatch<Action>;
-};
+import { Action, QuizContext, State } from './types';
 
 const initialState: State = {
   quizzes: [],
@@ -74,7 +55,6 @@ function QuizProvider({ children }: { children: React.ReactElement }) {
     fetchQuizzes();
   }, []);
 
-  console.log(state);
   return <QuizContex.Provider value={{ state, dispatch }}>{children}</QuizContex.Provider>;
 }
 

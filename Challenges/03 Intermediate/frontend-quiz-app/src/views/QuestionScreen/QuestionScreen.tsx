@@ -1,5 +1,5 @@
 import SmallText from '../../components/SmallText/SmallText';
-import { useQuizContext } from '../../contexts/QuizContext';
+import { useQuizContext } from '../../contexts/QuizContext/QuizContext';
 import styles from './QuestionScreen.module.css';
 import AnswerList from '../../components/AnswersList/AnswersList';
 import AnswerListItem from '../../components/AnswerListItem/AnswerListItem';
@@ -8,6 +8,8 @@ import Button from '../../components/Button/Button';
 import { useState } from 'react';
 import { BtnState } from '../../components/AnswerListItem/types';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
+import SectionContainer from '../../components/SectionContainer/SectionContainer';
+import Progress from '../../components/Progress/Progress';
 
 function QuestionScreen() {
   const [error, setError] = useState(false);
@@ -15,7 +17,7 @@ function QuestionScreen() {
   const { state, dispatch } = useQuizContext();
   const { category, currentQuestion } = state;
 
-  const numQuestions = category?.questions.length;
+  const numQuestions = category?.questions.length || 0;
   const question = category?.questions[currentQuestion];
   const isAnswer = state.userAnswer !== null;
   const isLastQuestion = state.userAnswer && state.currentQuestion + 1 === numQuestions;
@@ -36,11 +38,9 @@ function QuestionScreen() {
       <header className={styles.header}>
         <SmallText>{`Question ${currentQuestion + 1} of ${numQuestions}`}</SmallText>
         <h1>{question?.question}</h1>
-        <div className={styles.progress}>
-          <progress value={currentQuestion + 1} max={numQuestions} />
-        </div>
+        <Progress value={currentQuestion + 1} maxValue={numQuestions} />
       </header>
-      <section className={styles.section}>
+      <SectionContainer>
         <AnswerList>
           {question?.options.map((option, i) => {
             let buttonState: BtnState = 'idle';
@@ -64,7 +64,7 @@ function QuestionScreen() {
         </AnswerList>
         <Button onClick={handleQuestion}>{!state.userAnswer ? 'Send Answer' : isLastQuestion ? 'Finish Quiz' : 'Next Question'}</Button>
         {error && <ErrorMessage>Please select an answer</ErrorMessage>}
-      </section>
+      </SectionContainer>
     </>
   );
 }

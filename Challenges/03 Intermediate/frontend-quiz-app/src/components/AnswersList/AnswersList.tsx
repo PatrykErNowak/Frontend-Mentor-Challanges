@@ -1,7 +1,7 @@
 import styles from './AnswersList.module.css';
 
 type CategoryListProps = {
-  children: React.ReactElement[];
+  children: React.ReactNode[] | React.ReactNode;
 };
 
 function CategoryList({ children }: CategoryListProps) {
