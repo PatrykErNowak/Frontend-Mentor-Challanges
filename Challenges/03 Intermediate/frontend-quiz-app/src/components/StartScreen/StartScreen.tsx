@@ -5,6 +5,7 @@ import styles from './StartScreen.module.css';
 import { useQuizContext } from '../../contexts/QuizContext';
 import Spinner from '../Spinner/Spinner';
 import { IconCategoryBGC } from '../../configs/config';
+import HeadingH1 from '../HeadingH1/HeadingH1';
 
 function StartScreen() {
   const { state, dispatch } = useQuizContext();
@@ -17,9 +18,7 @@ function StartScreen() {
   return (
     <>
       <header className={styles.header}>
-        <h1 className={styles.title}>
-          Welcome to the <span>Frontend Quiz!</span>
-        </h1>
+        <HeadingH1 preChildren="Welcome to the">Frontend Quiz!</HeadingH1>
         <SmallText>Pick a subject to get started.</SmallText>
       </header>
       {status === 'loading' && <Spinner />}

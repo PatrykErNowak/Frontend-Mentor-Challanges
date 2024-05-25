@@ -48,6 +48,8 @@ function QuizReduce(state: State, action: Action): State {
       return { ...state, currentQuestion: state.currentQuestion + 1, userAnswer: null };
     case 'finishQuiz':
       return { ...state, userAnswer: null, status: 'finished' };
+    case 'restartQuiz':
+      return { ...initialState, quizzes: state.quizzes, status: 'ready' };
     default:
       throw new Error('Unknown Action type');
   }
