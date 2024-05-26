@@ -1,5 +1,5 @@
 import hero from '../assets/header-mobile.jpg';
-import GithubLogo from './Icons/GitHubLogo';
+import GithubLogo from '../assets/Icons/GitHubLogo';
 
 export default function Header() {
   return (

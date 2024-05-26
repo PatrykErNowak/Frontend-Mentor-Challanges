@@ -1,0 +1,12 @@
+.filtersList {
+  display: flex;
+  gap: 2rem;
+  row-gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.filterCategory {
+  color: #737373;
+}

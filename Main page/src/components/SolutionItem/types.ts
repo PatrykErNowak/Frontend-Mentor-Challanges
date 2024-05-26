@@ -17,11 +17,13 @@ export interface Solution {
   id: number;
   title: string;
   type: string;
-  level: DifficultyLevel;
+  level: Level;
   technologies: Array<Technology>;
   img: Img;
   links: Links;
 }
+
+export type Level = 'newbie' | 'junior' | 'intermediate' | 'advanced';
 
 export enum DifficultyLevel {
   newbie = 1,
