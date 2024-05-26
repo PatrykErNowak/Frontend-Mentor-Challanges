@@ -44,7 +44,7 @@ function QuizProvider({ children }: { children: React.ReactElement }) {
   useEffect(() => {
     async function fetchQuizzes() {
       try {
-        const res = await fetch('/data/data.json');
+        const res = await fetch('./data/data.json');
         const { quizzes } = await res.json();
 
         dispatch({ type: 'fetchQuizzes', payload: quizzes });

@@ -5,20 +5,20 @@
   width: 100%;
   padding: 1.2rem;
   border-radius: 1.2rem;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
 
   &.correct {
-    border: 3px solid var(--success-color);
+    border-color: var(--success-color);
     outline: none;
   }
   &.wrong {
-    border: 3px solid var(--failure-color);
+    border-color: var(--failure-color);
     outline: none;
   }
 
   &:active,
   &.active {
-    border: 3px solid var(--primary-color);
+    border-color: var(--primary-color);
     outline: none;
   }
 }

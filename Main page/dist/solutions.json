@@ -116,11 +116,6 @@
       },
       {
         "type": "svg",
-        "name": "css",
-        "icon": "icon-css3"
-      },
-      {
-        "type": "svg",
         "name": "sass",
         "icon": "icon-sass"
       }
@@ -144,11 +139,6 @@
         "type": "svg",
         "name": "html",
         "icon": "icon-html5"
-      },
-      {
-        "type": "svg",
-        "name": "css",
-        "icon": "icon-css3"
       },
       {
         "type": "svg",
@@ -183,11 +173,6 @@
       },
       {
         "type": "svg",
-        "name": "css",
-        "icon": "icon-css3"
-      },
-      {
-        "type": "svg",
         "name": "sass",
         "icon": "icon-sass"
       },
@@ -219,19 +204,15 @@
       },
       {
         "type": "svg",
-        "name": "css",
-        "icon": "icon-css3"
+        "name": "sass",
+        "icon": "icon-sass"
       },
       {
         "type": "svg",
         "name": "javascript",
         "icon": "icon-js"
       },
-      {
-        "type": "svg",
-        "name": "sass",
-        "icon": "icon-sass"
-      },
+
       {
         "type": "svg",
         "name": "gulp",
@@ -260,18 +241,13 @@
       },
       {
         "type": "svg",
-        "name": "css",
-        "icon": "icon-css3"
+        "name": "tailwindcss",
+        "icon": "icon-tailwindcss"
       },
       {
         "type": "svg",
         "name": "javascript",
         "icon": "icon-js"
-      },
-      {
-        "type": "svg",
-        "name": "tailwindcss",
-        "icon": "icon-tailwindcss"
       },
       {
         "type": "svg",
@@ -301,19 +277,15 @@
       },
       {
         "type": "svg",
-        "name": "css",
-        "icon": "icon-css3"
+        "name": "sass",
+        "icon": "icon-sass"
       },
       {
         "type": "svg",
         "name": "javascript",
         "icon": "icon-js"
       },
-      {
-        "type": "svg",
-        "name": "sass",
-        "icon": "icon-sass"
-      },
+
       {
         "type": "svg",
         "name": "gulp",
@@ -342,18 +314,13 @@
       },
       {
         "type": "svg",
-        "name": "css",
-        "icon": "icon-css3"
+        "name": "sass",
+        "icon": "icon-sass"
       },
       {
         "type": "svg",
         "name": "javascript",
         "icon": "icon-js"
-      },
-      {
-        "type": "svg",
-        "name": "sass",
-        "icon": "icon-sass"
       },
       {
         "type": "svg",
@@ -383,18 +350,13 @@
       },
       {
         "type": "svg",
-        "name": "css",
-        "icon": "icon-css3"
+        "name": "sass",
+        "icon": "icon-sass"
       },
       {
         "type": "svg",
         "name": "javascript",
         "icon": "icon-js"
-      },
-      {
-        "type": "svg",
-        "name": "sass",
-        "icon": "icon-sass"
       },
       {
         "type": "png",
@@ -429,18 +391,13 @@
       },
       {
         "type": "svg",
-        "name": "css",
-        "icon": "icon-css3"
+        "name": "sass",
+        "icon": "icon-sass"
       },
       {
         "type": "svg",
         "name": "typescript",
         "icon": "icon-typescript"
-      },
-      {
-        "type": "svg",
-        "name": "sass",
-        "icon": "icon-sass"
       },
       {
         "type": "png",
@@ -465,23 +422,13 @@
     "technologies": [
       {
         "type": "svg",
-        "name": "html",
-        "icon": "icon-html5"
-      },
-      {
-        "type": "svg",
-        "name": "css",
-        "icon": "icon-css3"
+        "name": "react",
+        "icon": "icon-react"
       },
       {
         "type": "svg",
         "name": "typescript",
         "icon": "icon-typescript"
-      },
-      {
-        "type": "svg",
-        "name": "react",
-        "icon": "icon-react"
       },
       {
         "type": "svg",
@@ -501,6 +448,42 @@
     "links": {
       "live": "../../Challenges/03 Intermediate/static-job-listings/dist/",
       "repo": "https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/03%20Intermediate/static-job-listings"
+    }
+  },
+  {
+    "id": 15,
+    "title": "Frontend Quiz App",
+    "type": "App",
+    "level": "intermediate",
+    "technologies": [
+      {
+        "type": "svg",
+        "name": "react",
+        "icon": "icon-react"
+      },
+      {
+        "type": "svg",
+        "name": "typescript",
+        "icon": "icon-typescript"
+      },
+      {
+        "type": "png",
+        "name": "css modules",
+        "icon": "icon-css-modules"
+      },
+      {
+        "type": "png",
+        "name": "vite",
+        "icon": "icon-vite"
+      }
+    ],
+    "img": {
+      "src": "./Photos of Challenges/03 Intermediate/frontend-quiz-app.jpg",
+      "alt": "Frontend quiz application solution screenshot"
+    },
+    "links": {
+      "live": "../../Challenges/03 Intermediate/frontend-quiz-app/dist/",
+      "repo": "https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/03%20Intermediate/frontend-quiz-app"
     }
   }
 ]
