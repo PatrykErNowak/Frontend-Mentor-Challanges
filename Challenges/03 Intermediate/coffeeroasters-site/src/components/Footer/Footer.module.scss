@@ -1,18 +1,75 @@
+@use '../../index.scss' as *;
+
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 4.8rem;
   padding: 5rem 2rem;
   margin-bottom: 7rem;
   text-align: center;
   background-color: var(--dark-grey-color);
 
-  ul {
-    list-style: none;
-    color: var(--grey-color);
+  @include breakpoint(tablet) {
+    padding: 5.4rem;
+    gap: 3rem;
+  }
+  @include breakpoint(desktop1280) {
+    flex-direction: row;
+    justify-content: start;
+    padding: 4.5rem 12rem;
+    gap: 10rem;
   }
 }
 
 .logo {
   display: inline-block;
 }
+
+.sitemap {
+  list-style: none;
+  color: var(--grey-color);
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+.link {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 300ms;
+
+  @include breakpoint(desktop1280) {
+    cursor: pointer;
+    &:hover {
+      color: var(--light-color);
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+  list-style: none;
+
+  @include breakpoint(tablet) {
+    margin-top: 3rem;
+  }
+  @include breakpoint(desktop1280) {
+    margin-top: 0;
+    margin-left: auto;
+  }
+}
+
+// .socialLink {
+
+// }

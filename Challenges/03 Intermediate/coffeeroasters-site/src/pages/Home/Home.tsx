@@ -23,7 +23,7 @@ function Home() {
         <ChooseUsSection />
         <HowItWorksSection />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
