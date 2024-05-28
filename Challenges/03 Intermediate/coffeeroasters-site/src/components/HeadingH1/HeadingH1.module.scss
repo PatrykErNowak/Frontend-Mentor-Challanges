@@ -1,0 +1,14 @@
+@use '../../index.scss' as *;
+
+.heading {
+  color: var(--light-color);
+  font-size: 4rem;
+  line-height: 1;
+
+  @include breakpoint(tablet) {
+    font-size: 4.8rem;
+  }
+  @include breakpoint(desktop1280) {
+    font-size: 7.2rem;
+  }
+}

@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
 
+@mixin breakpoint($size) {
+  @media screen and (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+$breakpoints: (
+  'tablet': 48em,
+  'desktop1280': 80em,
+  'desktop1440': 90em,
+);
+
 * {
   margin: 0;
   padding: 0;
@@ -15,9 +27,7 @@
   --light-color: #fefcf7;
   --white-color: #ffffff;
 
-  --media-tablet: 48em;
-  --media-desktop-1280: 80em;
-  --media-desktop-1440: 90em;
+  --hover-color: #66d2cf;
 }
 
 html {
@@ -27,6 +37,7 @@ html {
 body {
   font-family: 'Barlow', sans-serif;
   font-size: 1.6rem;
+  background-color: var(--light-color);
 }
 
 h1,

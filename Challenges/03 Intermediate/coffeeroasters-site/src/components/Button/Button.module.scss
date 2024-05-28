@@ -1,0 +1,27 @@
+@use '../../index.scss' as *;
+
+.btn {
+  padding: 1.5rem 3rem;
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--light-color);
+  background-color: var(--primary-color);
+  border-radius: 0.6rem;
+  transition: transform 300ms, background-color 300ms;
+
+  &:active {
+    transform: translateY(3px);
+  }
+
+  &:disabled {
+    background-color: var(--grey-color);
+  }
+
+  @include breakpoint(desktop1280) {
+    &:hover {
+      background-color: var(--hover-color);
+    }
+  }
+}

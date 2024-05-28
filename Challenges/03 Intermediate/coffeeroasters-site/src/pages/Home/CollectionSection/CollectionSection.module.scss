@@ -1,0 +1,92 @@
+@use '../../../index.scss' as *;
+
+.collection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 12rem 0;
+  color: var(--dark-grey-color);
+}
+
+.title {
+  margin-bottom: 5rem;
+  font-size: 4.2rem;
+  text-transform: lowercase;
+  line-height: 1;
+  font-weight: 900;
+
+  background: -webkit-linear-gradient(var(--grey-color), var(--light-color) 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @include breakpoint(tablet) {
+    font-size: 10.5rem;
+    letter-spacing: 3px;
+    margin-bottom: -4rem;
+    opacity: 0.6;
+    z-index: -1;
+  }
+  @include breakpoint(desktop1280) {
+    font-size: 17rem;
+    margin-bottom: -6rem;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5.5rem;
+
+  @include breakpoint(tablet) {
+    padding: 0 5%;
+  }
+  @include breakpoint(desktop1280) {
+    flex-direction: row;
+    gap: 3%;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .itemImg {
+    width: 100%;
+    max-width: 25rem;
+    display: block;
+  }
+
+  .itemTitle {
+    margin: 1.6rem 0 1.6rem;
+    font-size: 2.4rem;
+    font-weight: 900;
+  }
+
+  .itemDesc {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  @include breakpoint(tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: start;
+    text-align: start;
+
+    .itemTitle {
+      margin: 2.5rem 0;
+    }
+  }
+
+  @include breakpoint(desktop1280) {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
+}

@@ -1,0 +1,12 @@
+@use '../../index.scss' as *;
+
+.text {
+  color: var(--light-color);
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.65;
+  opacity: 0.8;
+  @include breakpoint(desktop1280) {
+    font-size: 1.6rem;
+  }
+}

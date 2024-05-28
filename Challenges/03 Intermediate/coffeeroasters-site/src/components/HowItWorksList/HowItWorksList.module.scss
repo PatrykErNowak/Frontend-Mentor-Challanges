@@ -1,0 +1,76 @@
+@use '../../index.scss' as *;
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5.5rem;
+  padding: 8rem 0;
+  list-style: none;
+  text-align: center;
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    text-align: start;
+    padding: 12rem 0 5rem;
+    overflow: hidden;
+    gap: 3rem;
+  }
+}
+
+.item {
+  @include breakpoint(tablet) {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -5rem;
+      left: 0;
+      width: 3rem;
+      height: 3rem;
+      border: 2px solid var(--primary-color);
+      background-color: var(--light-color);
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+    &:last-child::after {
+      content: '';
+      position: absolute;
+      top: -5rem;
+      left: 0;
+      width: 400%;
+      height: 3px;
+      background-color: var(--second-color);
+      transform: translateX(calc(-100% + 2rem));
+      z-index: -1;
+    }
+  }
+}
+
+.numb {
+  font-family: 'Fraunces', serif;
+  font-size: 7.2rem;
+  font-weight: 900;
+  color: var(--second-color);
+  line-height: 1;
+}
+
+.title {
+  margin: 2.4rem 0;
+  font-size: 2.8rem;
+  font-weight: 900;
+
+  @include breakpoint(tablet) {
+    margin: 5rem 0;
+  }
+  @include breakpoint(desktop1280) {
+    font-size: 3.2rem;
+  }
+}
+
+.desc {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  @include breakpoint(desktop1280) {
+    font-size: 1.6rem;
+  }
+}

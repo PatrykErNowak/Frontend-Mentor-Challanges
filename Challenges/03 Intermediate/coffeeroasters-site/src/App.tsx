@@ -1,9 +1,12 @@
+import Wrapper from './components/Wrapper/Wrapper';
+import Home from './pages/Home/Home';
+
 function App() {
-
-
   return (
-<div></div>
-  )
+    <Wrapper>
+      <Home />
+    </Wrapper>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,19 @@
+@use '../../../index.scss' as *;
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 12rem 0;
+  color: var(--dark-grey-color);
+
+  @include breakpoint(tablet) {
+    align-items: start;
+    padding: 6.5rem 7rem 0;
+  }
+}
+
+.title {
+  color: var(--grey-color);
+  font-size: 2.4rem;
+}
