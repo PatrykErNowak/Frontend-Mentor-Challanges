@@ -18,6 +18,13 @@
 }
 
 .item {
+  &.light::before {
+    background-color: var(--light-color);
+  }
+  &.dark::before {
+    background-color: var(--dark-grey-color);
+  }
+
   @include breakpoint(tablet) {
     position: relative;
     &::before {
@@ -28,7 +35,6 @@
       width: 3rem;
       height: 3rem;
       border: 2px solid var(--primary-color);
-      background-color: var(--light-color);
       border-radius: 50%;
       transform: translateY(-50%);
     }

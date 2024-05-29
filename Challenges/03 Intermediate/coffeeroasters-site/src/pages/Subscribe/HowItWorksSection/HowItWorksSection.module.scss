@@ -1,0 +1,38 @@
+@use '../../../index.scss' as *;
+
+.section {
+  margin: 12rem 0;
+  color: var(--light-color);
+
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 101vw;
+    height: 100%;
+    max-width: 128rem;
+    transform: translateX(-50%);
+    background-image: url('/img/plan/mobile/bg-steps.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+    z-index: -1;
+  }
+}
+
+@include breakpoint(tablet) {
+  .section {
+    padding: 9rem 4rem;
+
+    &::before {
+      background-image: url('/img/plan/desktop/bg-steps.png');
+    }
+  }
+}
+@include breakpoint(desktop) {
+  .section {
+    padding: 10rem 15rem 10rem 8rem;
+  }
+}
