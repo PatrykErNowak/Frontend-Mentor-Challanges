@@ -6,12 +6,12 @@ import Text from '../../components/Text/Text';
 import ChooseUsSection from './ChooseUsSection/ChooseUsSection';
 import CollectionSection from './CollectionSection/CollectionSection';
 import HowItWorksSection from './HowItWorksSection/HowItWorksSection';
-
+import styles from './Home.module.scss';
 function Home() {
   return (
     <>
       <main>
-        <Hero>
+        <Hero classCSS={styles.homeHero}>
           <HeadingH1>Great coffee made simple.</HeadingH1>
           <Text>
             Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door,

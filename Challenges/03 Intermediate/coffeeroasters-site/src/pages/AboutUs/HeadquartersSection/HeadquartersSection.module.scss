@@ -1,0 +1,62 @@
+@use '../../../index.scss' as *;
+
+.section {
+  margin: 12rem 0;
+}
+
+.title {
+  margin-bottom: 7rem;
+  color: var(--grey-color);
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  list-style: none;
+}
+
+@include breakpoint(tablet) {
+  .title {
+    text-align: start;
+  }
+
+  .list {
+    flex-direction: row;
+  }
+}
+@include breakpoint(desktop1280) {
+  .list {
+    gap: 10rem;
+  }
+}
+
+.item {
+  text-align: center;
+}
+
+.itemTitle {
+  font-size: 2.8rem;
+  margin-top: 4.5rem;
+  margin-bottom: 2.2rem;
+}
+
+.itemAddress {
+  line-height: 1.6;
+}
+
+@include breakpoint(tablet) {
+  .item {
+    text-align: start;
+  }
+  .itemTitle {
+    font-size: 2.4rem;
+  }
+}
+@include breakpoint(desktop1280) {
+  .itemTitle {
+    font-size: 3.2rem;
+  }
+}

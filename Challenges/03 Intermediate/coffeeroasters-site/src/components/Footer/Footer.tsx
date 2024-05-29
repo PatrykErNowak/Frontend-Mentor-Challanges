@@ -14,17 +14,17 @@ function Footer() {
 
       <ul className={styles.sitemap} aria-label="sitemap">
         <li>
-          <Link className={styles.link} to={'./'}>
+          <Link className={styles.link} to={'/'}>
             Home
           </Link>
         </li>
         <li>
-          <Link className={styles.link} to={'./about-us'}>
+          <Link className={styles.link} to={'/about-us'}>
             About us
           </Link>
         </li>
         <li>
-          <Link className={styles.link} to={'./subscribe'}>
+          <Link className={styles.link} to={'/subscribe'}>
             Create your plan
           </Link>
         </li>

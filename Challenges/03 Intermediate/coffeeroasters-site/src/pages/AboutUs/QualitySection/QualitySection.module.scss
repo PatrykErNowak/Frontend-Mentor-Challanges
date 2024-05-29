@@ -1,0 +1,63 @@
+@use '../../../index.scss' as *;
+.section {
+  display: grid;
+  margin: 40% 0 12rem;
+  padding: 35% 2.4rem 6rem;
+  background-image: url('/img/about/mobile/bg-quality.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  position: relative;
+
+  @include breakpoint(desktop) {
+    grid-template-columns: 4fr 3fr;
+    padding: 10rem 8.5rem 17rem;
+    margin: 20rem 0 12rem;
+    gap: 15rem;
+    background-image: url('/img/about/desktop/bg-quality.png');
+  }
+}
+
+.imageBox {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 85%;
+  transform: translateY(-50%) translateX(-50%);
+  border-radius: 1rem;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  @include breakpoint(desktop) {
+    position: absolute;
+    left: unset;
+    right: 10%;
+    transform: translateY(-15%) translateX(10%);
+    order: 1;
+    width: 100%;
+    height: 100%;
+    max-width: 40%;
+  }
+}
+
+.contentBox {
+  color: var(--light-color);
+  text-align: center;
+
+  @include breakpoint(desktop) {
+    text-align: start;
+  }
+}
+
+.title {
+  margin-bottom: 3rem;
+  font-size: 2.8rem;
+  @include breakpoint(desktop) {
+    font-size: 4rem;
+  }
+}

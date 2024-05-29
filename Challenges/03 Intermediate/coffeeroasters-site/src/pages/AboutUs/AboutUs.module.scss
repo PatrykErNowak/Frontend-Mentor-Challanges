@@ -1,0 +1,11 @@
+@use '../../index.scss' as *;
+.hero {
+  background-image: url('./img/about/mobile/image-hero-whitecup.jpg');
+
+  @include breakpoint(tablet) {
+    background-image: url('./img/about/tablet/image-hero-whitecup.jpg');
+  }
+  @include breakpoint(desktop1280) {
+    background-image: url('./img/about/desktop/image-hero-whitecup.jpg');
+  }
+}
