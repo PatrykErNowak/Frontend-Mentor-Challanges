@@ -1,0 +1,165 @@
+@use '../../../index.scss' as *;
+
+.section {
+  margin: 12rem 0;
+  @include breakpoint(desktop1280) {
+    padding: 0 8rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr 8fr;
+    align-items: start;
+  }
+}
+
+.listMenu {
+  display: none;
+  @include breakpoint(desktop1280) {
+    display: block;
+    position: sticky;
+    top: 0px;
+  }
+}
+
+.listMenuItem {
+  padding: 2.4rem;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 2.4rem;
+  color: var(--dark-grey-color);
+  text-transform: capitalize;
+  list-style: none;
+  opacity: 0.4;
+  cursor: pointer;
+  span {
+    color: var(--grey-color);
+    margin-right: 2.8rem;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--dark-grey-color);
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.listMenuItem:global(.active) {
+  opacity: 1;
+}
+.listMenuItem:global(.inactive) {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+// ------------------------------------------------
+
+.form {
+  grid-column: -2/-1;
+}
+
+.collapse {
+  .button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    margin-bottom: 3rem;
+    text-align: start;
+
+    .question {
+      font-family: 'Fraunces', serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--grey-color);
+    }
+
+    .icon {
+      transition: transform 300ms;
+    }
+
+    :global(.iconClose) {
+      transform: rotateX(-180deg);
+    }
+
+    @include breakpoint(desktop) {
+      &:hover .question {
+        color: var(--dark-grey-color);
+      }
+    }
+    @include breakpoint(desktop1280) {
+      .question {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .legend {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &:global(.disabled) {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    border-color: transparent;
+    padding-bottom: 8rem;
+  }
+
+  @include breakpoint(tablet) {
+    .form {
+      flex-direction: row;
+    }
+  }
+}
+
+.card {
+  display: block;
+  position: relative;
+  padding: 2.4rem;
+  color: var(--dark-grey-color);
+  border-radius: 0.8rem;
+  background-color: #f4f1eb;
+  cursor: pointer;
+
+  &:has(input:checked) {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+  }
+
+  .radio {
+    appearance: none;
+    position: absolute;
+  }
+
+  .title {
+    margin-bottom: 0.8rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 2.4rem;
+    text-transform: capitalize;
+  }
+
+  .desc {
+    font-size: 1.6rem;
+  }
+
+  @include breakpoint(tablet) {
+    padding: 3.2rem 2.5rem 8rem;
+
+    .title {
+      margin-bottom: 2.5rem;
+    }
+  }
+  @include breakpoint(desktop) {
+    &:hover {
+      background-color: var(--second-color);
+    }
+  }
+}
