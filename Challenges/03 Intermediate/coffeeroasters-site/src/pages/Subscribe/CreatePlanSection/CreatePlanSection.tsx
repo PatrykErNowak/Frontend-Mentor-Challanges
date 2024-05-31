@@ -1,6 +1,7 @@
 import { Collapse } from 'react-collapse';
 import styles from './CreatePlanSection.module.scss';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import Button from '../../../components/Button/Button';
 
 type PlanCategory = 'preferencees' | 'beanType' | 'quantity' | 'grind' | 'deliveries';
 interface Plan {
@@ -10,6 +11,25 @@ interface Plan {
   grind: 'wholebean' | 'filter' | 'cafetiére' | null;
   deliveries: 'every week' | 'every 2 weeks' | 'every month' | null;
 }
+
+const pricing = {
+  'every week': {
+    '250g': '7.20',
+    '500g': '13.00',
+    '1000g': '22.00',
+  },
+  'every 2 weeks': {
+    '250g': '9.60',
+    '500g': '17.50',
+    '1000g': '32.00',
+  },
+  'every month': {
+    '250g': '12.00',
+    '500g': '22.00',
+    '1000g': '42.00',
+  },
+};
+
 const initPlan = {
   preferencees: null,
   beanType: null,
@@ -22,6 +42,15 @@ function CreatePlanSection() {
   const [plan, setPlan] = useState<Plan>(initPlan);
   const [openedSection, setOpenedSection] = useState<boolean[]>([true, false, false, false, false]);
   const [currentSection, setCurrentSection] = useState(0);
+
+  const isReadyToSend = useCallback(() => {
+    if (plan.preferencees === 'capsule') {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { grind: _, ...newPlan } = plan;
+      return !Object.values(newPlan).includes(null);
+    }
+    return !Object.values(plan).includes(null);
+  }, [plan]);
 
   function handlePlanChange(planCategory: PlanCategory, value: string, questionLevel: number) {
     setOpenedSection((prev) => prev.map((el, i) => (i === questionLevel ? true : el)));
@@ -40,6 +69,7 @@ function CreatePlanSection() {
 
   function handleForm(e: React.SyntheticEvent) {
     e.preventDefault();
+    console.log('send form');
   }
 
   return (
@@ -113,17 +143,28 @@ function CreatePlanSection() {
           </Card>
         </CollapseSection>
 
-        <CollapseSection open={openedSection[4]} question="Want us to deliveries them?">
+        <CollapseSection open={openedSection[4]} question="How often should we deliver?">
           <Card questionLevel={4} onChangePlan={handlePlanChange} groupName={'deliveries'} title="every week">
-            $7.20 per shipment. Includes free first-class shipping.
+            ${pricing['every week'][plan.quantity || '250g']}
+            per shipment. Includes free first-class shipping.
           </Card>
           <Card questionLevel={4} onChangePlan={handlePlanChange} groupName={'deliveries'} title="every 2 weeks">
-            $9.60 per shipment. Includes free priority shipping.
+            ${pricing['every 2 weeks'][plan.quantity || '250g']} per shipment. Includes free priority shipping.
           </Card>
           <Card questionLevel={4} onChangePlan={handlePlanChange} groupName={'deliveries'} title="every month">
-            $12.00 per shipment. Includes free priority shipping.
+            ${pricing['every month'][plan.quantity || '250g']} per shipment. Includes free priority shipping.
           </Card>
         </CollapseSection>
+        <div className={styles.orderSummary}>
+          <p className={styles.orderSummaryTitle}>Order summary</p>
+          <p className={styles.orderSummaryDesc}>
+            “I drink my coffee {plan.preferencees === 'capsule' ? 'using' : `as`} <span>{plan.preferencees || '_____'}</span>, with a{' '}
+            <span>{plan.beanType || '_____'}</span> type of bean. <span>{plan.quantity || '_____'}</span>{' '}
+            {plan.preferencees !== 'capsule' && plan.preferencees !== null && `ground ala `}
+            {plan.preferencees !== 'capsule' && <span>{plan.grind}</span>}, sent to me <span>{plan.deliveries || '_____'}</span>.”
+          </p>
+        </div>
+        <Button disabled={!isReadyToSend()}>Create my plan!</Button>
       </form>
     </section>
   );
@@ -157,7 +198,7 @@ function CollapseSection({ question, children, open = false, active = true }: Co
 
   return (
     <div className={`${styles.collapse} ${!isActive ? 'disabled' : ''}`} aria-hidden={!active}>
-      <button className={styles.button} onClick={handleStateChange} aria-hidden={true}>
+      <button type="button" className={styles.button} onClick={handleStateChange} aria-hidden={true}>
         <span className={styles.question}>{question}</span>
         <span className={`${styles.icon} ${iconClass}`}>
           <svg width="19" height="13" xmlns="http://www.w3.org/2000/svg">
@@ -178,7 +219,7 @@ function CollapseSection({ question, children, open = false, active = true }: Co
 type CardProps = {
   groupName: PlanCategory;
   title: string;
-  children: string;
+  children: string | string[];
   onChangePlan: (plan: PlanCategory, value: string, questionLevel: number) => void;
   questionLevel: number;
 };

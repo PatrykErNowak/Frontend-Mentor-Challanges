@@ -17,6 +17,8 @@
 
   &:disabled {
     background-color: var(--grey-color);
+    opacity: 0.4;
+    pointer-events: none;
   }
 
   @include breakpoint(desktop1280) {
