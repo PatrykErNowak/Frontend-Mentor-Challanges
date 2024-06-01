@@ -1,9 +1,9 @@
 import styles from './Button.module.scss';
 import { ButtonProps } from './types';
 
-function Button({ children, disabled = false }: ButtonProps) {
+function Button({ children, disabled = false, onClick }: ButtonProps) {
   return (
-    <button className={`${styles.btn}`} disabled={disabled}>
+    <button className={`${styles.btn}`} disabled={disabled} onClick={onClick}>
       {children}
     </button>
   );

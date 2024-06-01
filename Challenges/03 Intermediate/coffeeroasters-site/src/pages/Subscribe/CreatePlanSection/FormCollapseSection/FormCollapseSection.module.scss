@@ -1,0 +1,63 @@
+@use '../../../../index.scss' as *;
+
+.collapse {
+  .button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    margin-bottom: 3rem;
+    text-align: start;
+
+    .question {
+      font-family: 'Fraunces', serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--grey-color);
+    }
+
+    .icon {
+      transition: transform 300ms;
+    }
+
+    :global(.iconClose) {
+      transform: rotateX(-180deg);
+    }
+
+    @include breakpoint(desktop) {
+      &:hover .question {
+        color: var(--dark-grey-color);
+      }
+    }
+    @include breakpoint(desktop1280) {
+      .question {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .legend {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &:global(.disabled) {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    border-color: transparent;
+    padding-bottom: 8rem;
+  }
+
+  @include breakpoint(tablet) {
+    .form {
+      flex-direction: row;
+    }
+  }
+}

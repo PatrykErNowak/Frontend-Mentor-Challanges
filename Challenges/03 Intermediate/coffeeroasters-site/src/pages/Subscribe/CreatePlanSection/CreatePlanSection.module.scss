@@ -68,118 +68,12 @@
   }
 }
 
-.collapse {
-  .button {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5rem;
-    margin-bottom: 3rem;
-    text-align: start;
-
-    .question {
-      font-family: 'Fraunces', serif;
-      font-size: 2.4rem;
-      font-weight: 800;
-      color: var(--grey-color);
-    }
-
-    .icon {
-      transition: transform 300ms;
-    }
-
-    :global(.iconClose) {
-      transform: rotateX(-180deg);
-    }
-
-    @include breakpoint(desktop) {
-      &:hover .question {
-        color: var(--dark-grey-color);
-      }
-    }
-    @include breakpoint(desktop1280) {
-      .question {
-        font-size: 3rem;
-      }
-    }
-  }
-
-  .legend {
-    position: absolute;
-    opacity: 0;
-  }
-
-  &:global(.disabled) {
-    opacity: 0.3;
-    pointer-events: none;
-  }
-
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-    border-color: transparent;
-    padding-bottom: 8rem;
-  }
-
-  @include breakpoint(tablet) {
-    .form {
-      flex-direction: row;
-    }
-  }
-}
-
-.card {
-  display: block;
-  position: relative;
-  padding: 2.4rem;
-  color: var(--dark-grey-color);
-  border-radius: 0.8rem;
-  background-color: #f4f1eb;
-  cursor: pointer;
-
-  &:has(input:checked) {
-    background-color: var(--primary-color);
-    color: var(--light-color);
-  }
-
-  .radio {
-    appearance: none;
-    position: absolute;
-  }
-
-  .title {
-    margin-bottom: 0.8rem;
-    font-family: 'Fraunces', serif;
-    font-weight: 900;
-    font-size: 2.4rem;
-    text-transform: capitalize;
-  }
-
-  .desc {
-    font-size: 1.6rem;
-  }
-
-  @include breakpoint(tablet) {
-    padding: 3.2rem 2.5rem 8rem;
-
-    .title {
-      margin-bottom: 2.5rem;
-    }
-  }
-  @include breakpoint(desktop) {
-    &:hover {
-      background-color: var(--second-color);
-    }
-  }
-}
-
 .orderSummary {
   margin-top: 6rem;
   padding: 3.2rem 2.4rem;
   background-color: var(--dark-grey-color);
   border-radius: 0.8rem;
+  color: var(--light-color);
   @include breakpoint(tablet) {
     padding: 2.7rem 4.4rem;
   }
@@ -192,16 +86,4 @@
   font-size: 1.6rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
-}
-
-.orderSummaryDesc {
-  font-family: 'Fraunces', serif;
-  font-size: 2.4rem;
-  font-weight: 800;
-  line-height: 1.6;
-  color: var(--light-color);
-  span {
-    text-transform: capitalize;
-    color: var(--primary-color);
-  }
 }
