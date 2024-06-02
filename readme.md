@@ -29,3 +29,4 @@ Here you can find a showcase of my front-end skills. This collection features my
 - Calculator App - [Repository](./Challenges/03%20Intermediate/calculator-app/) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/03%20Intermediate/calculator-app/dist/)
 - Job Listings App - [Repository](./Challenges/03%20Intermediate/static-job-listings/) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/03%20Intermediate/static-job-listings/dist/)
 - Frontend Quiz App - [Repository](./Challenges/03%20Intermediate/frontend-quiz-app/) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/03%20Intermediate/frontend-quiz-app/dist/)
+- Coffee Roasters Multipage Webiste - [Repository](./Challenges/03%20Intermediate/coffeeroasters-site/) | [Live](https://coffee-roasters-pendev.netlify.app)

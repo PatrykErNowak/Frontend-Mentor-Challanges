@@ -594,7 +594,7 @@
         "alt": "Coffee Roasters multipage website solution screenshot"
       },
       "links": {
-        "live": "../../Challenges/03 Intermediate/coffeeroasters-site/dist/",
+        "live": "https://coffee-roasters-pendev.netlify.app",
         "repo": "https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/03%20Intermediate/coffeeroasters-site"
       }
     }
