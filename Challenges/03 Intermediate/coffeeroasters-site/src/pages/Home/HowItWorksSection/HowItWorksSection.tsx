@@ -1,5 +1,5 @@
-import Button from '../../../components/Button/Button';
 import HowItWorksList from '../../../components/HowItWorksList/HowItWorksList';
+import LinkButton from '../../../components/LinkButton/LinkButton';
 import styles from './HowItWorksSection.module.scss';
 
 function HowItWorksSection() {
@@ -7,7 +7,7 @@ function HowItWorksSection() {
     <section className={styles.section}>
       <h2 className={styles.title}>How it works</h2>
       <HowItWorksList />
-      <Button>Create your plan</Button>
+      <LinkButton to="/subscribe">Create your plan</LinkButton>
     </section>
   );
 }

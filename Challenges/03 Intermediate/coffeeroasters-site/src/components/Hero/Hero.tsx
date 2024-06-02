@@ -6,7 +6,7 @@ type HeroProps = {
 };
 
 function Hero({ children, classCSS }: HeroProps) {
-  return <div className={`${styles.hero} ${classCSS}`}>{children}</div>;
+  return <header className={`${styles.hero} ${classCSS}`}>{children}</header>;
 }
 
 export default Hero;

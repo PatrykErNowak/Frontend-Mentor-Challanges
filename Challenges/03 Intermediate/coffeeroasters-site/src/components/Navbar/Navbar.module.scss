@@ -1,0 +1,102 @@
+@use '../../index.scss' as *;
+
+$bg-mobile: var(--light-color);
+$bg-mobile-transparent: rgba(248, 240, 220, 0.4);
+
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.2rem 0 4rem;
+  z-index: 100;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background-color: var(--light-color);
+  }
+
+  @include breakpoint(tablet) {
+    padding: 4.6rem 0;
+  }
+}
+
+.logo {
+  z-index: 100;
+  max-width: 16rem;
+  @include breakpoint(tablet) {
+    max-width: 20rem;
+  }
+}
+
+.list {
+  list-style: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background: linear-gradient(180deg, $bg-mobile 55%, $bg-mobile-transparent 100%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  padding-top: 13rem;
+
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: transform 300ms, opacity 300ms;
+
+  &:global(.activeNav) {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  @include breakpoint(tablet) {
+    all: initial;
+    list-style: none;
+    display: flex;
+    gap: 3.3rem;
+
+    z-index: 50;
+  }
+}
+
+.listItem {
+  font-family: 'Fraunces', serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--dark-grey-color);
+
+  :global(.active) {
+    color: var(--primary-color);
+  }
+
+  @include breakpoint(tablet) {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.5rem;
+    color: var(--grey-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    :hover {
+      color: var(--dark-grey-color);
+    }
+  }
+}
+
+.menuBtn {
+  z-index: 100;
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}

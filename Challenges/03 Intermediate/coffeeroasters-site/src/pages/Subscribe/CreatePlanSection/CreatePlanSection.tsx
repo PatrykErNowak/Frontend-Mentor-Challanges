@@ -1,5 +1,5 @@
 import styles from './CreatePlanSection.module.scss';
-import { useCallback, useState } from 'react';
+import { useMemo, useState } from 'react';
 import Button from '../../../components/Button/Button';
 import { Plan, PlanCategory } from './types';
 import PlanSummaryText from './PlanSummaryText/PlanSummaryText';
@@ -39,7 +39,13 @@ function CreatePlanSection() {
   const [currentSection, setCurrentSection] = useState(0);
   const [showModal, setShowModal] = useState(false);
 
-  const isReadyToSend = useCallback(() => {
+  const summaryPrice = useMemo(() => {
+    if (plan.deliveries === 'every week' && plan.quantity !== null) return parseFloat(pricing[plan.deliveries][plan.quantity]) * 4;
+    if (plan.deliveries === 'every 2 weeks' && plan.quantity !== null) return parseFloat(pricing[plan.deliveries][plan.quantity]) * 2;
+    if (plan.deliveries === 'every month' && plan.quantity !== null) return parseFloat(pricing[plan.deliveries][plan.quantity]) * 1;
+  }, [plan.deliveries, plan.quantity]);
+
+  const isReadyToSend = useMemo(() => {
     if (plan.preferencees === 'capsule') {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { grind: _, ...newPlan } = plan;
@@ -155,9 +161,9 @@ function CreatePlanSection() {
           <p className={styles.orderSummaryTitle}>Order summary</p>
           <PlanSummaryText plan={plan} />
         </div>
-        <Button disabled={!isReadyToSend()}>Create my plan!</Button>
+        <Button disabled={!isReadyToSend}>Create my plan!</Button>
       </form>
-      {showModal && <OrderSummaryModal plan={plan} price={30} onCloseModal={() => setShowModal(false)} />}
+      {showModal && <OrderSummaryModal plan={plan} price={summaryPrice || 0} onCloseModal={() => setShowModal(false)} />}
     </section>
   );
 }
