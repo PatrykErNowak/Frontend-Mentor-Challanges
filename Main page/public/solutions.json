@@ -556,6 +556,47 @@
         "live": "../../Challenges/03 Intermediate/frontend-quiz-app/dist/",
         "repo": "https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/03%20Intermediate/frontend-quiz-app"
       }
+    },
+    {
+      "id": 16,
+      "title": "Coffee Roasters",
+      "type": "Multipage Website",
+      "level": "intermediate",
+      "technologies": [
+        {
+          "type": "svg",
+          "name": "react",
+          "icon": "icon-react"
+        },
+        {
+          "type": "svg",
+          "name": "typescript",
+          "icon": "icon-typescript"
+        },
+        {
+          "type": "png",
+          "name": "css modules",
+          "icon": "icon-css-modules"
+        },
+        {
+          "type": "svg",
+          "name": "sass",
+          "icon": "icon-sass"
+        },
+        {
+          "type": "png",
+          "name": "vite",
+          "icon": "icon-vite"
+        }
+      ],
+      "img": {
+        "src": "./Photos of Challenges/03 Intermediate/coffee-roasters-site.jpg",
+        "alt": "Coffee Roasters multipage website solution screenshot"
+      },
+      "links": {
+        "live": "../../Challenges/03 Intermediate/coffeeroasters-site/dist/",
+        "repo": "https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/03%20Intermediate/coffeeroasters-site"
+      }
     }
   ]
 }
