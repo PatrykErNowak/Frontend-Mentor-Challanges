@@ -7,7 +7,11 @@ function QualitySection() {
   return (
     <section className={styles.section}>
       <div className={styles.imageBox}>
-        <img srcSet={`${qualityImg} 480w, ${qualityImgDesktop} 800w`} sizes="(max-width: 1024px) 480px, 800px" src={qualityImg} alt="" />
+        <picture>
+          <source media="(max-width: 1024px)" srcSet={qualityImg} />
+          <source media="(min-width: 1025px)" srcSet={qualityImgDesktop} />
+          <img src={qualityImg} alt="" />
+        </picture>
       </div>
       <div className={styles.contentBox}>
         <h2 className={styles.title}> Uncompromising quality</h2>
