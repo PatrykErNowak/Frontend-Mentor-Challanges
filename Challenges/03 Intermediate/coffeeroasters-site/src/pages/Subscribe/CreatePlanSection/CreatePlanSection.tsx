@@ -1,5 +1,5 @@
 import styles from './CreatePlanSection.module.scss';
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import Button from '../../../components/Button/Button';
 import { Plan, PlanCategory } from './types';
 import PlanSummaryText from './PlanSummaryText/PlanSummaryText';
@@ -54,7 +54,7 @@ function CreatePlanSection() {
     return !Object.values(plan).includes(null);
   }, [plan]);
 
-  function handlePlanChange(planCategory: PlanCategory, value: string, questionLevel: number) {
+  const handlePlanChange = useCallback(function handlePlanChange(planCategory: PlanCategory, value: string, questionLevel: number) {
     setOpenedSection((prev) => prev.map((el, i) => (i === questionLevel ? true : el)));
     setCurrentSection((prev) => {
       if (prev === 4) return prev;
@@ -63,7 +63,7 @@ function CreatePlanSection() {
     setPlan((prev) => {
       return { ...prev, [planCategory]: value };
     });
-  }
+  }, []);
 
   function toggleSectionFromMenu(index: number) {
     setOpenedSection((prev) => prev.map((el, i) => (i === index ? !el : el)));

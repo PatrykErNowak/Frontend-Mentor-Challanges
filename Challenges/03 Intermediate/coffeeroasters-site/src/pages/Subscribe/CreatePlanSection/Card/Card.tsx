@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import styles from './Card.module.scss';
 import { CardProps } from './types';
 
@@ -15,4 +16,4 @@ function Card({ groupName, title, children, onChangePlan, questionLevel }: CardP
   );
 }
 
-export default Card;
+export default memo(Card);
