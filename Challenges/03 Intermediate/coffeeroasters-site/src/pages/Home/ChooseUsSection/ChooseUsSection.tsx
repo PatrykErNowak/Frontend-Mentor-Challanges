@@ -6,7 +6,7 @@ import iconShipping from '../../../assets/collection/icon-truck.svg';
 
 function ChooseUsSection() {
   return (
-    <section className={styles.section}>
+    <section data-aos="fade-up" className={styles.section}>
       <header>
         <h2 className={styles.title}>Why Choose Us?</h2>
         <Text>

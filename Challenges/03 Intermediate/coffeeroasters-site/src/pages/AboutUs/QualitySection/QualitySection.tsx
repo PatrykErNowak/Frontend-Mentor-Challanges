@@ -5,7 +5,7 @@ import Text from '../../../components/Text/Text';
 
 function QualitySection() {
   return (
-    <section className={styles.section}>
+    <section data-aos="fade-up" className={styles.section}>
       <div className={styles.imageBox}>
         <picture>
           <source media="(max-width: 1024px)" srcSet={qualityImg} />

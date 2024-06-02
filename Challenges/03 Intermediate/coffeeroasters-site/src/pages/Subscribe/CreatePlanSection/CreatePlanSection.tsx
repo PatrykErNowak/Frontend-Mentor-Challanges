@@ -75,7 +75,7 @@ function CreatePlanSection() {
   }
 
   return (
-    <section className={styles.section}>
+    <section data-aos="fade-up" className={styles.section}>
       <ol className={styles.listMenu}>
         <li onClick={() => toggleSectionFromMenu(0)} className={`${styles.listMenuItem} ${currentSection === 0 ? 'active' : ''}`}>
           <span>01</span> preferences

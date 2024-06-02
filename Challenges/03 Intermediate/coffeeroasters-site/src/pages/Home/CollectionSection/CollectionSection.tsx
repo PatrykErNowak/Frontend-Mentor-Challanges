@@ -6,7 +6,7 @@ import danche from '../../../assets/collection/image-danche.png';
 
 function CollectionSection() {
   return (
-    <section className={styles.collection}>
+    <section data-aos="fade-up" className={styles.collection}>
       <h2 className={styles.title}>our collection</h2>
       <ul className={styles.list}>
         <FeatureItem imgSrc={granEspresso} title="Gran Espresso">

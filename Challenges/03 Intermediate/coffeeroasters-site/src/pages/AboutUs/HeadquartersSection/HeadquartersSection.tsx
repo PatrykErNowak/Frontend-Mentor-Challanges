@@ -5,7 +5,7 @@ import uk from '../../../assets/aboutus/desktop/illustration-uk.svg';
 
 function HeadquartersSection() {
   return (
-    <section className={styles.section}>
+    <section data-aos="fade-up" className={styles.section}>
       <h2 className={styles.title}>Our headquarters</h2>
       <ul className={styles.list}>
         <Item imgSrc={uk} title="United Kingdom">

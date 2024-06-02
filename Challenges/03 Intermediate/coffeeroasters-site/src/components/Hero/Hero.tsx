@@ -6,7 +6,11 @@ type HeroProps = {
 };
 
 function Hero({ children, classCSS }: HeroProps) {
-  return <header className={`${styles.hero} ${classCSS}`}>{children}</header>;
+  return (
+    <header data-aos="fade-right" className={`${styles.hero} ${classCSS}`}>
+      {children}
+    </header>
+  );
 }
 
 export default Hero;

@@ -4,7 +4,7 @@ import styles from './HowItWorksSection.module.scss';
 
 function HowItWorksSection() {
   return (
-    <section className={styles.section}>
+    <section data-aos="fade-up" className={styles.section}>
       <h2 className={styles.title}>How it works</h2>
       <HowItWorksList />
       <LinkButton to="/subscribe">Create your plan</LinkButton>

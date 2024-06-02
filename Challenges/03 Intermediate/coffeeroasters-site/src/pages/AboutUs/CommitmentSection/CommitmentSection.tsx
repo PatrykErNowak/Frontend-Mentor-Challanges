@@ -4,7 +4,7 @@ import commitmentHeroDesktop from '../../../assets/aboutus/desktop/image-commitm
 
 function CommitmentSection() {
   return (
-    <section className={styles.section}>
+    <section data-aos="fade-up" className={styles.section}>
       <div className={styles.imageBox}>
         <img srcSet={`${commitmentHero} 480w, ${commitmentHeroDesktop} 800w`} sizes="(max-width: 1024px) 480px, 800px" src={commitmentHero} alt="" />
       </div>

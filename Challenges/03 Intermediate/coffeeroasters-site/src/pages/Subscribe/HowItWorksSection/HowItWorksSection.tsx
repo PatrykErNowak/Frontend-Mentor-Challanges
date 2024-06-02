@@ -3,7 +3,7 @@ import styles from './HowItWorksSection.module.scss';
 
 function HowItWorksSection() {
   return (
-    <section className={styles.section}>
+    <section data-aos="fade-up" className={styles.section}>
       <HowItWorksList markerColor="dark" />
     </section>
   );
