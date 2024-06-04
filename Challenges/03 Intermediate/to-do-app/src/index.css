@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+@layer base {
+  :root {
+    --active-task-text: hsl(235, 19%, 35%);
+    --complete-task-text: hsl(233, 11%, 84%);
+    --filters-text: hsl(236, 9%, 61%);
+    --filters-active-text: hsl(220, 98%, 61%);
+    --input-text: hsl(237, 14%, 26%);
+    --input-placeholder-text: hsl(236, 9%, 61%);
+
+    --bgc-app: hsl(0, 0%, 98%);
+    --bgc-task: #fff;
+
+    --gradient-color-1: #5596ff;
+    --gradient-color-2: #ac2deb;
+
+    --bg-mobile: url('/public/images/bg-mobile-light.jpg');
+    --bg-desktop: url('/public/images/bg-desktop-light.jpg');
+  }
+  .dark {
+    --active-task-text: hsl(234, 39%, 85%);
+    --complete-task-text: hsl(233, 14%, 35%);
+    --filters-text: hsl(235, 16%, 42%);
+    --filters-active-text: hsl(220, 98%, 61%);
+    --input-text: hsl(234, 39%, 85%);
+    --input-placeholder-text: hsl(234, 11%, 52%);
+
+    --bgc-app: hsl(235, 21%, 11%);
+    --bgc-task: hsl(235, 24%, 19%);
+
+    --gradient-color-1: #3710bd;
+    --gradient-color-2: #a42395;
+
+    --bg-mobile: url('/public/images/bg-mobile-dark.jpg');
+    --bg-desktop: url('/public/images/bg-desktop-dark.jpg');
+  }
+}
