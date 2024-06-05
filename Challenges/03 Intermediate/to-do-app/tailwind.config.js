@@ -12,19 +12,20 @@ export default {
         inputPlaceholder: 'var(--input-placeholder-text)',
       },
       borderColor: {
-        defaultColor: '#979797',
+        defaultColor: 'var(--border-color)',
       },
       backgroundColor: {
         app: 'var(--bgc-app)',
         task: 'var(--bgc-task)',
       },
       colors: {
-        gradientColor1: 'var(--gradient-color-1)',
-        gradientColor2: 'var(--gradient-color-2)',
+        defaultColor: 'var(--border-color)',
       },
+
       backgroundImage: {
         mobile: 'var(--bg-mobile)',
         desktop: 'var(--bg-desktop)',
+        gradientButton: 'var(--gradient-button)',
       },
     },
   },

@@ -22,6 +22,9 @@ body {
 
     --gradient-color-1: #5596ff;
     --gradient-color-2: #ac2deb;
+    --gradient-button: linear-gradient(135deg, hsl(192, 100%, 67%) 0%, hsl(280, 87%, 65%) 100%);
+
+    --border-color: #979797;
 
     --bg-mobile: url('/public/images/bg-mobile-light.jpg');
     --bg-desktop: url('/public/images/bg-desktop-light.jpg');
@@ -39,6 +42,8 @@ body {
 
     --gradient-color-1: #3710bd;
     --gradient-color-2: #a42395;
+
+    --border-color: #393a4b;
 
     --bg-mobile: url('/public/images/bg-mobile-dark.jpg');
     --bg-desktop: url('/public/images/bg-desktop-dark.jpg');

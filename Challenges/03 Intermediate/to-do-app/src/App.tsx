@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import Header from './components/Header/Header';
 import Wrapper from './components/Wrapper/Wrapper';
+import Main from './components/Main/Main';
+import AddTaskInput from './components/AddTaskInput/AddTaskInput';
+import TasksContainer from './components/TasksContainer/TasksContainer';
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(() => window.matchMedia('(prefers-color-scheme: dark)').matches);
@@ -13,6 +16,10 @@ function App() {
     <div className={`min-h-screen relative bg-app  ${heroStyles} ${isDarkTheme}`}>
       <Wrapper>
         <Header darkTheme={darkTheme} onClick={() => setDarkTheme((prev) => !prev)} />
+        <Main>
+          <AddTaskInput />
+          <TasksContainer />
+        </Main>
       </Wrapper>
     </div>
   );
