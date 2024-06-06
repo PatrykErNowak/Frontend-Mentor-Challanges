@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Header from './components/Header/Header';
 import Wrapper from './components/Wrapper/Wrapper';
 import Main from './components/Main/Main';
-import AddTaskInput from './components/AddTaskInput/AddTaskInput';
+import AddTaskForm from './components/AddTaskForm/AddTaskForm';
 import TasksContainer from './components/TasksContainer/TasksContainer';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <Wrapper>
         <Header darkTheme={darkTheme} onClick={() => setDarkTheme((prev) => !prev)} />
         <Main>
-          <AddTaskInput />
+          <AddTaskForm />
           <TasksContainer />
         </Main>
       </Wrapper>
