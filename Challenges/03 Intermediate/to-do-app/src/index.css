@@ -26,8 +26,8 @@ body {
 
     --border-color: #979797;
 
-    --bg-mobile: url('/public/images/bg-mobile-light.jpg');
-    --bg-desktop: url('/public/images/bg-desktop-light.jpg');
+    --bg-mobile: url('/images/bg-mobile-light.jpg');
+    --bg-desktop: url('/images/bg-desktop-light.jpg');
   }
   .dark {
     --active-task-text: hsl(234, 39%, 85%);
@@ -45,7 +45,7 @@ body {
 
     --border-color: #393a4b;
 
-    --bg-mobile: url('/public/images/bg-mobile-dark.jpg');
-    --bg-desktop: url('/public/images/bg-desktop-dark.jpg');
+    --bg-mobile: url('/images/bg-mobile-dark.jpg');
+    --bg-desktop: url('/images/bg-desktop-dark.jpg');
   }
 }

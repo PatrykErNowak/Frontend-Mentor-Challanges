@@ -1,16 +1,20 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { ID, Todo } from './App.types';
 
-const tempData = [
-  { id: self.crypto.randomUUID(), title: 'Go to Shop', complete: true },
+const initialState: Todo[] = [
+  { id: self.crypto.randomUUID(), title: 'Complete online JavaScript course', complete: true },
+  { id: self.crypto.randomUUID(), title: 'Jog around the park 3x', complete: false },
+  { id: self.crypto.randomUUID(), title: '10 minutes meditation', complete: false },
   { id: self.crypto.randomUUID(), title: 'Read for 1 hour', complete: false },
-  { id: self.crypto.randomUUID(), title: 'Vacuum the flat', complete: false },
+  { id: self.crypto.randomUUID(), title: 'Pick up groceries', complete: false },
+  { id: self.crypto.randomUUID(), title: 'Complete Todo App on Frontend Mentor', complete: false },
 ];
 
 const tasksSlice = createSlice({
   name: 'tasks',
-  initialState: tempData,
+  initialState,
   reducers: {
-    add: (state, action) => {
+    add: (state, action: PayloadAction<string>) => {
       const task = {
         id: self.crypto.randomUUID(),
         title: action.payload,
@@ -20,11 +24,11 @@ const tasksSlice = createSlice({
       state.push(task);
     },
 
-    completed: (state, action) => {
+    completed: (state, action: PayloadAction<ID>) => {
       return state.map((task) => (task.id === action.payload ? { ...task, complete: !task.complete } : task));
     },
 
-    remove: (state, action) => {
+    remove: (state, action: PayloadAction<ID>) => {
       return state.filter((task) => task.id !== action.payload);
     },
   },

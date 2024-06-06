@@ -1,16 +1,17 @@
 import { SyntheticEvent } from 'react';
 import ButtonCircle from '../ButtonCircle/ButtonCircle';
-import { useDispatch } from 'react-redux';
 import { remove, completed } from '../../tasksSlice';
+import { useAppDispatch } from '../../store';
+import { ID } from '../../App.types';
 
 type TaskProps = {
-  id: string;
+  id: ID;
   title: string;
   complete: boolean;
 };
 
 function Task({ id, title, complete = false }: TaskProps) {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   function handleComplete() {
     dispatch(completed(id));

@@ -1,8 +1,8 @@
-import { useSelector } from 'react-redux';
 import Task from '../Task/Task';
+import { useAppSelector } from '../../store';
 
 function TasksContainer() {
-  const tasks = useSelector((store) => store.tasks);
+  const tasks = useAppSelector((store) => store.tasks);
 
   return (
     <div className="rounded-md overflow-hidden shadow-lg">

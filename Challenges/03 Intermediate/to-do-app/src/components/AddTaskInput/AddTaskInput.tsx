@@ -1,10 +1,10 @@
 import { SyntheticEvent, useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { add } from '../../tasksSlice';
+import { useAppDispatch } from '../../store';
 
 function AddTaskInput() {
   const [text, setText] = useState('');
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   function handleSubmit(e: SyntheticEvent) {
     e.preventDefault();
