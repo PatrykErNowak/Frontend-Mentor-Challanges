@@ -6,7 +6,7 @@ export default {
       textColor: {
         activeTask: 'var(--active-task-text)',
         completeTask: 'var(--complete-task-text)',
-        filters: 'var(--additional-text)',
+        filters: 'var(--filters-text)',
         filtersActive: 'var(--filters-active-text)',
         input: 'var(--input-text)',
         inputPlaceholder: 'var(--input-placeholder-text)',
@@ -26,6 +26,9 @@ export default {
         mobile: 'var(--bg-mobile)',
         desktop: 'var(--bg-desktop)',
         gradientButton: 'var(--gradient-button)',
+      },
+      boxShadow: {
+        custom: 'var(--box-shadow)',
       },
     },
   },

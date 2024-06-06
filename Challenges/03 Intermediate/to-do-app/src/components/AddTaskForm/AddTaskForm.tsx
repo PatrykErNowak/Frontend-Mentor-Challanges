@@ -23,7 +23,7 @@ function AddTaskForm() {
           name="task"
           id="task"
           placeholder="Create a new todo..."
-          className="w-full bg-transparent text-input placeholder:text-inputPlaceholder outline-none"
+          className="w-full bg-transparent text-input text-xs placeholder:text-inputPlaceholder outline-none sm:text-base"
         />
       </label>
     </form>

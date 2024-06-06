@@ -28,6 +28,8 @@ body {
 
     --bg-mobile: url('/images/bg-mobile-light.jpg');
     --bg-desktop: url('/images/bg-desktop-light.jpg');
+
+    --box-shadow: 0 35px 50px -15px rgba(194, 195, 214, 0.5);
   }
   .dark {
     --active-task-text: hsl(234, 39%, 85%);
@@ -47,5 +49,7 @@ body {
 
     --bg-mobile: url('/images/bg-mobile-dark.jpg');
     --bg-desktop: url('/images/bg-desktop-dark.jpg');
+
+    --box-shadow: 0 35px 50px -15px rgba(0, 0, 0, 0.5);
   }
 }
