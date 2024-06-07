@@ -5,6 +5,7 @@ import Main from './components/Main/Main';
 import AddTaskForm from './components/AddTaskForm/AddTaskForm';
 import TasksContainer from './components/TasksContainer/TasksContainer';
 import Filters from './components/Filters/Filters';
+import Footer from './components/Footer';
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(() => window.matchMedia('(prefers-color-scheme: dark)').matches);
@@ -22,6 +23,7 @@ function App() {
           <TasksContainer />
           <Filters />
         </Main>
+        <Footer />
       </Wrapper>
     </div>
   );

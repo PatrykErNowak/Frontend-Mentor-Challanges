@@ -1,4 +1,4 @@
-import { Show, Todo } from '../App.types';
+import { Show, Todo } from '../App/App.types';
 
 export function filterTasks(todos: Todo[], filter: Show) {
   if (filter === 'active') return todos.filter((todo) => !todo.isComplete);

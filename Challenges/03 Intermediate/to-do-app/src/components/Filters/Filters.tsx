@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../App/store';
 
-import { Show } from '../../App.types';
+import { Show } from '../../App/App.types';
 import { setFilter } from '../../features/todos/tasksSlice';
 
 function Filters() {
@@ -13,7 +13,7 @@ function Filters() {
 
   function onFilterChange(e: ChangeEvent<HTMLInputElement>) {
     setFilterBy(e.target.value as Show);
-    dispatch(setFilter(e.target.value));
+    dispatch(setFilter(e.target.value as Show));
   }
 
   return (

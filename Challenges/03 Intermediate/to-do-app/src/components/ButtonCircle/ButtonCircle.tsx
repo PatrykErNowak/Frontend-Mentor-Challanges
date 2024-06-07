@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type ButtonCircleProps = {
   ariaLabel?: string;
@@ -8,6 +8,10 @@ type ButtonCircleProps = {
 
 function ButtonCircle({ ariaLabel = '', activeState = false, onClick }: ButtonCircleProps) {
   const [active, setActive] = useState(activeState);
+
+  useEffect(() => {
+    setActive(activeState);
+  }, [activeState]);
 
   const beforeStyles = `relative  before:absolute before:top-1/2 before:left-1/2 before:size-[calc(100%-1px)] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full ${
     active ? 'before:bg-gradientButton' : 'before:bg-task'

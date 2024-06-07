@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { ID, Show, Todo } from '../../App.types';
+import { ID, Show, Todo } from '../../App/App.types';
 
 interface InitialState {
   show: Show;
@@ -44,11 +44,18 @@ const tasksSlice = createSlice({
       state.todos = state.todos.filter((task) => task.isComplete === false);
     },
 
-    setFilter: (state, action) => {
+    setFilter: (state, action: PayloadAction<Show>) => {
       state.show = action.payload;
+    },
+
+    newOrder: (state, action: PayloadAction<{ source: number; destination: number }>) => {
+      const newTasks = [...state.todos];
+      const [removed] = newTasks.splice(action.payload.source, 1);
+      newTasks.splice(action.payload.destination, 0, removed);
+      state.todos = newTasks;
     },
   },
 });
 
 export default tasksSlice.reducer;
-export const { add, remove, completed, removeAllCompleted, setFilter } = tasksSlice.actions;
+export const { add, remove, completed, removeAllCompleted, setFilter, newOrder } = tasksSlice.actions;

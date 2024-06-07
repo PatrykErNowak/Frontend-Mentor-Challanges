@@ -1,7 +1,7 @@
-import { SyntheticEvent } from 'react';
+import { SyntheticEvent, useState } from 'react';
 import ButtonCircle from '../ButtonCircle/ButtonCircle';
 
-import { ID } from '../../App.types';
+import { ID } from '../../App/App.types';
 import { useAppDispatch } from '../../App/store';
 import { completed, remove } from '../../features/todos/tasksSlice';
 
@@ -12,9 +12,11 @@ type TaskProps = {
 };
 
 function Task({ id, title, isComplete = false }: TaskProps) {
+  const [complete, setComplete] = useState(isComplete);
   const dispatch = useAppDispatch();
 
   function handleComplete() {
+    setComplete((prev) => !prev);
     dispatch(completed(id));
   }
 
@@ -26,9 +28,11 @@ function Task({ id, title, isComplete = false }: TaskProps) {
   return (
     <li
       className="flex items-center gap-3 py-4 px-5 bg-task border-b border-defaultColor sm:py-5 sm:px-6 sm:text-lg group"
-      aria-label={`${isComplete ? 'Completed' : 'Active'} task`}>
-      <ButtonCircle ariaLabel={`Mark as a ${isComplete ? 'active' : 'completed'} task`} activeState={isComplete} onClick={handleComplete} />
-      <p className={`${isComplete ? 'text-completeTask line-through' : 'text-activeTask'} text-xs  cursor-pointer first-letter:uppercase sm:text-base`}>
+      aria-label={`${complete ? 'Completed' : 'Active'} task`}>
+      <ButtonCircle ariaLabel={`Mark as a ${complete ? 'active' : 'completed'} task`} activeState={complete} onClick={handleComplete} />
+      <p
+        className={`${complete ? 'text-completeTask line-through' : 'text-activeTask'} text-xs  cursor-pointer first-letter:uppercase sm:text-base`}
+        onClick={handleComplete}>
         {title}
       </p>
       <button

@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 
 import { configureStore } from '@reduxjs/toolkit';
 import tasksSlice from '../features/todos/tasksSlice';
-import { Show, Todo } from '../App.types';
+import { Show, Todo } from '../App/App.types';
 
 interface InitialState {
   show: Show;
