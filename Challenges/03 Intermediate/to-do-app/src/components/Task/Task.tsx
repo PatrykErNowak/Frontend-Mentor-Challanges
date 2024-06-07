@@ -1,8 +1,9 @@
 import { SyntheticEvent } from 'react';
 import ButtonCircle from '../ButtonCircle/ButtonCircle';
-import { remove, completed } from '../../tasksSlice';
-import { useAppDispatch } from '../../store';
+
 import { ID } from '../../App.types';
+import { useAppDispatch } from '../../App/store';
+import { completed, remove } from '../../features/todos/tasksSlice';
 
 type TaskProps = {
   id: ID;

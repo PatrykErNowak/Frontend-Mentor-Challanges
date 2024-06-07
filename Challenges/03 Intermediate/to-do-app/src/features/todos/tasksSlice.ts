@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { ID, Show, Todo } from './App.types';
+import { ID, Show, Todo } from '../../App.types';
 
 interface InitialState {
   show: Show;

@@ -7,7 +7,7 @@ function Header({ darkTheme, onClick }: HeaderProps) {
   return (
     <header className="flex justify-between items-baseline pt-11 pb-6">
       <h1 className="text-white text-3xl uppercase tracking-[0.4em] font-bold sm:text-4xl">Todo</h1>
-      <button onClick={onClick} aria-label={`Change to ${darkTheme ? 'light' : 'dark'} theme`}>
+      <button onClick={onClick} aria-label={`Change to ${darkTheme ? 'light' : 'dark'} theme`} className="sm:hover:scale-110 sm:transition-transform">
         {darkTheme ? <Sun /> : <Moon />}
       </button>
     </header>

@@ -1,15 +1,18 @@
 import { ChangeEvent, useState } from 'react';
-import { useAppDispatch } from '../../store';
-import { setFilter } from '../../tasksSlice';
+import { useAppDispatch, useAppSelector } from '../../App/store';
+
+import { Show } from '../../App.types';
+import { setFilter } from '../../features/todos/tasksSlice';
 
 function Filters() {
-  const [filterBy, setFilterBy] = useState('all');
   const dispatch = useAppDispatch();
+  const initFilter = useAppSelector((store) => store.tasks.show);
+  const [filterBy, setFilterBy] = useState(initFilter);
 
   const largeScreenStyles = 'sm:absolute sm:bottom-0 sm:left-1/2 sm:-translate-x-1/2 sm:bg-transparent sm:w-max';
 
   function onFilterChange(e: ChangeEvent<HTMLInputElement>) {
-    setFilterBy(e.target.value);
+    setFilterBy(e.target.value as Show);
     dispatch(setFilter(e.target.value));
   }
 

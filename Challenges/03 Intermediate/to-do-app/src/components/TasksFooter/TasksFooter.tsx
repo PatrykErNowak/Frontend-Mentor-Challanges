@@ -1,5 +1,5 @@
-import { useAppDispatch, useAppSelector } from '../../store';
-import { removeAllCompleted } from '../../tasksSlice';
+import { useAppDispatch, useAppSelector } from '../../App/store';
+import { removeAllCompleted } from '../../features/todos/tasksSlice';
 
 function TasksFooter() {
   const activeTasksNumber = useAppSelector((store) => store.tasks.todos.reduce((a, task) => (a += Number(!task.isComplete)), 0));

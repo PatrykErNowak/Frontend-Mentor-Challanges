@@ -1,6 +1,7 @@
 import { SyntheticEvent, useState } from 'react';
-import { add } from '../../tasksSlice';
-import { useAppDispatch } from '../../store';
+
+import { useAppDispatch } from '../../App/store';
+import { add } from '../../features/todos/tasksSlice';
 
 function AddTaskForm() {
   const [text, setText] = useState('');

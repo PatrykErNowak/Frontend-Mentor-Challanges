@@ -1,5 +1,5 @@
 type MainProps = {
-  children: React.ReactElement[];
+  children: React.ReactElement[] | false;
 };
 
 function Main({ children }: MainProps) {
