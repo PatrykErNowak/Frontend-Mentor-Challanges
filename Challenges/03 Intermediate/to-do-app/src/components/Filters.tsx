@@ -1,8 +1,7 @@
 import { ChangeEvent, useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../App/store';
-
-import { Show } from '../../App/App.types';
-import { setFilter } from '../../features/todos/tasksSlice';
+import { useAppDispatch, useAppSelector } from '../App/store';
+import { Show } from '../App/App.types';
+import { setFilter } from '../features/todos/tasksSlice';
 
 function Filters() {
   const dispatch = useAppDispatch();

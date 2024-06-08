@@ -1,11 +1,10 @@
-import Task from '../Task/Task';
-import TasksFooter from '../TasksFooter/TasksFooter';
-import { filterTasks } from '../../utils/filterTasks';
-import { useAppDispatch, useAppSelector } from '../../App/store';
-import Message from '../Message/Message';
-import { DragDropContext, Draggable, DropResult } from 'react-beautiful-dnd';
-import { newOrder } from '../../features/todos/tasksSlice';
-import { StrictModeDroppable } from '../../utils/StrictModeDroppable';
+import Task from './Task';
+import TasksFooter from './TasksFooter';
+import { filterTasks } from '../utils/filterTasks';
+import { useAppDispatch, useAppSelector } from '../App/store';
+import Message from './Message';
+import { DragDropContext, Draggable, DropResult, Droppable } from 'react-beautiful-dnd';
+import { newOrder } from '../features/todos/tasksSlice';
 
 function TasksContainer() {
   const dispatch = useAppDispatch();
@@ -23,7 +22,7 @@ function TasksContainer() {
     <div className="rounded-md overflow-hidden shadow-custom">
       {todos.length > 0 && (
         <DragDropContext onDragEnd={onDragEnd}>
-          <StrictModeDroppable droppableId="droppable">
+          <Droppable droppableId="droppable">
             {(provided) => (
               <ul {...provided.droppableProps} ref={provided.innerRef} aria-label="Tasks list">
                 {tasks.map((task, index) => (
@@ -38,7 +37,7 @@ function TasksContainer() {
                 {provided.placeholder}
               </ul>
             )}
-          </StrictModeDroppable>
+          </Droppable>
         </DragDropContext>
       )}
       {todos.length > 0 && tasks.length === 0 && <Message>No results found ❌</Message>}

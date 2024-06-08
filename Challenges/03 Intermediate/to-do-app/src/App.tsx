@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import Header from './components/Header/Header';
-import Wrapper from './components/Wrapper/Wrapper';
-import Main from './components/Main/Main';
-import AddTaskForm from './components/AddTaskForm/AddTaskForm';
-import TasksContainer from './components/TasksContainer/TasksContainer';
-import Filters from './components/Filters/Filters';
+import Header from './components/Header';
+import Wrapper from './components/Wrapper';
+import Main from './components/Main';
+import AddTaskForm from './components/AddTaskForm';
+import TasksContainer from './components/TasksContainer';
+import Filters from './components/Filters';
 import Footer from './components/Footer';
 
 function App() {

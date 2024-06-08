@@ -1,12 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { ID, Show, Todo } from '../../App/App.types';
+import { ID, TasksState, Show } from '../../App/App.types';
 
-interface InitialState {
-  show: Show;
-  todos: Todo[];
-}
-
-const initialState: InitialState = {
+const initialState: TasksState = {
   show: 'all',
   todos: [
     { id: self.crypto.randomUUID(), title: 'Complete online JavaScript course', isComplete: true },

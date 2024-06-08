@@ -26,16 +26,15 @@ describe('App integration', () => {
       ],
     };
 
-    const testStore = configureStore({
-      preloadedState: {
-        tasks: initialState,
-      },
-      reducer: {
-        tasks: tasksSlice,
-      },
-    });
-
     function renderApp() {
+      const testStore = configureStore({
+        preloadedState: {
+          tasks: initialState,
+        },
+        reducer: {
+          tasks: tasksSlice,
+        },
+      });
       render(
         <Provider store={testStore}>
           <App />

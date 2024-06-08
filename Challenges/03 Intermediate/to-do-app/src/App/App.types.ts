@@ -7,5 +7,9 @@ interface Todo {
   title: string;
   isComplete: boolean;
 }
+interface TasksState {
+  show: Show;
+  todos: Todo[];
+}
 
-export type { ID, Todo, Show };
+export type { ID, Todo, Show, TasksState };
