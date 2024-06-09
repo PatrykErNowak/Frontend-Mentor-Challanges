@@ -15,13 +15,13 @@ main {
 .list-of-solutions {
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: 1fr;
   gap: 2em;
   padding: 1em;
   list-style: none;
 
   @media (min-width: b.$medium) {
     grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
   }
   @media (min-width: b.$large) {
     grid-template-columns: 1fr 1fr 1fr;

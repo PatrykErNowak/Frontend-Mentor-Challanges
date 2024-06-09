@@ -16,6 +16,7 @@ export interface Technology {
 export interface Solution {
   id: number;
   title: string;
+  info: string;
   type: string;
   level: Level;
   technologies: Array<Technology>;

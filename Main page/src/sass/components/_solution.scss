@@ -37,9 +37,9 @@ $intermediate: rgb(241, 182, 4);
 
     @media (min-width: b.$large) {
       position: absolute;
-      bottom: 0;
+      top: 100%;
       left: 0;
-      transform: translateY(68%);
+      transform: translateY(-8rem);
       margin-bottom: 0;
       background-color: rgba(240, 240, 240, 1);
     }
@@ -140,27 +140,24 @@ $intermediate: rgb(241, 182, 4);
     flex-wrap: wrap;
     gap: 0.5em;
     position: relative;
-    margin: 1em 0;
-    padding-top: 1.3em;
     list-style: none;
 
     @media (min-width: b.$large) {
       justify-content: flex-start;
     }
+  }
 
-    &::before {
-      content: attr(aria-label);
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 1.2rem;
-      color: $card-additional-text;
-      @media (min-width: b.$large) {
-        left: 0;
-        transform: translateX(0);
-        font-size: 1.4rem;
-      }
+  &__box {
+    margin: 1.5rem 0;
+    h5 {
+      color: c.$secondary;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      margin-top: -0.4rem;
+      font-size: 1.3rem;
+      line-height: 1.4;
     }
   }
 
@@ -169,8 +166,8 @@ $intermediate: rgb(241, 182, 4);
     position: relative;
     transition: transform 0.4s;
     .icon {
-      width: 4.5rem;
-      height: 4.5rem;
+      width: 4rem;
+      height: 4rem;
       transition: transform 0.4s ease-in-out;
     }
 
@@ -192,7 +189,7 @@ $intermediate: rgb(241, 182, 4);
       left: 0;
       right: 0;
       color: c.$paragraph;
-      font-size: 0.7em;
+      font-size: 0.8rem;
       font-family: 'Barlow', sans-serif;
       font-weight: 600;
       text-align: center;
@@ -223,7 +220,7 @@ $intermediate: rgb(241, 182, 4);
 .solution {
   @media (min-width: b.$large) {
     &:hover &__content {
-      transform: translateY(0);
+      transform: translateY(-100%);
       &::before {
         transform: scaleX(1);
         transform-origin: left;

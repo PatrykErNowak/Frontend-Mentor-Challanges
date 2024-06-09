@@ -83,6 +83,7 @@
     {
       "id": 1,
       "title": "Three column card",
+      "info": "",
       "type": "Component",
       "level": "newbie",
       "technologies": [
@@ -109,6 +110,7 @@
     {
       "id": 2,
       "title": "Result summary",
+      "info": "",
       "type": "Component",
       "level": "newbie",
       "technologies": [
@@ -135,6 +137,7 @@
     {
       "id": 3,
       "title": "Testimonials Grid",
+      "info": "",
       "type": "Section",
       "level": "junior",
       "technologies": [
@@ -161,6 +164,7 @@
     {
       "id": 4,
       "title": "Fylo data storage",
+      "info": "",
       "type": "Component",
       "level": "junior",
       "technologies": [
@@ -187,6 +191,7 @@
     {
       "id": 5,
       "title": "Clipboard",
+      "info": "",
       "type": "Landing page",
       "level": "junior",
       "technologies": [
@@ -213,6 +218,7 @@
     {
       "id": 6,
       "title": "Huddle",
+      "info": "",
       "type": "Landing page",
       "level": "junior",
       "technologies": [
@@ -244,6 +250,7 @@
     {
       "id": 7,
       "title": "Chat app",
+      "info": "",
       "type": "Illustration",
       "level": "intermediate",
       "technologies": [
@@ -275,6 +282,7 @@
     {
       "id": 8,
       "title": "FAQ accordion",
+      "info": "",
       "type": "Component",
       "level": "newbie",
       "technologies": [
@@ -312,6 +320,7 @@
     {
       "id": 9,
       "title": "Interactive rating",
+      "info": "",
       "type": "Component",
       "level": "newbie",
       "technologies": [
@@ -348,6 +357,7 @@
     {
       "id": 10,
       "title": "Base Apparel",
+      "info": "",
       "type": "Landing page",
       "level": "newbie",
       "technologies": [
@@ -385,6 +395,7 @@
     {
       "id": 11,
       "title": "Age Calculator",
+      "info": "",
       "type": "App",
       "level": "junior",
       "technologies": [
@@ -421,6 +432,7 @@
     {
       "id": 12,
       "title": "Advice Generator",
+      "info": "",
       "type": "App",
       "level": "junior",
       "technologies": [
@@ -462,6 +474,7 @@
     {
       "id": 13,
       "title": "Calculator",
+      "info": "",
       "type": "App",
       "level": "intermediate",
       "technologies": [
@@ -498,6 +511,7 @@
     {
       "id": 14,
       "title": "Job Listings",
+      "info": "",
       "type": "App",
       "level": "intermediate",
       "technologies": [
@@ -534,6 +548,7 @@
     {
       "id": 15,
       "title": "Frontend Quiz App",
+      "info": "Context API • useReducer",
       "type": "App",
       "level": "intermediate",
       "technologies": [
@@ -570,6 +585,7 @@
     {
       "id": 16,
       "title": "Coffee Roasters",
+      "info": "React Router, Code Splitting",
       "type": "Multipage Website",
       "level": "intermediate",
       "technologies": [
@@ -611,6 +627,7 @@
     {
       "id": 17,
       "title": "To do",
+      "info": "Unit & Integration tests • Global state management - Redux Toolkit • Local Storage",
       "type": "App",
       "level": "intermediate",
       "technologies": [
