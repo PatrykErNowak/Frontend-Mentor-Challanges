@@ -165,13 +165,44 @@ $intermediate: rgb(241, 182, 4);
   }
 
   // icon selector
-  &__tech-item .icon {
-    width: 4.5rem;
-    height: 4.5rem;
-    transition: transform 0.4s ease-in-out;
+  &__tech-item {
+    position: relative;
+    transition: transform 0.4s;
+    .icon {
+      width: 4.5rem;
+      height: 4.5rem;
+      transition: transform 0.4s ease-in-out;
+    }
 
-    &:hover {
-      transform: scale(1.2);
+    @media (min-width: b.$large) {
+      &:hover {
+        transform: scale(1.2);
+
+        .tooltip {
+          transform: scale(1) translateY(80%);
+          opacity: 0.6;
+        }
+      }
+    }
+
+    .tooltip {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: c.$paragraph;
+      font-size: 0.7em;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1;
+      opacity: 0;
+      transform: scale(0);
+      transition: transform $card-animation-duration, opacity $card-animation-duration;
+      &::first-letter {
+        text-transform: uppercase;
+      }
     }
   }
 

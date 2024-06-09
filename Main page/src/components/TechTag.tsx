@@ -6,6 +6,7 @@ export default function TechTag({ technology }: { technology: Technology }) {
     return (
       <li className="solution__tech-item">
         <img className="icon" aria-label={name} src={`./tech-icons/other/${icon}.${type}`} />
+        <span className="tooltip">{name}</span>
       </li>
     );
 
@@ -14,6 +15,7 @@ export default function TechTag({ technology }: { technology: Technology }) {
       <svg className="icon" aria-label={name} role="img">
         <use xlinkHref={`./tech-icons/sprite.svg#${icon}`}></use>
       </svg>
+      <span className="tooltip">{name}</span>
     </li>
   );
 }

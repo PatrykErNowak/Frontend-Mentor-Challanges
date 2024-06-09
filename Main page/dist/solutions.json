@@ -3,46 +3,56 @@
     "languages": [
       {
         "type": "svg",
-        "name": "html",
+        "name": "HTML",
         "icon": "icon-html5"
       },
       {
         "type": "svg",
-        "name": "css",
+        "name": "CSS",
         "icon": "icon-css3"
       },
       {
         "type": "svg",
-        "name": "javascript",
+        "name": "JavaScript",
         "icon": "icon-js"
       },
       {
         "type": "svg",
-        "name": "typescript",
+        "name": "TypeScript",
         "icon": "icon-typescript"
       }
     ],
     "frameworks": [
       {
         "type": "svg",
-        "name": "react",
+        "name": "React",
         "icon": "icon-react"
+      },
+      {
+        "type": "svg",
+        "name": "Redux",
+        "icon": "icon-redux"
+      },
+      {
+        "type": "svg",
+        "name": "Jest",
+        "icon": "icon-jest"
       }
     ],
     "styling": [
       {
         "type": "svg",
-        "name": "sass",
+        "name": "SASS",
         "icon": "icon-sass"
       },
       {
         "type": "svg",
-        "name": "tailwindcss",
+        "name": "TailwindCSS",
         "icon": "icon-tailwindcss"
       },
       {
         "type": "png",
-        "name": "css modules",
+        "name": "CSS Modules",
         "icon": "icon-css-modules"
       }
     ],
@@ -78,12 +88,12 @@
       "technologies": [
         {
           "type": "svg",
-          "name": "html",
+          "name": "HTML",
           "icon": "icon-html5"
         },
         {
           "type": "svg",
-          "name": "css",
+          "name": "CSS",
           "icon": "icon-css3"
         }
       ],
@@ -104,12 +114,12 @@
       "technologies": [
         {
           "type": "svg",
-          "name": "html",
+          "name": "HTML",
           "icon": "icon-html5"
         },
         {
           "type": "svg",
-          "name": "css",
+          "name": "CSS",
           "icon": "icon-css3"
         }
       ],
@@ -130,12 +140,12 @@
       "technologies": [
         {
           "type": "svg",
-          "name": "html",
+          "name": "HTML",
           "icon": "icon-html5"
         },
         {
           "type": "svg",
-          "name": "css",
+          "name": "CSS",
           "icon": "icon-css3"
         }
       ],
@@ -156,12 +166,12 @@
       "technologies": [
         {
           "type": "svg",
-          "name": "html",
+          "name": "HTML",
           "icon": "icon-html5"
         },
         {
           "type": "svg",
-          "name": "css",
+          "name": "CSS",
           "icon": "icon-css3"
         }
       ],
@@ -182,12 +192,12 @@
       "technologies": [
         {
           "type": "svg",
-          "name": "html",
+          "name": "HTML",
           "icon": "icon-html5"
         },
         {
           "type": "svg",
-          "name": "sass",
+          "name": "SASS",
           "icon": "icon-sass"
         }
       ],
@@ -208,12 +218,12 @@
       "technologies": [
         {
           "type": "svg",
-          "name": "html",
+          "name": "HTML",
           "icon": "icon-html5"
         },
         {
           "type": "svg",
-          "name": "sass",
+          "name": "SASS",
           "icon": "icon-sass"
         },
         {
@@ -239,12 +249,12 @@
       "technologies": [
         {
           "type": "svg",
-          "name": "html",
+          "name": "HTML",
           "icon": "icon-html5"
         },
         {
           "type": "svg",
-          "name": "sass",
+          "name": "SASS",
           "icon": "icon-sass"
         },
         {
@@ -270,17 +280,17 @@
       "technologies": [
         {
           "type": "svg",
-          "name": "html",
+          "name": "HTML",
           "icon": "icon-html5"
         },
         {
           "type": "svg",
-          "name": "sass",
+          "name": "SASS",
           "icon": "icon-sass"
         },
         {
           "type": "svg",
-          "name": "javascript",
+          "name": "JavaScript",
           "icon": "icon-js"
         },
 
@@ -307,17 +317,17 @@
       "technologies": [
         {
           "type": "svg",
-          "name": "html",
+          "name": "HTML",
           "icon": "icon-html5"
         },
         {
           "type": "svg",
-          "name": "tailwindcss",
+          "name": "TailwindCSS",
           "icon": "icon-tailwindcss"
         },
         {
           "type": "svg",
-          "name": "javascript",
+          "name": "JavaScript",
           "icon": "icon-js"
         },
         {
@@ -343,17 +353,17 @@
       "technologies": [
         {
           "type": "svg",
-          "name": "html",
+          "name": "HTML",
           "icon": "icon-html5"
         },
         {
           "type": "svg",
-          "name": "sass",
+          "name": "SASS",
           "icon": "icon-sass"
         },
         {
           "type": "svg",
-          "name": "javascript",
+          "name": "JavaScript",
           "icon": "icon-js"
         },
 
@@ -380,17 +390,17 @@
       "technologies": [
         {
           "type": "svg",
-          "name": "html",
+          "name": "HTML",
           "icon": "icon-html5"
         },
         {
           "type": "svg",
-          "name": "sass",
+          "name": "SASS",
           "icon": "icon-sass"
         },
         {
           "type": "svg",
-          "name": "javascript",
+          "name": "JavaScript",
           "icon": "icon-js"
         },
         {
@@ -416,17 +426,17 @@
       "technologies": [
         {
           "type": "svg",
-          "name": "html",
+          "name": "HTML",
           "icon": "icon-html5"
         },
         {
           "type": "svg",
-          "name": "sass",
+          "name": "SASS",
           "icon": "icon-sass"
         },
         {
           "type": "svg",
-          "name": "javascript",
+          "name": "JavaScript",
           "icon": "icon-js"
         },
         {
@@ -457,17 +467,17 @@
       "technologies": [
         {
           "type": "svg",
-          "name": "html",
+          "name": "HTML",
           "icon": "icon-html5"
         },
         {
           "type": "svg",
-          "name": "sass",
+          "name": "SASS",
           "icon": "icon-sass"
         },
         {
           "type": "svg",
-          "name": "typescript",
+          "name": "TypeScript",
           "icon": "icon-typescript"
         },
         {
@@ -493,17 +503,17 @@
       "technologies": [
         {
           "type": "svg",
-          "name": "react",
+          "name": "React",
           "icon": "icon-react"
         },
         {
           "type": "svg",
-          "name": "typescript",
+          "name": "TypeScript",
           "icon": "icon-typescript"
         },
         {
           "type": "svg",
-          "name": "tailwindcss",
+          "name": "TailwindCSS",
           "icon": "icon-tailwindcss"
         },
         {
@@ -529,17 +539,17 @@
       "technologies": [
         {
           "type": "svg",
-          "name": "react",
+          "name": "React",
           "icon": "icon-react"
         },
         {
           "type": "svg",
-          "name": "typescript",
+          "name": "TypeScript",
           "icon": "icon-typescript"
         },
         {
           "type": "png",
-          "name": "css modules",
+          "name": "CSS Modules",
           "icon": "icon-css-modules"
         },
         {
@@ -565,22 +575,22 @@
       "technologies": [
         {
           "type": "svg",
-          "name": "react",
+          "name": "React",
           "icon": "icon-react"
         },
         {
           "type": "svg",
-          "name": "typescript",
+          "name": "TypeScript",
           "icon": "icon-typescript"
         },
         {
           "type": "png",
-          "name": "css modules",
+          "name": "CSS Modules",
           "icon": "icon-css-modules"
         },
         {
           "type": "svg",
-          "name": "sass",
+          "name": "SASS",
           "icon": "icon-sass"
         },
         {
@@ -596,6 +606,52 @@
       "links": {
         "live": "https://coffee-roasters-pendev.netlify.app",
         "repo": "https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/03%20Intermediate/coffeeroasters-site"
+      }
+    },
+    {
+      "id": 17,
+      "title": "To do",
+      "type": "App",
+      "level": "intermediate",
+      "technologies": [
+        {
+          "type": "svg",
+          "name": "React",
+          "icon": "icon-react"
+        },
+        {
+          "type": "svg",
+          "name": "TypeScript",
+          "icon": "icon-typescript"
+        },
+        {
+          "type": "svg",
+          "name": "TailwindCSS",
+          "icon": "icon-tailwindcss"
+        },
+        {
+          "type": "svg",
+          "name": "Redux",
+          "icon": "icon-redux"
+        },
+        {
+          "type": "svg",
+          "name": "Jest",
+          "icon": "icon-jest"
+        },
+        {
+          "type": "png",
+          "name": "vite",
+          "icon": "icon-vite"
+        }
+      ],
+      "img": {
+        "src": "./Photos of Challenges/03 Intermediate/todo-app.jpg",
+        "alt": "To do app solution screenshot"
+      },
+      "links": {
+        "live": "../../Challenges/03 Intermediate/to-do-app/dist/",
+        "repo": "https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/03%20Intermediate/to-do-app"
       }
     }
   ]

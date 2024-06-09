@@ -1,18 +1,18 @@
-@use "../abstracts/colors" as c;
+@use '../abstracts/colors' as c;
 
 html {
   font-size: 62.5%;
 }
 body {
   font-size: 1.6rem;
-  font-family: "Heebo", sans-serif;
+  font-family: 'Heebo', sans-serif;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Barlow", sans-serif;
+  font-family: 'Barlow', sans-serif;
   color: c.$secondary;
 }
 
@@ -23,7 +23,7 @@ h1 {
   text-align: center;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
