@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white-color: #fff;
+  --dark-color: #070724;
+  --grey-color: #838391;
+  --grey-dark-color: #38384f;
+
+  --mercury-color: #419ebb;
+  --venus-color: #eda249;
+  --earth-color: #6f2ed6;
+  --mars-color: #d14c32;
+  --jupiter-color: #d83a34;
+  --saturn-color: #cd5120;
+  --uranus-color: #1ec2a4;
+  --neptun-color: #2d68f0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.55;
+}
+
+h1,
+h2 {
+  font-family: 'Antonio', sans-serif;
+}
