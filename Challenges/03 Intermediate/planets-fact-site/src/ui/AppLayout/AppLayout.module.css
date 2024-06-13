@@ -1,0 +1,14 @@
+.app {
+  min-height: 100dvh;
+  padding: 0 2.4rem;
+  background-color: var(--dark-color);
+  background-size: cover;
+  background-position: center;
+  background-image: url('/assets/background-stars.svg');
+}
+
+@media screen and (min-width: 1024px) {
+  .app {
+    padding: 0 3.2rem;
+  }
+}

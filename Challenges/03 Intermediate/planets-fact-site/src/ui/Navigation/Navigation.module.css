@@ -1,0 +1,121 @@
+.nav {
+  display: none;
+
+  &:global(.active) {
+    display: block;
+  }
+
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 100dvw;
+  min-height: calc(100dvh - 100%);
+  padding: 2.4rem;
+  transform: translateX(-50%);
+  background-color: var(--dark-color);
+
+  .navList {
+    list-style: none;
+  }
+
+  .navListItem {
+    position: relative;
+    &:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: var(--grey-dark-color);
+    }
+
+    .circle {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      background-color: var(--scheme-color);
+      border-radius: 1000px;
+      margin-top: -3px;
+    }
+
+    .arrow {
+      margin-left: auto;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      padding: 2.2rem 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      line-height: 1;
+      color: inherit;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    all: unset;
+    position: relative;
+
+    opacity: 1;
+    pointer-events: all;
+
+    .navList {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    .navListItem {
+      &::before {
+        display: none;
+      }
+
+      .circle {
+        display: none;
+      }
+      .arrow {
+        display: none;
+      }
+
+      a {
+        padding: 0;
+        font-size: 1.4rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .nav {
+    .navListItem {
+      padding: 3rem 0;
+      height: 100%;
+      position: relative;
+
+      a {
+        opacity: 0.75;
+
+        &:hover {
+          opacity: 1;
+        }
+        &:hover::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 3px;
+          width: 100%;
+          background-color: var(--scheme-color);
+        }
+      }
+    }
+  }
+}

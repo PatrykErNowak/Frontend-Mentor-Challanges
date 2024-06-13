@@ -19,7 +19,32 @@
   --jupiter-color: #d83a34;
   --saturn-color: #cd5120;
   --uranus-color: #1ec2a4;
-  --neptun-color: #2d68f0;
+  --neptune-color: #2d68f0;
+}
+
+.mercury {
+  --scheme-color: var(--mercury-color);
+}
+.venus {
+  --scheme-color: var(--venus-color);
+}
+.earth {
+  --scheme-color: var(--earth-color);
+}
+.mars {
+  --scheme-color: var(--mars-color);
+}
+.jupiter {
+  --scheme-color: var(--jupiter-color);
+}
+.saturn {
+  --scheme-color: var(--saturn-color);
+}
+.uranus {
+  --scheme-color: var(--uranus-color);
+}
+.neptune {
+  --scheme-color: var(--neptune-color);
 }
 
 html {
@@ -30,6 +55,7 @@ body {
   font-family: 'League Spartan', sans-serif;
   font-size: 1.4rem;
   line-height: 1.55;
+  color: var(--white-color);
 }
 
 h1,
