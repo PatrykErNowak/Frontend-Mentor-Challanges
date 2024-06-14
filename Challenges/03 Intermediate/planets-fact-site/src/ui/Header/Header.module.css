@@ -15,7 +15,7 @@
     width: 100dvw;
     transform: translateX(-50%);
     background-color: var(--grey-dark-color);
-    z-index: 100;
+    z-index: 200;
   }
 }
 

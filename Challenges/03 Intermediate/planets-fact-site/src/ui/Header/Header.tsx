@@ -1,13 +1,17 @@
 import styles from './Header.module.css';
 import Navigation from '../Navigation/Navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 function Header({ planets }: { planets: string[] }) {
   const [showNav, setShowNav] = useState(false);
+  const { planet } = useParams();
 
   function handleToggleNavigation() {
     setShowNav((prev) => !prev);
   }
+
+  useEffect(() => setShowNav(false), [planet]);
 
   return (
     <header className={styles.header}>

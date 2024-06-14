@@ -24,27 +24,51 @@
 
 .mercury {
   --scheme-color: var(--mercury-color);
+  img {
+    width: 33.3%;
+  }
 }
 .venus {
   --scheme-color: var(--venus-color);
+  img {
+    width: 46.2%;
+  }
 }
 .earth {
   --scheme-color: var(--earth-color);
+  img {
+    width: 51.9%;
+  }
 }
 .mars {
   --scheme-color: var(--mars-color);
+  img {
+    width: 38.7%;
+  }
 }
 .jupiter {
   --scheme-color: var(--jupiter-color);
+  img {
+    width: 67.2%;
+  }
 }
 .saturn {
   --scheme-color: var(--saturn-color);
+  img {
+    width: 75%;
+  }
 }
 .uranus {
   --scheme-color: var(--uranus-color);
+  img {
+    width: 52.8%;
+  }
 }
 .neptune {
   --scheme-color: var(--neptune-color);
+  img {
+    width: 51.9%;
+  }
 }
 
 html {
@@ -61,4 +85,17 @@ body {
 h1,
 h2 {
   font-family: 'Antonio', sans-serif;
+}
+
+button {
+  background: transparent;
+  color: inherit;
+  border: transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
 }
