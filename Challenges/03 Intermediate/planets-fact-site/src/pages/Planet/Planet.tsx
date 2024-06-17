@@ -1,7 +1,7 @@
 import styles from './Planet.module.css';
 import { LoaderFunction, redirect, useLoaderData } from 'react-router-dom';
 import { getPlanet } from '../../services/apiPlanet';
-import { Planet } from '../../services/types';
+import { Planet } from './types';
 import Tabs from './Tabs/Tabs';
 import { useState } from 'react';
 import PlanetImage from './PlanetImage/PlanetImage';
@@ -47,5 +47,5 @@ export const loader: LoaderFunction = async ({ params }): Promise<Planet | Respo
   const planet = await getPlanet(params.planet);
   if (planet) return planet;
 
-  throw new Error('Planet not found');
+  throw new Error('Sorry, there is no such planet!');
 };

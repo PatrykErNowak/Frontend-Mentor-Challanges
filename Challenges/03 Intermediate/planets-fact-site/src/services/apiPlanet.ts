@@ -1,4 +1,4 @@
-import { Planet } from './types';
+import { Planet } from '../pages/Planet/types';
 
 async function getPlanet(planet: string) {
   try {
@@ -7,7 +7,7 @@ async function getPlanet(planet: string) {
     const planetData = data.find((item) => item.name.toLowerCase() === planet.toLowerCase());
     return planetData;
   } catch (error) {
-    throw new Error('Failed getting planet data');
+    throw new Error('Failed getting planet data from server');
   }
 }
 
@@ -19,7 +19,7 @@ async function getAllPlanets() {
 
     return planets;
   } catch (error) {
-    throw new Error('Failed getting planets');
+    throw new Error('Failed getting planets data from server');
   }
 }
 
