@@ -105,10 +105,8 @@
       position: relative;
 
       a {
-        opacity: 0.75;
-
         &:hover {
-          opacity: 1;
+          color: var(--white-color);
         }
         &:hover::after {
           content: '';

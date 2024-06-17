@@ -33,7 +33,7 @@
 
     svg {
       margin-top: -1rem;
-      transform: scale(1.3);
+      transform: scale(1.2);
     }
   }
 }
@@ -52,5 +52,43 @@
   .desc {
     font-size: 1.6rem;
     line-height: 1.6;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .infoBox {
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+    margin-top: 3rem;
+  }
+
+  .heading {
+    font-size: 8rem;
+  }
+  .desc {
+    font-size: 1.7rem;
+  }
+  .source {
+    font-size: 1.7rem;
+
+    a {
+      svg {
+        margin-top: 0rem;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1536px) {
+  .infoBox {
+    margin-top: 10rem;
+  }
+  .heading {
+    font-size: 10rem;
+  }
+  .desc {
+    font-size: 1.9rem;
+  }
+  .source {
+    font-size: 1.9rem;
   }
 }

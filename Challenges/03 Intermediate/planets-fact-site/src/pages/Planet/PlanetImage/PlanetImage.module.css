@@ -22,3 +22,11 @@
     grid-row: 1/2;
   }
 }
+@media screen and (min-width: 1024px) {
+  .imageBox {
+    grid-column: 1/2;
+    grid-row: 1/3;
+
+    max-width: unset;
+  }
+}
