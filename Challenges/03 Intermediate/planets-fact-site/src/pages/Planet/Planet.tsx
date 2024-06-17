@@ -1,5 +1,5 @@
 import styles from './Planet.module.css';
-import { redirect, useLoaderData } from 'react-router-dom';
+import { LoaderFunction, redirect, useLoaderData } from 'react-router-dom';
 import { getPlanet } from '../../services/apiPlanet';
 import { Planet } from '../../services/types';
 import Tabs from './Tabs/Tabs';
@@ -40,8 +40,12 @@ function PlanetView() {
 
 export default PlanetView;
 
-export async function loader({ params }) {
+// eslint-disable-next-line react-refresh/only-export-components
+export const loader: LoaderFunction = async ({ params }): Promise<Planet | Response> => {
   if (!params.planet) return redirect('/mercury');
+
   const planet = await getPlanet(params.planet);
-  return planet;
-}
+  if (planet) return planet;
+
+  throw new Error('Planet not found');
+};
