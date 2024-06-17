@@ -4,13 +4,21 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 60rem;
   aspect-ratio: 1/1;
 
   .surface {
     position: absolute;
-    bottom: 50%;
+    bottom: 45%;
     left: 50%;
     width: 20%;
     transform: translate(-50%, 120%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .imageBox {
+    grid-column: 1/3;
+    grid-row: 1/2;
   }
 }

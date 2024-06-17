@@ -1,6 +1,12 @@
 import styles from './HeaderInfoBox.module.css';
 
-function HeaderInfoBox({ name, source, children }) {
+type HeaderInfoBoxProps = {
+  name: string;
+  source: string;
+  children: string;
+};
+
+function HeaderInfoBox({ name, source, children }: HeaderInfoBoxProps) {
   return (
     <div className={styles.infoBox}>
       <h1 className={styles.heading}>{name}</h1>

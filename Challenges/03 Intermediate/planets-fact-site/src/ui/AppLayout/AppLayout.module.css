@@ -7,6 +7,10 @@
   background-image: url('/assets/background-stars.svg');
 }
 
+.main {
+  padding-bottom: 4.5rem;
+}
+
 @media screen and (min-width: 1024px) {
   .app {
     padding: 0 3.2rem;

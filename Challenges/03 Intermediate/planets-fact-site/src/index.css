@@ -80,6 +80,10 @@ body {
   font-size: 1.4rem;
   line-height: 1.55;
   color: var(--white-color);
+
+  &:has(nav.active) {
+    overflow: hidden;
+  }
 }
 
 h1,

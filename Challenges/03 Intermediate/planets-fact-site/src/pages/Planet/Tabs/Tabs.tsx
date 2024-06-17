@@ -8,14 +8,14 @@ type TabsProps = {
 function Tabs({ activeTab, onSetTab }: TabsProps) {
   return (
     <ul className={styles.list}>
-      <Tab active={activeTab === 'overview'} onClick={onSetTab}>
+      <Tab active={activeTab === 'overview'} number={1} value={'overview'} onClick={onSetTab}>
         overview
       </Tab>
-      <Tab active={activeTab === 'structure'} onClick={onSetTab}>
-        structure
+      <Tab active={activeTab === 'structure'} number={2} value="structure" onClick={onSetTab}>
+        <span>internal</span> structure
       </Tab>
-      <Tab active={activeTab === 'surface'} onClick={onSetTab}>
-        surface
+      <Tab active={activeTab === 'surface'} number={3} value="surface" onClick={onSetTab}>
+        surface <span>geology</span>
       </Tab>
     </ul>
   );
@@ -23,14 +23,19 @@ function Tabs({ activeTab, onSetTab }: TabsProps) {
 
 export default Tabs;
 
-function Tab({ children, active, onClick }: { children: string; active?: boolean; onClick: (p: string) => void }) {
+type TabProps = { children: React.ReactNode; active?: boolean; onClick: (p: string) => void; value: string; number: number };
+
+function Tab({ children, active, onClick, value, number }: TabProps) {
   function handleClick() {
-    onClick(children);
+    onClick(value);
   }
 
   return (
     <li className={`${styles.listItem} ${active ? 'active' : ''}`}>
-      <button onClick={handleClick}>{children}</button>
+      <button onClick={handleClick}>
+        <span className={styles.number}>{String(number).padStart(2, '0')}</span>
+        {children}
+      </button>
     </li>
   );
 }

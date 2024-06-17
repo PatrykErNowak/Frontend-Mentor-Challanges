@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-around;
   list-style: none;
+  width: 100%;
 
   &::before {
     content: '';
@@ -25,6 +26,10 @@
     opacity: 0.75;
   }
 
+  span {
+    display: none;
+  }
+
   &:global(.active) {
     position: relative;
     button {
@@ -40,6 +45,53 @@
       transform: scale(1.25);
       height: 3px;
       background-color: var(--scheme-color);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .list {
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding-left: 5rem;
+
+    &::before {
+      display: none;
+    }
+  }
+  .listItem {
+    border: 1px solid var(--grey-dark-color);
+
+    button {
+      padding: 1.7rem 2.5rem;
+      width: 100%;
+      text-align: start;
+      font-weight: 500;
+      letter-spacing: 2px;
+    }
+
+    span {
+      display: inline;
+    }
+    .number {
+      margin-right: 1.5rem;
+      color: var(--grey-color);
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    &:global(.active) {
+      background-color: var(--scheme-color);
+      .number {
+        color: var(--white-color);
+      }
+    }
+    &::before {
+      display: none;
     }
   }
 }

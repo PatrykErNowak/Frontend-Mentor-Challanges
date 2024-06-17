@@ -9,7 +9,7 @@ function AppLayout() {
   return (
     <div className={styles.app}>
       <Header planets={planets} />
-      <main>
+      <main className={styles.main}>
         <Outlet />
       </main>
     </div>
