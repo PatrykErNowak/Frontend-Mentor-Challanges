@@ -47,5 +47,5 @@ export const loader: LoaderFunction = async ({ params }): Promise<Planet | Respo
   const planet = await getPlanet(params.planet);
   if (planet) return planet;
 
-  throw new Error('Sorry, there is no such planet!');
+  throw new Response('Not Found', { status: 404, statusText: 'Sorry, there is no such planet!' });
 };

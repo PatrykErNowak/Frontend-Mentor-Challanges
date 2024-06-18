@@ -8,7 +8,7 @@ type HeaderInfoBoxProps = {
 
 function HeaderInfoBox({ name, source, children }: HeaderInfoBoxProps) {
   return (
-    <div className={styles.infoBox}>
+    <header className={styles.infoBox}>
       <h1 className={styles.heading}>{name}</h1>
       <p className={styles.desc}>{children}</p>
       <p className={styles.source}>
@@ -24,7 +24,7 @@ function HeaderInfoBox({ name, source, children }: HeaderInfoBoxProps) {
           </svg>
         </a>
       </p>
-    </div>
+    </header>
   );
 }
 

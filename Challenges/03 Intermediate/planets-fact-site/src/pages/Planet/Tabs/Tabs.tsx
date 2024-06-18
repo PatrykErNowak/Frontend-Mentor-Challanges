@@ -7,7 +7,7 @@ type TabsProps = {
 
 function Tabs({ activeTab, onSetTab }: TabsProps) {
   return (
-    <ul className={styles.list}>
+    <ul className={styles.list} aria-label="Type of information">
       <Tab active={activeTab === 'overview'} number={1} value={'overview'} onClick={onSetTab}>
         overview
       </Tab>
@@ -32,7 +32,7 @@ function Tab({ children, active, onClick, value, number }: TabProps) {
 
   return (
     <li className={`${styles.listItem} ${active ? 'active' : ''}`}>
-      <button onClick={handleClick}>
+      <button onClick={handleClick} aria-current={active}>
         <span className={styles.number}>{String(number).padStart(2, '0')}</span>
         {children}
       </button>

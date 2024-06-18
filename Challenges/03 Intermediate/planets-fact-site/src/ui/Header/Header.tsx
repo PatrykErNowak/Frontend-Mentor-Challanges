@@ -15,7 +15,7 @@ function Header({ planets }: { planets: string[] }) {
 
   return (
     <header className={styles.header}>
-      <h1 className={styles.heading}>the planets</h1>
+      <span className={styles.heading}>the planets</span>
 
       <Navigation planets={planets} active={showNav} />
 
