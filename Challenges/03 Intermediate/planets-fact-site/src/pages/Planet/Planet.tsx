@@ -3,7 +3,7 @@ import { LoaderFunction, redirect, useLoaderData } from 'react-router-dom';
 import { getPlanet } from '../../services/apiPlanet';
 import { Planet } from './types';
 import Tabs from './Tabs/Tabs';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import PlanetImage from './PlanetImage/PlanetImage';
 import HeaderInfoBox from './HeaderInfoBox/HeaderInfoBox';
 import DataBox from './DataBox/DataBox';
@@ -17,6 +17,15 @@ function PlanetView() {
   function handleTabChange(tab: string) {
     setTab(tab);
   }
+
+  useEffect(() => {
+    const defaultTitle = document.title;
+    document.title = name + ' | ' + defaultTitle;
+
+    return () => {
+      document.title = defaultTitle;
+    };
+  }, [name]);
 
   return (
     <div className={`${styles.container} ${name.toLowerCase()}`}>
