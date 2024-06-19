@@ -395,7 +395,7 @@
     {
       "id": 11,
       "title": "Age Calculator",
-      "info": "",
+      "info": "Day.js - for correct age calculation",
       "type": "App",
       "level": "junior",
       "technologies": [
@@ -669,6 +669,48 @@
       "links": {
         "live": "../../Challenges/03 Intermediate/to-do-app/dist/",
         "repo": "https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/03%20Intermediate/to-do-app"
+      }
+    },
+    {
+      "id": 18,
+      "title": "Planets fact",
+      "info": "Unit & Integration tests • React Router v6.2 - dynamic routing with loader",
+      "type": "App",
+      "level": "intermediate",
+      "technologies": [
+        {
+          "type": "svg",
+          "name": "React",
+          "icon": "icon-react"
+        },
+        {
+          "type": "svg",
+          "name": "TypeScript",
+          "icon": "icon-typescript"
+        },
+        {
+          "type": "png",
+          "name": "CSS Modules",
+          "icon": "icon-css-modules"
+        },
+        {
+          "type": "svg",
+          "name": "Jest",
+          "icon": "icon-jest"
+        },
+        {
+          "type": "png",
+          "name": "vite",
+          "icon": "icon-vite"
+        }
+      ],
+      "img": {
+        "src": "./Photos of Challenges/03 Intermediate/planets-fact.jpg",
+        "alt": "Planets fact app solution screenshot"
+      },
+      "links": {
+        "live": "https://planets-facts-pendev.netlify.app",
+        "repo": "https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/03%20Intermediate/planets-fact-site"
       }
     }
   ]

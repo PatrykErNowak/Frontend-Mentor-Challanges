@@ -31,3 +31,4 @@ Here you can find a showcase of my front-end skills. This collection features my
 - Frontend Quiz App - [Repository](./Challenges/03%20Intermediate/frontend-quiz-app/) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/03%20Intermediate/frontend-quiz-app/dist/)
 - Coffee Roasters Multipage Webiste - [Repository](./Challenges/03%20Intermediate/coffeeroasters-site/) | [Live](https://coffee-roasters-pendev.netlify.app)
 - To do app - [Repository](./Challenges/03%20Intermediate/to-do-app/) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/03%20Intermediate/to-do-app/dist/)
+- Planets fact site - [Repository](./Challenges/03%20Intermediate/planets-fact-site/) | [Live](https://planets-facts-pendev.netlify.app)
