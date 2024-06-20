@@ -1,6 +1,11 @@
 .container {
   display: grid;
   justify-items: center;
+  transition: opacity 200ms;
+  transition-delay: 200ms;
+}
+:global(.loading) {
+  opacity: 0;
 }
 
 @media screen and (min-width: 768px) {

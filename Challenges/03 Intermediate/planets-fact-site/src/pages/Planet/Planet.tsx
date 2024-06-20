@@ -1,5 +1,5 @@
 import styles from './Planet.module.css';
-import { LoaderFunction, redirect, useLoaderData } from 'react-router-dom';
+import { LoaderFunction, redirect, useLoaderData, useNavigation } from 'react-router-dom';
 import { getPlanet } from '../../services/apiPlanet';
 import { Planet } from './types';
 import Tabs from './Tabs/Tabs';
@@ -13,6 +13,8 @@ function PlanetView() {
   const { name, images, overview, structure, geology, rotation, radius, revolution, temperature } = useLoaderData() as Planet;
   const [tab, setTab] = useState('overview');
   const tabContent = tab === 'overview' ? overview : tab === 'structure' ? structure : geology;
+  const navigation = useNavigation();
+  const isLoading = navigation.state === 'loading';
 
   function handleTabChange(tab: string) {
     setTab(tab);
@@ -28,7 +30,7 @@ function PlanetView() {
   }, [name]);
 
   return (
-    <div className={`${styles.container} ${name.toLowerCase()}`}>
+    <div className={`${styles.container} ${name.toLowerCase()} ${isLoading ? 'loading' : ''}`}>
       <Tabs activeTab={tab} onSetTab={handleTabChange} />
 
       <PlanetImage images={images} name={name} tab={tab} />

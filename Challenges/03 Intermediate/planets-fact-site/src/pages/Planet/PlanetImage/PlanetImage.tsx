@@ -11,16 +11,12 @@ type PlanetImageProps = {
 };
 
 function PlanetImage({ tab, images, name }: PlanetImageProps) {
+  const mainImageSrc = tab === 'overview' || tab === 'surface' ? images.planet : images.internal;
+
   return (
-    <div className={styles.imageBox}>
-      {tab === 'overview' && <img src={images.planet} alt={name} />}
-      {tab === 'structure' && <img src={images.internal} alt={name} />}
-      {tab === 'surface' && (
-        <>
-          <img src={images.planet} alt={name} />
-          <img src={images.geology} alt={`${name} surface geology`} className={styles.surface} />
-        </>
-      )}
+    <div className={styles.imageBox} key={name}>
+      <img src={mainImageSrc} alt={name} />
+      {tab === 'surface' && <img src={images.geology} alt={`${name} surface geology`} className={styles.surface} />}
     </div>
   );
 }
