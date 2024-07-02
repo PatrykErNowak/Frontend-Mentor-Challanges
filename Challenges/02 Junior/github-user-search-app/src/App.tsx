@@ -1,10 +1,13 @@
+import { DarkModeProvider } from './context/DarkModeContext';
 import GlobalStyles from './styles/GlobalStyles';
 
 function App() {
   return (
     <>
-      <GlobalStyles />
-      <div>github</div>
+      <DarkModeProvider>
+        <GlobalStyles />
+        <div>github</div>
+      </DarkModeProvider>
     </>
   );
 }
