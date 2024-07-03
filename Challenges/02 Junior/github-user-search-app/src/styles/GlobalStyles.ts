@@ -8,23 +8,29 @@ const GlobalStyles = createGlobalStyle`
 
   &.light-mode {
     --heading-color: #2B3442;
-    --text-color: rgba(75, 106, 155, 0.75);
+    --text-color: #4B6A9B;
+    --text-light-color: rgba(75, 106, 155, 0.75);
     --strong-text-color: #697C9A;
     
     --bg-color: #F6F8FF;
 
     --main-container-color: #FEFEFE;
     --child-container-color: #F6F8FF;
+
+    --theme-hover-color: #222731;
   }
   &.dark-mode {
     --heading-color: #FFFFFF;
-    --text-color: rgba(255,255,255,0.75);
+    --text-color: #ffffff;
+    --text-light-color: rgba(255,255,255,0.75);
     --strong-text-color: #FFFFFF;
 
     --bg-color: #141D2F;
 
     --main-container-color: #1E2A47;
     --child-container-color: #141D2F;
+
+    --theme-hover-color: #90A4D4;
   }
 }
 

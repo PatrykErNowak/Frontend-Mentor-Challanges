@@ -1,13 +1,19 @@
-import { useDarkMode } from './context/DarkModeContext';
+import Header from './components/Header';
+import Logo from './components/Logo';
+import ThemeSwitcher from './components/ThemeSwitcher';
+import Wrapper from './components/Wrapper';
 import GlobalStyles from './styles/GlobalStyles';
 
 function App() {
-  const { toggleDarkMode } = useDarkMode();
   return (
     <>
       <GlobalStyles />
-      <div>github</div>
-      <button onClick={toggleDarkMode}>dakr Toggle</button>
+      <Wrapper>
+        <Header>
+          <Logo />
+          <ThemeSwitcher />
+        </Header>
+      </Wrapper>
     </>
   );
 }
