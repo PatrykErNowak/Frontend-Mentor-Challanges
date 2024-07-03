@@ -5,6 +5,8 @@ const GlobalStyles = createGlobalStyle`
   --primary-color: #0079FF;
   --primary-hover-color: #60ABFF;
   --error-color: #F74646;
+  --white-color: #fff;
+  --grey-color: #979797;
 
   &.light-mode {
     --heading-color: #2B3442;
@@ -20,10 +22,10 @@ const GlobalStyles = createGlobalStyle`
     --theme-hover-color: #222731;
   }
   &.dark-mode {
-    --heading-color: #FFFFFF;
-    --text-color: #ffffff;
+    --heading-color: var(--white-color);
+    --text-color: var(--white-color);
     --text-light-color: rgba(255,255,255,0.75);
-    --strong-text-color: #FFFFFF;
+    --strong-text-color: var(--white-color);
 
     --bg-color: #141D2F;
 
