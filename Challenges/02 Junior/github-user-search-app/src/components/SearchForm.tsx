@@ -5,6 +5,8 @@ import { boxShadow } from '../styles/Utilities';
 import Button from './Button';
 import { useDarkMode } from '../context/DarkModeContext';
 import { breakpoint } from '../styles/config';
+import { getUser, noResultsErrorMessage } from '../services/apiGithubUser';
+import { useQuery } from '@tanstack/react-query';
 
 const StyledSearchForm = styled.form<{ $mode?: 'light' | 'dark' }>`
   display: flex;
@@ -49,12 +51,19 @@ const Error = styled.span`
 `;
 
 function SearchForm() {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState('octocat');
   const { isDarkMode } = useDarkMode();
+  const { refetch, error } = useQuery({
+    queryKey: ['user'],
+    queryFn: () => getUser(query),
+    enabled: false,
+    retry: false,
+  });
+  const isNoResultsError = error?.message === noResultsErrorMessage;
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    console.log(query);
+    refetch();
   }
 
   return (
@@ -64,7 +73,7 @@ function SearchForm() {
           <SearchIcon />
         </IconContainer>
         <Input type="text" name="user" id="user" placeholder="Search GitHub username…" value={query} onChange={(e) => setQuery(e.currentTarget.value)} />
-        <Error>No results</Error>
+        {isNoResultsError && <Error>No results</Error>}
       </Label>
       <Button>search</Button>
     </StyledSearchForm>
