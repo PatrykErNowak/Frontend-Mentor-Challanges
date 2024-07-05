@@ -7,6 +7,7 @@ import ThemeSwitcher from './components/ThemeSwitcher';
 import Wrapper from './components/Wrapper';
 import GlobalStyles from './styles/GlobalStyles';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import UserInfoBox from './features/User/UserInfoBox';
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ function App() {
           </Header>
           <Main>
             <SearchForm />
+            <UserInfoBox />
           </Main>
         </Wrapper>
         <ReactQueryDevtools initialIsOpen={false} />

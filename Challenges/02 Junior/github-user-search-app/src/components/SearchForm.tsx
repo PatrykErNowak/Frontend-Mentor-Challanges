@@ -1,23 +1,22 @@
 import styled from 'styled-components';
 import IconContainer from './IconContainer';
 import { FormEvent, useState } from 'react';
-import { boxShadow } from '../styles/Utilities';
 import Button from './Button';
 import { useDarkMode } from '../context/DarkModeContext';
 import { breakpoint } from '../styles/config';
 import { getUser, noResultsErrorMessage } from '../services/apiGithubUser';
 import { useQuery } from '@tanstack/react-query';
+import Container from './Container';
 
-const StyledSearchForm = styled.form<{ $mode?: 'light' | 'dark' }>`
+const StyledSearchForm = styled(Container)`
   display: flex;
   align-items: center;
   gap: 0.5rem;
   justify-content: space-between;
   padding: 0.7rem 0.7rem 0.7rem 1.5rem;
-  background-color: var(--main-container-color);
-  border-radius: 1.5rem;
-
-  ${(props) => (props.$mode === 'light' ? boxShadow : '')}
+  @media screen and (min-width: ${breakpoint.tablet}) {
+    padding: 0.95rem 1rem 0.95rem 3.2rem;
+  }
 `;
 
 const Label = styled.label`
@@ -56,7 +55,7 @@ function SearchForm() {
   const { refetch, error } = useQuery({
     queryKey: ['user'],
     queryFn: () => getUser(query),
-    enabled: false,
+    enabled: true,
     retry: false,
   });
   const isNoResultsError = error?.message === noResultsErrorMessage;
@@ -67,7 +66,7 @@ function SearchForm() {
   }
 
   return (
-    <StyledSearchForm onSubmit={handleSubmit} $mode={isDarkMode ? 'dark' : 'light'}>
+    <StyledSearchForm as="form" onSubmit={handleSubmit} $mode={isDarkMode ? 'dark' : 'light'}>
       <Label htmlFor="user">
         <IconContainer>
           <SearchIcon />
