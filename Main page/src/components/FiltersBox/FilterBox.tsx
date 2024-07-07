@@ -17,11 +17,13 @@ function FilterBox({
   techs,
   onAddTechFilter,
   onAddDiffFilters,
+  onSortChange,
 }: {
   solutions: Solution[];
   techs: Techs;
   onAddTechFilter: (p: string) => void;
   onAddDiffFilters: (p: string) => void;
+  onSortChange: (p: string) => void;
 }) {
   const diffLevels = [...new Set(solutions.map((sol) => sol.level))];
 
@@ -31,7 +33,7 @@ function FilterBox({
       <div className={styles.filterBox}>
         <FilterSection title="Difficulty">
           {diffLevels.map((lev) => (
-            <FilterDifficultyListItem level={lev as keyof typeof DifficultyLevelTag} onAddTechFilter={onAddDiffFilters} />
+            <FilterDifficultyListItem key={lev} level={lev as keyof typeof DifficultyLevelTag} onAddTechFilter={onAddDiffFilters} />
           ))}
         </FilterSection>
         <FilterSection title="Technologies">
@@ -41,6 +43,16 @@ function FilterBox({
           {techs.build && <FilterTechBox onAddTechFilter={onAddTechFilter} techs={techs.build} />}
         </FilterSection>
       </div>
+      <select
+        className={styles.sort}
+        name="sort"
+        id="sort"
+        onChange={(e) => {
+          onSortChange(e.currentTarget.value);
+        }}>
+        <option value="newest">Sort by date (newest first)</option>
+        <option value="oldest">Sort by date (oldest first)</option>
+      </select>
     </div>
   );
 }

@@ -18,6 +18,7 @@ function App() {
   const [filteredSolutions, setFilteredSolutions] = useState([]);
   const [techFilters, setTechFilters] = useState<Array<string>>([]);
   const [diffLevelFilters, setDiffLevelFilters] = useState<Array<string>>([]);
+  const [sortByNewest, setSortByNewest] = useState(true);
 
   const { solutions, techs } = solutionsData;
 
@@ -31,13 +32,14 @@ function App() {
           data.solutions
             .filter((sol: Solution) => techFilters.every((item) => [...sol.technologies.map((tech) => tech.name), sol.level].includes(item)))
             .filter((sol: Solution) => (diffLevelFilters.length > 0 ? diffLevelFilters.some((filter) => filter === sol.level) : true))
+            .sort((a: Solution, b: Solution) => (sortByNewest ? b.id - a.id : a.id - b.id))
         );
       } catch (error) {
         console.log(error);
       }
     }
     fetchSolutions();
-  }, [techFilters, diffLevelFilters]);
+  }, [techFilters, diffLevelFilters, sortByNewest]);
 
   function handleAddTechFilters(filter: string) {
     const isTheSameFilter = techFilters.some((fil) => fil.toLowerCase() === filter.toLowerCase());
@@ -67,12 +69,23 @@ function App() {
     setDiffLevelFilters((filters) => filters.filter((item) => item.toLowerCase() !== filter.toLowerCase()));
   }
 
+  function handleSort(sortBy: string) {
+    if (sortBy === 'newest') setSortByNewest(true);
+    if (sortBy === 'oldest') setSortByNewest(false);
+  }
+
   return (
     <WrapperContainer>
       <Header></Header>
       <Main>
         {solutions && techs && (
-          <FilterBox solutions={solutions} techs={techs} onAddTechFilter={handleAddTechFilters} onAddDiffFilters={handleAddDiffLevelFilters} />
+          <FilterBox
+            solutions={solutions}
+            techs={techs}
+            onAddTechFilter={handleAddTechFilters}
+            onAddDiffFilters={handleAddDiffLevelFilters}
+            onSortChange={handleSort}
+          />
         )}
         {filteredSolutions.length > 0 ? <SolutionsList solutions={filteredSolutions}></SolutionsList> : <Message />}
       </Main>

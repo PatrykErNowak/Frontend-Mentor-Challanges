@@ -1,3 +1,7 @@
+.box {
+  position: relative;
+}
+
 .filterBox {
   display: flex;
   flex-direction: column;
@@ -6,4 +10,25 @@
 
 .title {
   margin-bottom: 1rem;
+}
+.sort {
+  width: 100%;
+  padding: 1rem;
+  color: #737373;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  cursor: pointer;
+  &:focus {
+    outline: 1px solid #777;
+  }
+}
+@media screen and (min-width: 80em) {
+  .sort {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 1.5rem 0;
+    width: max-content;
+  }
 }
