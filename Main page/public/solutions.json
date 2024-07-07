@@ -54,6 +54,11 @@
         "type": "png",
         "name": "CSS Modules",
         "icon": "icon-css-modules"
+      },
+      {
+        "type": "svg",
+        "name": "Styled Components",
+        "icon": "icon-styled-components"
       }
     ],
     "build": [
@@ -711,6 +716,48 @@
       "links": {
         "live": "https://planets-facts-pendev.netlify.app",
         "repo": "https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/03%20Intermediate/planets-fact-site"
+      }
+    },
+    {
+      "id": 19,
+      "title": "GitHub user search",
+      "info": "React/TanStack Query • Context API • Local Storage",
+      "type": "App",
+      "level": "junior",
+      "technologies": [
+        {
+          "type": "svg",
+          "name": "React",
+          "icon": "icon-react"
+        },
+        {
+          "type": "svg",
+          "name": "TypeScript",
+          "icon": "icon-typescript"
+        },
+        {
+          "type": "svg",
+          "name": "Styled Components",
+          "icon": "icon-styled-components"
+        },
+        {
+          "type": "png",
+          "name": "vite",
+          "icon": "icon-vite"
+        },
+        {
+          "type": "png",
+          "name": "API",
+          "icon": "icon-api"
+        }
+      ],
+      "img": {
+        "src": "./Photos of Challenges/02 junior/github-search-app.jpg",
+        "alt": "Github search app solution screenshot"
+      },
+      "links": {
+        "live": "https://github-search-pendev.netlify.app",
+        "repo": "https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/02%20Junior/github-user-search-app"
       }
     }
   ]

@@ -22,6 +22,7 @@ Here you can find a showcase of my front-end skills. This collection features my
 - Huddle landing page - [Repository](./Challenges/02%20Junior/huddle-landing-page-with-alternating-feature-blocks) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/02%20Junior/huddle-landing-page-with-alternating-feature-blocks/dist/)
 - Age Calculator App - [Repository](./Challenges/02%20Junior/age-calculator-app) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/02%20Junior/age-calculator-app/dist/)
 - Advice Generator App - [Repository](./Challenges/02%20Junior/advice-generator-app) | [Live](https://patrykernowak.github.io/Frontend-Mentor-Challenges/Challenges/02%20Junior/advice-generator-app/dist/)
+- Github search user App - [Repository](./Challenges/02%20Junior/github-user-search-app) | [Live](https://github-search-pendev.netlify.app)
 
 ### Intermediate:
 
