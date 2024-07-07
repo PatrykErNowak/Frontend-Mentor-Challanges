@@ -54,6 +54,7 @@ function UserInfoBox() {
   const { isDarkMode } = useDarkMode();
   const { isFetching, data = {} } = useQuery({
     queryKey: ['user'],
+    staleTime: Infinity,
   });
 
   if (isFetching) return <Spinner />;
@@ -63,7 +64,7 @@ function UserInfoBox() {
 
   return (
     <StyledUserInfoBox $mode={isDarkMode ? 'dark' : 'light'}>
-      <AvatarExt src={avatar_url} alt={`${login} avatar`} />
+      <AvatarExt src={avatar_url} alt={login ? `${login} avatar` : ''} />
       <UserHeader username={login} name={name} pageHref={html_url} joinDate={created_at} />
       <UserContent>
         <UserBio $isBio={Boolean(bio)}>{bio || 'This profile has no bio'}</UserBio>

@@ -23,15 +23,22 @@ const Label = styled.label`
   position: relative;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0.9rem;
   width: 100%;
+  @media screen and (min-width: ${breakpoint.tablet}) {
+    gap: 2rem;
+  }
 `;
 const Input = styled.input.attrs({ type: 'text' })`
   width: 100%;
   font-size: 1.3rem;
-  color: var(--text-color);
   border: transparent;
   background-color: transparent;
+
+  &,
+  &::placeholder {
+    color: var(--text-color);
+  }
 
   &:focus {
     outline: none;
@@ -50,13 +57,14 @@ const Error = styled.span`
 `;
 
 function SearchForm() {
-  const [query, setQuery] = useState('octocat');
+  const [query, setQuery] = useState('');
   const { isDarkMode } = useDarkMode();
   const { refetch, error } = useQuery({
     queryKey: ['user'],
-    queryFn: () => getUser(query),
+    queryFn: () => getUser(query || 'octocat'),
     enabled: true,
     retry: false,
+    staleTime: Infinity,
   });
   const isNoResultsError = error?.message === noResultsErrorMessage;
 

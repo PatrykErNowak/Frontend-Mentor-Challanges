@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
   --primary-color: #0079FF;
   --primary-hover-color: #60ABFF;
   --error-color: #F74646;
-  --white-color: #fff;
+  --white-color: #ffffff;
   --grey-color: #979797;
 
   &.light-mode {
