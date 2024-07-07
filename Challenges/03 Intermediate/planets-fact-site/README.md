@@ -8,6 +8,8 @@ This is a solution to the [Planets fact site challenge on Frontend Mentor](https
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
 - [Author](#author)
 
 ## Overview
