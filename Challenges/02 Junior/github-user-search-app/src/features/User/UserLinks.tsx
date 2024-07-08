@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import IconContainer from '../../components/IconContainer';
 import { breakpoint } from '../../styles/config';
+import { convertURL } from '../../utils/helpers';
 
 const StyledUserLinks = styled.ul`
   display: flex;
@@ -28,7 +29,7 @@ function UserLinks({ location, blog, twitter, company }: UserLinksProps) {
       <LinkItem as="address" icon={<LocationIcon />}>
         {location}
       </LinkItem>
-      <LinkItem href={blog || undefined} icon={<WebsiteIcon />}>
+      <LinkItem href={(blog && convertURL(blog)) || undefined} icon={<WebsiteIcon />}>
         {blog}
       </LinkItem>
       <LinkItem href={`https://x.com/${twitter}`} icon={<TwitterIcon />}>

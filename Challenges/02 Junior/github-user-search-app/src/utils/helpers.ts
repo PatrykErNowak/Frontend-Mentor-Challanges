@@ -9,4 +9,11 @@ function formatToLocalDate(date: string) {
   return new Date(date).toLocaleDateString(localLang, options);
 }
 
-export { formatToLocalDate };
+function convertURL(url: string) {
+  const hasHttp = url.startsWith('https://') || url.startsWith('http://');
+
+  if (hasHttp) return url;
+  if (!hasHttp) return `https://${url}`;
+}
+
+export { formatToLocalDate, convertURL };
