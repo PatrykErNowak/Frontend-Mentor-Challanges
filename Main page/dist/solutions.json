@@ -741,6 +741,11 @@
           "icon": "icon-styled-components"
         },
         {
+          "type": "svg",
+          "name": "Jest",
+          "icon": "icon-jest"
+        },
+        {
           "type": "png",
           "name": "vite",
           "icon": "icon-vite"
