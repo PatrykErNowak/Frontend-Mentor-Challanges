@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import IconContainer from './IconContainer';
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import Button from './Button';
 import { useDarkMode } from '../context/DarkModeContext';
 import { breakpoint } from '../styles/config';
@@ -59,7 +59,7 @@ const Error = styled.span`
 function SearchForm() {
   const [query, setQuery] = useState('');
   const { isDarkMode } = useDarkMode();
-  const { refetch, error } = useQuery({
+  const { refetch, error, data } = useQuery({
     queryKey: ['user'],
     queryFn: () => getUser(query || 'octocat'),
     enabled: true,
@@ -67,6 +67,10 @@ function SearchForm() {
     staleTime: Infinity,
   });
   const isNoResultsError = error?.message === noResultsErrorMessage;
+
+  useEffect(() => {
+    if (!isNoResultsError) setQuery('');
+  }, [isNoResultsError, data]);
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();

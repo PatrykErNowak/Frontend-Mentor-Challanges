@@ -26,16 +26,16 @@ type UserLinksProps = {
 function UserLinks({ location, blog, twitter, company }: UserLinksProps) {
   return (
     <StyledUserLinks>
-      <LinkItem as="address" icon={<LocationIcon />}>
+      <LinkItem as="address" icon={<LocationIcon />} title="Location">
         {location}
       </LinkItem>
-      <LinkItem href={(blog && convertURL(blog)) || undefined} icon={<WebsiteIcon />}>
+      <LinkItem href={(blog && convertURL(blog)) || undefined} icon={<WebsiteIcon />} title="Web Page">
         {blog}
       </LinkItem>
-      <LinkItem href={`https://x.com/${twitter}`} icon={<TwitterIcon />}>
+      <LinkItem href={`https://x.com/${twitter}`} icon={<TwitterIcon />} title="Twitter">
         {twitter}
       </LinkItem>
-      <LinkItem as="p" icon={<CompanyIcon />}>
+      <LinkItem as="p" icon={<CompanyIcon />} title="Company">
         {company}
       </LinkItem>
     </StyledUserLinks>
@@ -70,13 +70,14 @@ type LinkItemProps = {
   children: string | null | undefined;
   href?: string;
   as?: string;
+  title?: string;
 };
 
-function LinkItem({ href = '', icon, children, as = 'a' }: LinkItemProps) {
+function LinkItem({ href = '', icon, children, as = 'a', title = '' }: LinkItemProps) {
   if (!children)
     return (
       <li>
-        <Link as="p" $noData>
+        <Link as="p" $noData title={title}>
           <IconContainer>{icon}</IconContainer>
           <span>Not available</span>
         </Link>
@@ -85,7 +86,7 @@ function LinkItem({ href = '', icon, children, as = 'a' }: LinkItemProps) {
 
   return (
     <li>
-      <Link as={as} href={href}>
+      <Link as={as} href={href} title={title}>
         <IconContainer>{icon}</IconContainer>
         <span>{children}</span>
       </Link>

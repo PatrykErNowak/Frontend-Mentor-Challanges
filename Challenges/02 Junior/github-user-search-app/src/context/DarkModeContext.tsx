@@ -8,7 +8,7 @@ type DarkModeContextType = {
 };
 
 type DarkModeProviderProps = {
-  children: React.ReactElement | React.ReactElement[];
+  children: React.ReactNode | React.ReactNode[];
 };
 
 // ------------------------------------------------------------------------------
