@@ -1,5 +1,10 @@
+@use '../abstracts/breakpoints' as b;
+
 .wrapper {
   margin: 0 auto;
   width: calc(100% - 1.5em);
   max-width: 120rem;
+  @media (min-width: b.$xl-large) {
+    max-width: 160rem;
+  }
 }

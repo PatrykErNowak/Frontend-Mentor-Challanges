@@ -26,4 +26,7 @@ main {
   @media (min-width: b.$large) {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  @media (min-width: b.$xl-large) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
