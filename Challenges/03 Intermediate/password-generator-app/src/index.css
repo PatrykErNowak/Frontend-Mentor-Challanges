@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: inherit;
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+
+body {
+  background-color: #08070b;
+  min-height: 100vh;
+}
