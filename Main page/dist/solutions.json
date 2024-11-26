@@ -764,6 +764,43 @@
         "live": "https://github-search-pendev.netlify.app",
         "repo": "https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/02%20Junior/github-user-search-app"
       }
+    },
+    {
+      "id": 20,
+      "title": "Password Generator",
+      "info": "",
+      "type": "App",
+      "level": "intermediate",
+      "technologies": [
+        {
+          "type": "svg",
+          "name": "React",
+          "icon": "icon-react"
+        },
+        {
+          "type": "svg",
+          "name": "TypeScript",
+          "icon": "icon-typescript"
+        },
+        {
+          "type": "svg",
+          "name": "TailwindCSS",
+          "icon": "icon-tailwindcss"
+        },
+        {
+          "type": "png",
+          "name": "vite",
+          "icon": "icon-vite"
+        }
+      ],
+      "img": {
+        "src": "./Photos of Challenges/03 Intermediate/password-generator-app.jpg",
+        "alt": "Github search app solution screenshot"
+      },
+      "links": {
+        "live": "../../Challenges/03 Intermediate/password-generator-app/dist/",
+        "repo": "https://github.com/PatrykErNowak/Frontend-Mentor-Challenges/tree/main/Challenges/03%20Intermediate/password-generator-app"
+      }
     }
   ]
 }
