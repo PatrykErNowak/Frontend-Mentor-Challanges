@@ -7,9 +7,11 @@ import PasswordLength from './components/PasswordLength';
 import Options from './components/Options';
 import PasswrodStrength from './components/PasswrodStrength';
 import { GeneratePassword } from 'js-generate-password';
+import validPassword from 'password-strength';
 
 function App() {
   const [password, setPassword] = useState('');
+  const [passwordStrength, setPasswordStrenth] = useState<0 | 1 | 2 | 3 | 4>(0);
   const [length, setLength] = useState(0);
   const [options, setOptions] = useState({
     uppercase: false,
@@ -18,7 +20,7 @@ function App() {
     symbol: false,
   });
 
-  const maxLength = 20;
+  const maxLength = 18;
 
   function onOptionChange(option: keyof Options) {
     setOptions((prevState) => ({ ...prevState, [option]: !prevState[option] }));
@@ -42,7 +44,17 @@ function App() {
       uppercase: options.uppercase,
     });
 
-    if (password) setPassword(password);
+    if (password) {
+      setPassword(password);
+      const { valid, strength } = validPassword(password);
+
+      if (!valid) setPasswordStrenth(1);
+      if (valid) {
+        if (strength === 'simple') setPasswordStrenth(2);
+        if (strength === 'medium') setPasswordStrenth(3);
+        if (strength === 'strong') setPasswordStrenth(4);
+      }
+    }
   }
 
   return (
@@ -59,7 +71,7 @@ function App() {
             onChange={setLength}
           />
           <Options options={options} onOptionChange={onOptionChange} />
-          <PasswrodStrength strengthLevel={0} />
+          <PasswrodStrength strengthLevel={passwordStrength} />
           <Button />
         </form>
       </Container>

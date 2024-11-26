@@ -14,15 +14,15 @@ function Password({ password }: PasswordProps) {
   }
 
   return (
-    <Container className="flex justify-end items-center gap-4">
-      <p className="mr-auto text-2xl md:text-3xl">
+    <Container className="flex justify-end items-center">
+      <p className="mr-auto text-xl md:text-3xl">
         {password ? (
           password
         ) : (
           <span className="opacity-30 select-none">P4$5W0rD!</span>
         )}
       </p>
-      {copied && <p className="text-main">COPIED</p>}
+      {copied && <p className="text-main pr-3 md:pr-4">COPIED</p>}
       <button onClick={handleCopy} className="group" title="Copy to Clipboard">
         <CopyIcon />
       </button>
